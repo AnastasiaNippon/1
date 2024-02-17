@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Опросник для обладателей магических животных</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Calibri, sans-serif;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        position: relative;
+      }
+
+      .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("https://wallbox.ru/resize/2560x1600/wallpapers/main2/201712/149000680158cfb311107f39.27072964.jpg");
+        background-size: cover;
+        filter: blur(5px);
+        z-index: -1;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      label,
+      input,
+      select,
+      textarea,
+      button {
+        margin-bottom: 0.5cm;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="container">
+      <h1>Опросник для обладателей магических животных</h1>
+      <form action="#" method="post">
+        <label for="petName">Кличка питомца:</label>
+        <input type="text" id="petName" name="petName" required />
+
+        <label for="ownerInfo">Имя и контакты владельца:</label>
+        <input type="text" id="ownerInfo" name="ownerInfo" required />
+
+        <label for="breed">Порода питомца:</label>
+        <select id="breed" name="breed">
+          <option value="cat">Кот</option>
+          <option value="dog">Собака</option>
+          <option value="bird">Птица</option>
+          <option value="horse">Лошадь</option>
+        </select>
+
+        <fieldset>
+          <legend>Чем питается:</legend>
+          <label
+            ><input type="checkbox" name="food" value="dry" /> Сухой корм</label
+          >
+          <label
+            ><input type="checkbox" name="food" value="wet" /> Влажный
+            корм</label
+          >
+          <label
+            ><input type="checkbox" name="food" value="natural" /> Натуральный
+            корм</label
+          >
+        </fieldset>
+
+        <fieldset>
+          <legend>Мальчик или девочка:</legend>
+          <label
+            ><input type="radio" name="gender" value="male" /> Мальчик</label
+          >
+          <label
+            ><input type="radio" name="gender" value="female" /> Девочка</label
+          >
+        </fieldset>
+
+        <label for="comment">Комментарий владельца:</label>
+        <textarea id="comment" name="comment" rows="4"></textarea>
+
+        <label for="petPhoto">Приложить фото питомца:</label>
+        <input type="file" id="petPhoto" name="petPhoto" />
+
+        <button type="submit">Сохранить</button>
+      </form>
+    </div>
+  </body>
+</html>
