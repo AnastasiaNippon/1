@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Киносайт</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+      }
+      section {
+        width: 1200px;
+        margin: 20px auto;
+      }
+      .celebrity,
+      .movie-posters,
+      .trailers {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .celebrity img,
+      .movie-posters img {
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+      }
+      .celebrity p {
+        margin-top: 5px;
+      }
+      .trailers iframe {
+        width: 560px;
+        height: 315px;
+      }
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Мои Любимые Звезды</h1>
+      <div class="celebrity">
+        <div>
+          <img
+            src="https://i.pinimg.com/originals/77/30/9b/77309bbbbda67693313390282c87349c.jpg"
+            alt="Том Хиддлстон"
+          />
+          <p>Том Хиддлстон</p>
+        </div>
+        <div>
+          <img
+            src="https://i.pinimg.com/736x/07/1a/c6/071ac637e156cc46997cb7da9de21dee.jpg"
+            alt="Мадс Миккельсен"
+          />
+          <p>Мадс Миккельсен</p>
+        </div>
+        <div>
+          <img
+            src="https://sun9-15.userapi.com/impg/1D3Ynvgos3xjWoczx_Q3Yw1GVf85JOQBLjwGKg/_zHcVeZ0A1k.jpg?size=604x604&quality=95&sign=5a3f9dff0d02fd18214ab757a4c78b22&c_uniq_tag=04vB4ZEmFarWfvuHT34kJJaPqyv6hSyUK33iAvLDEj4&type=album"
+            alt="Элизабет Олсен"
+          />
+          <p>Элизабет Олсен</p>
+        </div>
+        <div>
+          <img
+            src="https://i.pinimg.com/736x/d9/5b/c0/d95bc07b5e6366c7015afb59481e68bf.jpg"
+            alt="Евангелина Лили"
+          />
+          <p>Евангелина Лили</p>
+        </div>
+        <div>
+          <img
+            src="https://yt3.googleusercontent.com/Fg_0MlgagEeH3s1dJkPJqbBrxkg5alSKtVW8FRYMl3W7uw2Yt54-8SAxQkogqyWHy0poHektGz0=s900-c-k-c0x00ffffff-no-rj"
+            alt="Таданобу Асано"
+          />
+          <p>Таданобу Асано</p>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2 style="text-align: center">Пять известных актеров</h2>
+      <div class="celebrity">
+        <a
+          href="https://www.kinopoisk.ru/name/553143/?utm_referrer=www.google.com"
+          ><img
+            src="https://wl-adme.cf.tsp.li/resize/728x/jpg/e56/d52/26c2ab52aba33c1e8be5b2c741.jpg"
+            alt="Том Хиддлстон"
+        /></a>
+        <a href="https://www.kinopoisk.ru/name/11123/"
+          ><img
+            src="https://yt3.ggpht.com/ytc/AKedOLSR1rZYL-G2pHI6dKv6F5Z5hQS8krusccNP-kZZ=s900-c-k-c0x00ffffff-no-rj"
+            alt="Мадс Миккельсен"
+        /></a>
+        <a href="https://www.kinopoisk.ru/name/1103511/"
+          ><img
+            src="https://s.yimg.com/ny/api/res/1.2/sBQj2eAx770SxsRSCPNnQQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD0xMTA4/https://s.yimg.com/cd/resizer/2.0/FIT_TO_WIDTH-w1273/94a7da2a5c0422d800c70e0085858271c0d1fc83.jpg"
+            alt="Элизабет Олсен"
+        /></a>
+        <a href="https://www.kinopoisk.ru/name/605598/"
+          ><img
+            src="https://emailtuna.com/images/newsletter/aac/aacb9008c5a732f8ecf793335eb28c31.jpg"
+            alt="Евангелина Лили"
+        /></a>
+        <a href="https://www.kinopoisk.ru/name/398751/"
+          ><img
+            src="https://image.news.livedoor.com/newsimage/stf/3/9/3987f_1328_f5d9555f_76050cef.jpg"
+            alt="Таданобу Асано"
+        /></a>
+      </div>
+      <p style="text-align: center">Нажми чтобы узнать кто они такие!</p>
+    </section>
+
+    <section>
+      <h2 style="text-align: center">Пять постеров с лучшими фильмами</h2>
+      <div class="movie-posters">
+        <a href="https://www.kinopoisk.ru/series/1203039/"
+          ><img
+            src="https://avatars.mds.yandex.net/i?id=06361d03ed9dd8564f64bd6cc2a14a3c_l-9048286-images-thumbs&n=13"
+            alt="Loki"
+        /></a>
+        <a href="https://www.kinopoisk.ru/series/682468/"
+          ><img
+            src="https://f4.bcbits.com/img/a0508860076_16.jpg"
+            alt="Hannibal"
+        /></a>
+        <a href="https://www.kinopoisk.ru/series/1203040/"
+          ><img
+            src="https://i.pinimg.com/736x/67/7f/bc/677fbc494ecdf657a05ff3435483b5e4.jpg"
+            alt="WandaVision"
+        /></a>
+        <a href="https://www.kinopoisk.ru/film/408876/"
+          ><img
+            src="https://i.pinimg.com/originals/20/4c/8a/204c8a43ca133f60920ed88a11fa8923.jpg"
+            alt="The Hobbit: The Desolation of Smaug"
+        /></a>
+        <a href="https://www.kinopoisk.ru/film/51078/"
+          ><img
+            src="https://sun4-16.userapi.com/s/v1/ig2/qG1sh4zaZ-mKDKw62Gvymvf86j760wXyL2FQIddx0-hd3fsjFq5RFHMX08kQ9zTok-qxFXwaxoJ1wTmr57Udqcjg.jpg?size=400x400&quality=96&crop=483,0,1080,1080&ava=1"
+            alt="Затоiчи"
+        /></a>
+      </div>
+      <p style="text-align: center">
+        Нажми чтобы узнать в каких моих любимых проектах они участвовали!
+      </p>
+    </section>
+
+    <section>
+      <h2 style="text-align: center">Пять видео с трейлерами</h2>
+      <div class="trailers">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/nW948Va-l10"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/FCknuh1AhkQ"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/ETztep7JiEg"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/HPHTQL6Wb3s"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/1ji3ebpyH2Q"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <p style="text-align: center">семпл</p>
+    </section>
+
+    <footer>
+      <p>Выбор Анастасии</p>
+    </footer>
+  </body>
+</html>
