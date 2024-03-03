@@ -1,56 +1,51 @@
+/* Figma Styles of your File */
 :root {
-  --htmlgithubcomseashell: rgba(241, 241, 241, 1);
-  --htmlgithubcomblack-50: rgba(0, 0, 0, 0.5);
-  --htmlgithubcomboston-blue: rgba(65, 131, 196, 1);
-  --htmlgithubcomdove-gray: rgba(102, 102, 102, 1);
-  --htmlgithubcomsilver: rgba(204, 204, 204, 1);
-  --htmlgithubcomblack: rgba(0, 0, 0, 1);
-  --html-github-com-inter-regular-13-font-family: "Inter", Helvetica;
-  --html-github-com-inter-regular-13-font-weight: 400;
-  --html-github-com-inter-regular-13-font-size: 13px;
-  --html-github-com-inter-regular-13-letter-spacing: 0px;
-  --html-github-com-inter-regular-13-line-height: 20.799999237060547px;
-  --html-github-com-inter-regular-13-font-style: normal;
-  --html-github-com-inter-arial-bold-15-88-font-family: "Arial", Helvetica;
-  --html-github-com-inter-arial-bold-15-88-font-weight: 700;
-  --html-github-com-inter-arial-bold-15-88-font-size: 15.875px;
-  --html-github-com-inter-arial-bold-15-88-letter-spacing: 0px;
-  --html-github-com-inter-arial-bold-15-88-line-height: 25.600000381469727px;
-  --html-github-com-inter-arial-bold-15-88-font-style: normal;
-  --html-github-com-inter-arial-regular-15-88-font-family: "Arial", Helvetica;
-  --html-github-com-inter-arial-regular-15-88-font-weight: 400;
-  --html-github-com-inter-arial-regular-15-88-font-size: 15.875px;
-  --html-github-com-inter-arial-regular-15-88-letter-spacing: 0px;
-  --html-github-com-inter-arial-regular-15-88-line-height: 25.600000381469727px;
-  --html-github-com-inter-arial-regular-15-88-font-style: normal;
-  --html-github-com-inter-arial-regular-16-font-family: "Arial", Helvetica;
-  --html-github-com-inter-arial-regular-16-font-weight: 400;
-  --html-github-com-inter-arial-regular-16-font-size: 16px;
-  --html-github-com-inter-arial-regular-16-letter-spacing: 0px;
-  --html-github-com-inter-arial-regular-16-line-height: normal;
-  --html-github-com-inter-arial-regular-16-font-style: normal;
-  --html-github-com-inter-arial-regular-14-font-family: "Arial", Helvetica;
-  --html-github-com-inter-arial-regular-14-font-weight: 400;
-  --html-github-com-inter-arial-regular-14-font-size: 14px;
-  --html-github-com-inter-arial-regular-14-letter-spacing: 0px;
-  --html-github-com-inter-arial-regular-14-line-height: normal;
-  --html-github-com-inter-arial-regular-14-font-style: normal;
-  --html-github-com-inter-arial-regular-59-41-font-family: "Arial", Helvetica;
-  --html-github-com-inter-arial-regular-59-41-font-weight: 400;
-  --html-github-com-inter-arial-regular-59-41-font-size: 59.4140625px;
-  --html-github-com-inter-arial-regular-59-41-letter-spacing: -1px;
-  --html-github-com-inter-arial-regular-59-41-line-height: 60px;
-  --html-github-com-inter-arial-regular-59-41-font-style: normal;
-  --text-paragraph-font-family: "Poppins", Helvetica;
-  --text-paragraph-font-weight: 400;
-  --text-paragraph-font-size: 17px;
-  --text-paragraph-letter-spacing: 0px;
-  --text-paragraph-line-height: normal;
-  --text-paragraph-font-style: normal;
-  --icon-list-font-family: "Font Awesome 5 Free", Helvetica;
-  --icon-list-font-weight: 400;
-  --icon-list-font-size: 20px;
-  --icon-list-letter-spacing: 0px;
-  --icon-list-line-height: normal;
-  --icon-list-font-style: normal;
+  /* Colors */
+  --htmlgithubcom-seashell: #f1f1f1;
+  --htmlgithubcom-black-50percent: rgba(0, 0, 0, 0.5);
+  --htmlgithubcom-boston-blue: #4183c4;
+  --htmlgithubcom-dove-gray: #666666;
+  --htmlgithubcom-silver: #cccccc;
+  --htmlgithubcom-black: #000000;
+
+  /* Fonts */
+  --htmlgithubcom-inter-regular-13-font-family: Inter-Regular, sans-serif;
+  --htmlgithubcom-inter-regular-13-font-size: 13px;
+  --htmlgithubcom-inter-regular-13-line-height: 20.8px;
+  --htmlgithubcom-inter-regular-13-font-weight: 400;
+  --htmlgithubcom-inter-regular-13-font-style: normal;
+  --htmlgithubcom-inter-arial-bold-1588-font-family: Arial-Bold, sans-serif;
+  --htmlgithubcom-inter-arial-bold-1588-font-size: 15.875px;
+  --htmlgithubcom-inter-arial-bold-1588-line-height: 25.6px;
+  --htmlgithubcom-inter-arial-bold-1588-font-weight: 700;
+  --htmlgithubcom-inter-arial-bold-1588-font-style: normal;
+  --htmlgithubcom-inter-arial-regular-1588-font-family: Arial-Regular,
+    sans-serif;
+  --htmlgithubcom-inter-arial-regular-1588-font-size: 15.875px;
+  --htmlgithubcom-inter-arial-regular-1588-line-height: 25.6px;
+  --htmlgithubcom-inter-arial-regular-1588-font-weight: 400;
+  --htmlgithubcom-inter-arial-regular-1588-font-style: normal;
+  --htmlgithubcom-inter-arial-regular-16-font-family: Arial-Regular, sans-serif;
+  --htmlgithubcom-inter-arial-regular-16-font-size: 16px;
+  --htmlgithubcom-inter-arial-regular-16-line-height: 25.6px;
+  --htmlgithubcom-inter-arial-regular-16-font-weight: 400;
+  --htmlgithubcom-inter-arial-regular-16-font-style: normal;
+  --htmlgithubcom-inter-arial-regular-14-font-family: Arial-Regular, sans-serif;
+  --htmlgithubcom-inter-arial-regular-14-font-size: 14px;
+  --htmlgithubcom-inter-arial-regular-14-line-height: normal;
+  --htmlgithubcom-inter-arial-regular-14-font-weight: 400;
+  --htmlgithubcom-inter-arial-regular-14-font-style: normal;
+  --htmlgithubcom-inter-arial-regular-16-font-family: Arial-Regular, sans-serif;
+  --htmlgithubcom-inter-arial-regular-16-font-size: 16px;
+  --htmlgithubcom-inter-arial-regular-16-line-height: normal;
+  --htmlgithubcom-inter-arial-regular-16-font-weight: 400;
+  --htmlgithubcom-inter-arial-regular-16-font-style: normal;
+  --htmlgithubcom-inter-arial-regular-5941-font-family: Arial-Regular,
+    sans-serif;
+  --htmlgithubcom-inter-arial-regular-5941-font-size: 59.4140625px;
+  --htmlgithubcom-inter-arial-regular-5941-line-height: 60px;
+  --htmlgithubcom-inter-arial-regular-5941-font-weight: 400;
+  --htmlgithubcom-inter-arial-regular-5941-font-style: normal;
+
+  /* Effects */
 }
