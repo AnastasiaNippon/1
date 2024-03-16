@@ -7,7 +7,7 @@ html {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #d49ec6; /* Оставляем фоновый цвет как есть */
+  background-color: #d49ec6; 
 }
 
 .container {
@@ -35,7 +35,7 @@ body {
 .phone {
   padding: 10px 20px;
   border-radius: 5px;
-  background-color: pink; /* Цвет кнопки сохраняем */
+  background-color: pink; 
   color: white;
   border: none;
   cursor: pointer;
@@ -59,27 +59,27 @@ body {
 .top-six-item img {
   width: 100%;
   border-radius: 10px;
-  transition: transform 0.3s ease; /* Плавное преобразование */
+  transition: transform 0.3s ease; 
 }
 
 .top-six-item img:hover {
-  transform: scale(1.1); /* Увеличение размера картинки */
+  transform: scale(1.1); 
 }
 
 .footer-buttons {
   display: flex;
   justify-content: space-around;
-  padding: 20px 0; /* Добавлено для отступов внутри футера */
+  padding: 20px 0; 
 }
 
 .footer-buttons a {
   padding: 10px 20px;
   border-radius: 5px;
-  background-color: pink; /* Цвет ссылок сохраняем */
+  background-color: pink; 
   color: white;
   text-decoration: none;
 }
 
 .footer-buttons a:hover {
-  background-color: #ff80bf; /* Эффект при наведении */
+  background-color: #ff80bf; 
 }
