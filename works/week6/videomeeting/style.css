@@ -1,87 +1,85 @@
 html {
-    font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-  }
-  
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #d49ec6;
-  }
-  
-  .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px 0;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    background-image: url('https://w7.pngwing.com/pngs/907/1015/png-transparent-cat-logo-brand-art-cat-mammal-animals-cat-like-mammal.png');
-    background-size: cover;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
-  
-  .phone {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: pink;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .main {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 20px;
-  }
-  
-  .top-six {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  
-  .top-six-item img {
-    width: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  .top-six-item img:hover {
-    transform: scale(1.1);
-  }
-  
-  .aside-title {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .footer-buttons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .footer-buttons a {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: pink;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .footer-buttons a:hover {
-    background-color: #ff80bf;
-  }
-  
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #d49ec6; /* Оставляем фоновый цвет как есть */
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: grid;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  background-image: url('https://w7.pngwing.com/pngs/907/1015/png-transparent-cat-logo-brand-art-cat-mammal-animals-cat-like-mammal.png'); /* Оставляем URL логотипа */
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.phone {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: pink; /* Цвет кнопки сохраняем */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.main {
+  grid-template-columns: 3fr 1fr; /* Это делает основной макет двухколоночным */
+}
+
+.top-six {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Три изображения в ряд */
+  gap: 20px;
+}
+
+.top-six-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.top-six-item img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Плавное преобразование */
+}
+
+.top-six-item img:hover {
+  transform: scale(1.1); /* Увеличение размера картинки */
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0; /* Добавлено для отступов внутри футера */
+}
+
+.footer-buttons a {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: pink; /* Цвет ссылок сохраняем */
+  color: white;
+  text-decoration: none;
+}
+
+.footer-buttons a:hover {
+  background-color: #ff80bf; /* Эффект при наведении */
+}
