@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Документ</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        display: grid;
+        grid-template-areas:
+          "header header header"
+          "main main aside"
+          "footer footer footer";
+        gap: 20px;
+        margin: 20px;
+      }
+      .header,
+      .main,
+      .aside,
+      .footer {
+        border: 2px solid black;
+        padding: 20px;
+      }
+      .header {
+        grid-area: header;
+        text-align: center;
+      }
+      .main {
+        grid-area: main;
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        gap: 20px;
+      }
+      .aside {
+        grid-area: aside;
+        background-color: #d78e86;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .aside-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .aside-item img {
+        margin-bottom: 10px;
+      }
+      .footer {
+        grid-area: footer;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding: 10px;
+      }
+      .article,
+      .section {
+        border: 1px solid #c2f350;
+        padding: 20px;
+        background-color: #a0cdcf;
+      }
+      .article:not(:first-child) {
+        margin-top: 10px;
+      }
+      .section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+      }
+      .section div {
+        text-align: center;
+        padding: 10px;
+        border: 1px solid #cccccc;
+        background-color: #b6627f;
+      }
+      .content_images {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+      }
+      .content_images img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .footer-button {
+        border: 1px solid #a4c99d;
+        background-color: #dbaaaa;
+        padding: 10px 20px;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .footer-button:hover {
+        background-color: #d6d43e;
+      }
+      @media screen and (max-width: 768px) {
+        .container {
+          grid-template-areas:
+            "header"
+            "main"
+            "aside"
+            "footer";
+        }
+        .aside {
+          grid-template-columns: 1fr;
+        }
+        .footer {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">Прикольные Вещи в Японии</header>
+      <main class="main">
+        <div class="article">
+          В Японии много удивительных вещей, которые привлекают людей со всего
+          мира. Во-первых, это традиционная культура, включающая чайные
+          церемонии, икэбану (искусство составления букетов) и гэйш. Во-вторых,
+          современные технологии и города, такие как Токио, известные своими
+          неоновыми огнями и роботами. Любители аниме и манги найдут здесь рай:
+          квартал Акихабара, фестивали и магазины, полные сувениров. Кулинария
+          тоже выделяется: суши, рамен, сакэ. Природа поражает своей красотой –
+          цветение сакуры, горячие источники онсэн, живописные горы и морские
+          пейзажи. Кроме того, Япония известна своими фестивалями, такими как
+          Ханами и Танабата, а также уникальной поп-культурой.
+        </div>
+        <div class="section">
+          <div>
+            В Японии автоматы повсюду, они предлагают всё - от горячего кофе до
+            зонтиков. Одинокий автомат стоит на уединенной улице в Киото, светя
+            в ночи. Он словно маяк для прохожих, предлагая не только напитки, но
+            и немного уюта в холодную зимнюю ночь.
+          </div>
+          <div>
+            В Токио, в квартале Акихабара, царство аниме, где каждый уголок
+            пестрит яркими цветами и огромными плакатами аниме-героев. Здесь
+            встречаются фанаты, обсуждают последние серии и собирают редкие
+            фигурки. Этот квартал – не просто место, а дом для сообщества, где
+            аниме оживает.
+          </div>
+        </div>
+        <div class="content_images">
+          <img
+            src="https://sun1-57.userapi.com/s/v1/if1/t0OzjjDwVRmXeRG7D49Mn7eQQhKUse82eDVclfgFVGhsgqxj1Jl29F5O6thwsn7ypKs2qAPL.jpg?size=200x200&quality=96&crop=1,236,718,718&ava=1"
+            alt="Картинка 1"
+          />
+          <img
+            src="https://sun9-41.userapi.com/s/v1/ig2/GyGc6htiVTlnVCGVFl3_Whk_3Yk6WkJJc59zKJkSnRc78BOX2KBmvv7mrhVqFWKxhtnAKyvZERKVrmQ2CMhWwm1a.jpg?size=200x200&quality=96&crop=107,0,488,488&ava=1"
+            alt="Картинка 2"
+          />
+          <img
+            src="https://rabota.ykt.ru/static/uploaded/2021-02-13/yf9niCBSZb.jpeg"
+            alt="Картинка 3"
+          />
+          <img
+            src="https://sun9-44.userapi.com/s/v1/if1/2lilmN5zVTwe4R9AcPsSqWkPvq-uKLV1i6PZ8vIpDvm59nrtNDWgPjNhIxBQxe-6qe4rlg.jpg?size=200x200&quality=96&crop=5,32,899,899&ava=1"
+            alt="Картинка 4"
+          />
+          <img
+            src="https://sun1-88.userapi.com/s/v1/ig2/7TS8Xf0VhLvkC4E5LI67mmoQalYbE-FxVDQwmZpmkEuQx4GH6-a7qYloC4y1UOw2k87wbJoNJnPzj4vj1hhzDbN1.jpg?size=200x200&quality=96&crop=0,0,1079,1079&ava=1"
+            alt="Картинка 5"
+          />
+          <img
+            src="https://sun6-21.userapi.com/s/v1/ig2/lwJozk1ADsoeI6aVddR59CkW1v07Zl0lXSoZ3xPmCUondFL4oWhjApD3SoAG_vLvQJFiEv64bGoAoLgyHuaEZcpP.jpg?size=200x200&quality=96&crop=0,0,320,320&ava=1"
+            alt="Картинка 6"
+          />
+          <img
+            src="https://sun4-11.userapi.com/s/v1/ig2/6DWeeg9O9fiVoFmjgPJBdZxB5xi_ZGjn1v79cELS6H6T4Br4Et_cZ74eWPhdOdzkclQB81VmxOwUPyn7y7gWxCR3.jpg?size=200x200&quality=95&crop=0,64,756,756&ava=1"
+            alt="Картинка 7"
+          />
+          <img
+            src="https://pp.userapi.com/c824502/v824502597/8ce0d/bdim0mt1VNo.jpg"
+            alt="Картинка 8"
+          />
+          <img
+            src="https://sun9-2.userapi.com/s/v1/ig2/6OmOvwfxAbZv8IcKhkHC7KwcbIa9TFs9bnbbEFo7AxnDg89fhWj322t_WYMfsLH9uSXaFo1u41ZGMdXmVA0XX18Z.jpg?size=200x200&quality=95&crop=2,0,1077,1077&ava=1"
+            alt="Картинка 9"
+          />
+        </div>
+        <div class="article">
+          В сердце Киото находится небольшая кондитерская, где мастер сладостей
+          каждое утро создает произведения искусства из анко, моти и сакуры. Его
+          изысканные вагаси, смесь традиции и инновации, напоминают о временах
+          императорского двора. Витрины магазина, полные этих сладостей,
+          привлекают прохожих своими яркими красками и изысканными формами,
+          будто приглашая их на мгновение остановиться и насладиться вкусом
+          старой Японии.
+        </div>
+      </main>
+      <aside class="aside">
+        <div class="aside-item">
+          <img
+            src="https://www.xaluan.com/images/news/Image/2010/09/20/1284960051.img.jpg"
+            alt="Боковая панель 1"
+          />
+          Знаете ли вы, что у гейш есть традиционный метод для улучшения
+          равновесия и грации? Они часто тренируются, ходя по деревянным
+          тапочкам, называемым "окобоки". Это подобно японской версии ходьбы по
+          горячим углям на подушках – приносит массу удовольствия и, конечно же,
+          помогает сохранить идеальное равновесие, что весьма полезно при
+          сложных танцах и общении с гостями.
+        </div>
+        <div class="aside-item">
+          <img
+            src="https://sun9-36.userapi.com/impg/nEcDRbw0D1lYpH25DU9PETt9sj8u9F3KC8SjwQ/VRgdXtaEAL0.jpg?size=200x200&quality=95&sign=63aec9c5781c3562388939f564f32f6e&c_uniq_tag=Lil8WLjNwGEI1GxkF8NU_-pBjmycxJKIH0mArUn5stc&type=album"
+            alt="Боковая панель 2"
+          />
+          Вы, возможно, знали, что слово "суши" буквально переводится как
+          "кислый рис". Но знали ли вы, что первоначально суши придумали, чтобы
+          служить как вид закуски и быстрое блюдо? Таким образом, когда вы
+          следуете за суши с удовольствием одним кусочком за другим, помните,
+          что это действительно было задумано как быстрая закуска, а не только
+          как основное блюдо!
+        </div>
+        <div class="aside-item">
+          <img
+            src="https://sun1-96.userapi.com/s/v1/ig2/-LHOT7QlVg2P6t0V7PVcOyt5oM2Fvb2iwOBc8g4Asn951ioRDQz8-LBkkwzoGpqU2L8Dvq6FBXjrsuILczg8_Hj5.jpg?size=200x0&quality=96&crop=214,2,850,850&ava=1"
+            alt="Боковая панель 3"
+          />
+          Японцы прославились своими инновациями в автомобильной индустрии, но
+          вы знали, что в 1970-х годах японские автомобильные производители даже
+          начали добавлять музыку в автомобильные клаксоны? Это был попытка
+          сделать сигналы на дороге более приятными для окружающих и снизить
+          уровень стресса в городской среде. Вполне возможно, что в будущем мы
+          услышим не только звук автомобильных клаксонов, но и мелодии,
+          напоминающие мелодии известных песен!
+        </div>
+        <div class="aside-item">
+          <img
+            src="https://sun9-4.userapi.com/s/v1/if1/8CQGQefV6pfaxaadYDQkJLBtJzsYQCOJT0zB5e-V9lSDxGdYLu7Mj7x8ecKW77lKQp4SVxod.jpg?size=200x200&quality=96&crop=48,48,384,384&ava=1"
+            alt="Боковая панель 4"
+          />
+          В Японии разработали робота по имени "Pepper", который обладает
+          способностью распознавать эмоции и взаимодействовать с людьми на
+          эмоциональном уровне. Но знаете ли вы, что когда-то один из Pepper'ов
+          был временно назначен в качестве женитьбы "жреца" на свадьбе? Это
+          действительно произошло! Pepper провел церемонию и даже официально
+          зарегистрировал брак. Похоже, будущее с роботами будет веселым и
+          немного странным одновременно!
+        </div>
+        <div class="aside-item">
+          <img
+            src="https://sun1-27.userapi.com/s/v1/ig2/GsPoqMe_xeFITiNdBH2eaUpF3anPfc1osZk6u21yra9GDhCLDCoZXufTvhnib85kH-mgahUa1gxSLxwOMNcwK90F.jpg?size=200x200&quality=95&crop=0,0,1080,1080&ava=1"
+            alt="Боковая панель 5"
+          />
+          Вы, вероятно, знаете, что гора Фудзи является самой высокой вершиной в
+          Японии, и она является символом страны. Но знали ли вы, что Фудзи
+          имеет своеобразный статус, связанный с туалетами? В 2003 году компания
+          "NTT West" установила беспроводные точки доступа Wi-Fi на вершине
+          горы, но поскольку сигнал не мог достичь всего маршрута до вершины,
+          вместо этого они установили Wi-Fi точку на высоте 3 776 метров. Таким
+          образом, вы можете быстро поделиться фотографиями с вершины Фудзи в
+          своих социальных сетях, несмотря на то, что находитесь в самом сердце
+          горы!
+        </div>
+        <div class="aside-item">
+          <img
+            src="https://sun1-57.userapi.com/s/v1/if1/zH6rqv-AGVrdmQVOU_6oKgHfKtlxZ3qkdJ5df0DBPpTv_IBTck-K5JkfuTA4ucksnCwWbrio.jpg?size=200x200&quality=96&crop=360,161,876,876&ava=1"
+            alt="Боковая панель 6"
+          />
+          В Японии существует некоторое количество дорог, которые не имеют
+          официальных названий или номеров. Они просто называются "Беспорядочные
+          дороги" (англ. "Unnamed Roads"). Эти дороги обычно небольшие, служат
+          для доступа к домам или полям, и их часто используют местные жители.
+          Вполне возможно, что вас заблудит не только навигационная система, но
+          и отсутствие официального названия дороги!
+        </div>
+        <div class="aside-item">
+          <img
+            src="https://i.pinimg.com/736x/31/14/27/31142780fa64027d7cb608335831a807.jpg"
+            alt="Боковая панель 7"
+          />
+          В японских садах вы можете найти множество красивых и уникальных
+          элементов, включая камни, водные элементы и растения. Однако, одним из
+          самых любопытных аспектов является использование техники "ниваки"
+          (названной так в честь знаменитого садовода Теики Ниваки), которая
+          позволяет создавать иллюзию глубины и пространства даже на небольших
+          участках. Это достигается с помощью правильного размещения растений и
+          элементов, создающих ощущение глубины и перспективы. Так что прогулка
+          по японскому саду может быть не только приятным визуальным опытом, но
+          и настоящим погружением в мир иллюзий!
+        </div>
+        <div class="aside-item">
+          <img
+            src="https://sun1.userapi.com/sun1-19/s/v1/ig2/Ui8UH_JKd4gO8WrtWXvm0-ZX--UaLAhcVmSDcB7Ts11xQA2q3VOd3DViooUxbRRTUY3AzFqIT9EFXLLn0ZFlVan1.jpg?size=200x200&quality=96&crop=1,2,649,649&ava=1"
+            alt="Боковая панель 8"
+          />
+          Главный замок Осаки (Осака-дзё) — это одна из самых известных и
+          посещаемых достопримечательностей в Осаке, Япония. Он служил
+          резиденцией могущественных сёгунов Тояотоми и Токугава в период
+          Сэнгоку и Эдо соответственно. Вот забавный факт: в 17 веке главный
+          замок Осаки был даже использован для проведения оперы! В те времена
+          Осака была важным культурным центром, и оперные спектакли были весьма
+          популярны среди местного населения. Таким образом, даже величественные
+          замки могли стать сценой для искусства и развлечений.
+        </div>
+      </aside>
+      <footer class="footer">
+        <button class="footer-button">ТУРЫ</button>
+        <button class="footer-button">ГОРОДА</button>
+        <button class="footer-button">СЛАДОСТИ</button>
+        <button class="footer-button">ТРАДИЦИИ</button>
+      </footer>
+    </div>
+  </body>
+</html>
