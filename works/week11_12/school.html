@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Образовательный клуб</title>
+  <link rel="stylesheet" href="./assets/styles/normalize.css" />
+  <link rel="stylesheet" href="./assets/styles/school_styles.css" />
+  <!-- Добавьте ссылку на Google Fonts для Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-container" style="background-image: url('./assets/pictures/headerbackground.png'); background-size: cover; background-repeat: no-repeat; padding-bottom: 0px;">
+  <div class="site-container">
+    <div class="background-container">
+      <div class="header">
+        <div class="logo-container">
+          <img src="./assets/pictures/Logo.png" alt="Логотип" />
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+      </button>
+      <div class="header-contacts">
+          <div class="contact-icons">
+              <div class="icon-links">
+                  <a href="#"><img src="./assets/pictures/telegram.png" alt="Telegram" /></a>
+                  <a href="#"><img src="./assets/pictures/vk.png" alt="VK" /></a>
+                  <a href="#"><img src="./assets/pictures/whatsup.png" alt="WhatsApp" /></a>
+              </div>
+              <a href="tel:+79992558055" class="no-underline"><b>+7 (999) 255-80-55</b></a>
+          </div>
+      </div>
+      <div class="navigation" id="navigation">
+          <a href="#"><b>Направления<br>и стоимость</b></a>
+          <a href="#"><b>Педагоги</b></a>
+          <a href="#"><b>Акции</b></a>
+          <a href="#"><b>Контакты</b></a>
+      </div>
+  </div>
+      <div class="container">
+        <div class="text-section">
+          <h1>
+          Детский образовательный клуб<br>в Калининграде 
+          </h1>
+          <h2><em>напротив лицея №35</em><h2>
+          <p>С нами у детей возвращается<br>интерес к учебе и повышается<dr> самооценка.</p>
+          <p1>А еще мы бережем нервы<br>родителей и избавляем от<br>домашних заданий.</p1>
+        </div>
+        <div class="image-section">
+          <img src="./assets/pictures/kids2.jpg" alt="Дети в классе" />
+        </div>
+          </div>
+      <div class="button-container">
+        <a href="#" class="free-lesson-button">БЕСПЛАТНОЕ ПЕРВОЕ ЗАНЯТИЕ</a>
+      </div>
+           
+     <!-- Весь остальной контент -->
+    
+
+  <div class="footer">
+        <div><b>Калининград<br>улица Генерала Буткова 20к1</b></div>
+        <div class="contact-icons">
+          <div class="icon-links">
+            <a href="#">
+              <img src="./assets/pictures/telegram.png" alt="Telegram" />
+            </a>
+            <a href="#">
+              <img src="./assets/pictures/vk.png" alt="VK" />
+            </a>
+            <a href="#">
+              <img src="./assets/pictures/whatsup.png" alt="WhatsApp" />
+            </a>
+          </div>
+          <a href="tel:+79992558055"><b><u>7 (999) 255-80-55</u></b></a>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('hamburger').addEventListener('click', function() {
+          this.classList.toggle('active');
+          document.getElementById('navigation').classList.toggle('active');
+        });
+      });
+    </script>
+  </body>
+</html>

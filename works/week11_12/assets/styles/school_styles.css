@@ -1,0 +1,388 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #EDF2F0;
+}
+
+.site-container {
+ min-height: 100%; /* Минимальная высота равна 100% */
+  display: flex;
+ flex-direction: column; /* Колонный флекс */
+ justify-content: space-between; /* Распределение пространства */
+ }
+
+.background-container {
+  background-image: url("./assets/pictures/headerbackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 0px; /* Добавил отступ снизу */
+}
+.header {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+}
+.logo-container img {
+  display: flex;
+  width: 230px;
+}
+.navigation {
+  display: flex;
+  margin: 25px 25px;
+  text-decoration: none;
+}
+.navigation a {
+  display: flex;
+  text-decoration: none;
+  color: #1576bd;
+  margin-right: 10px;
+  font-size: 25px;
+  padding: 20px;
+}
+
+.no-underline, .no-underline:hover, .no-underline:visited {
+ text-decoration: none;
+ display: flex;
+ font-size: 24px;
+ color: #1576bd;
+ white-space: nowrap;
+ }
+
+.contact-icons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+.icon-links {
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+  
+}
+.icon-links img {
+  width: 27px;
+  height: 27px;
+  margin-right: 20px;
+}
+
+.container {
+  padding-top: 20px;
+  display: flex;
+  background-color: transparent;
+  font-size: 30px;
+  padding: 0 10px; /* Верх и низ без отступов, слева и справа 20px */
+}
+.text-section {
+  width: 50%; /* Задаем ширину текстового блока */
+  padding: 40px;
+  color: #1572c2;
+}
+.text-section h1 {
+  font-size: 30px; /* Увеличенный размер для заголовка */
+  text-transform: uppercase; /* Преобразование текста в верхний регистр */
+}
+.text-section h2 {
+  font-size: 20px; /* Увеличенный размер для заголовка */
+  text-transform: uppercase; /* Преобразование текста в верхний регистр */
+} 
+
+.text-section p {
+  padding: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.text-section p1 {
+  padding: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.text-section p, .text-section p1 {
+  padding-bottom: 20px;
+  font-size: larger;
+}
+
+.image-section {
+  width: 80%; /* Задаем ширину блока с изображением */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px; /* Отодвигаем изображение вниз*/
+  margin-right: 100px;
+}
+.image-section img {
+  max-width: 60%; /* Уменьшаем изображение, чтобы оно не выходило за пределы своего блока */
+  height: auto;
+  border-radius: 10px; /* Добавление закругленных углов */
+}
+.button-container {
+  text-align: center; /* Выравниваем кнопку по центру */
+  padding: 20px; /* Добавляем отступ сверху и снизу для кнопки */
+}
+.free-lesson-button {
+  background-color: #fbdd29;
+  color: #1576bd;
+  text-decoration: none;
+  padding: 20px 40px;
+  border-radius: 40px;
+  display: inline-block; /* Для центрирования кнопки */
+  font-size: 30px;
+}
+.footer {
+  background-color: #1572c2;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .icon-links {
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+}
+.footer .icon-links img {
+  width: 28px;
+  height: 28px;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger menu button */
+.hamburger {
+  display: none; /* Hidden by default, will be displayed in a media query below */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburger span {
+  display: none;
+  width: 100%;
+  height: 4px;
+  background-color: #1576bd;
+  border-radius: 2px;
+  transition: all 0.3s linear;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+/* Media Queries for Responsive Adjustments */
+@media (max-width: 344px) {
+  .hamburger {
+    display: flex; /* Show the hamburger menu */
+  }
+
+  .navigation {
+    display: none; /* Hidden by default, will show when hamburger is active */
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  .navigation.active {
+    display: flex;
+  }
+
+  .contact-icons {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px; /* Space from navigation */
+  }
+
+  .contact-icons .icon-links {
+    justify-content: center;
+  }
+}
+/* Header and navigation styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 20px;
+  position: relative;
+}
+
+.logo-container img {
+  width: 150px; /* Adjust based on your design needs */
+}
+
+.navigation {
+  display: none; /* Hidden by default */
+  position: absolute;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  top: 100%;
+  width: 100%; /* Full width to cover the area under the header */
+  left: 0;
+}
+
+.navigation.active {
+  display: flex;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #1576bd;
+  border-radius: 2px;
+  transition: all 0.3s linear;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+.hamburger.active .contact-icons .icon-links  span:nth-child(4){
+  transform: translateY(-11px) rotate(-45deg);
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .header, .footer {
+      flex-direction: column;
+  }
+
+  .header-contacts, .contact-icons, .footer .icon-links {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .button-container, .free-lesson-button {
+      font-size: 20px;
+      padding: 10px 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .logo-container img {
+      width: 120px; /* Smaller logo for mobile */
+  }
+
+  .navigation a, .no-underline {
+      font-size: 16px; /* Smaller text for mobile */
+  }
+}
+
+/* Media queries for responsiveness */
+/* For screens wider than 1440px */
+@media (min-width: 1441px) {
+  .container, .text-section, .image-section img {
+    padding: 0 20px;
+  }
+
+  .text-section h1, .text-section h2 {
+    font-size: 30px;
+  }
+}
+
+/* For screens up to 1440px */
+@media (max-width: 1440px) {
+  .logo-container img {
+    width: 200px;
+  }
+
+  .navigation a, .no-underline {
+    font-size: 20px;
+  }
+
+  .text-section, .image-section {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/* For screens up to 1024px */
+@media (max-width: 1024px) {
+  .header, .footer {
+    flex-direction: column;
+  }
+
+  .navigation, .contact-icons, .footer .icon-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-container, .free-lesson-button {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+}
+
+/* For mobile screens (up to 520px) */
+@media (max-width: 520px) {
+  .header {
+    padding: 20px 10px;
+  }
+
+  .logo-container img {
+    width: 150px;
+  }
+
+  .navigation a, .no-underline {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .text-section, .image-section {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .text-section h1, .text-section h2 {
+    font-size: 20px;
+  }
+}
