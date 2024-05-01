@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Японские сладости</title>
+    <link rel="icon" href="./assets/pictures/sign.png" type="image/png" />
+    <link rel="stylesheet" href="./assets/styles/normalize.css" />
+    <link rel="stylesheet" href="./assets/styles/style_figma.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <style>
+      .sweets-item img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .logo-container img {
+        width: auto;
+        max-height: 100px;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header,
+      footer {
+        background-color: #f0f0f0;
+        padding: 20px;
+      }
+
+      main {
+        flex-grow: 1;
+      }
+
+      .main-content,
+      .container,
+      .navigation {
+        flex-grow: 1;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+      }
+
+      .footer {
+        background-color: transparent;
+        color: #000;
+        font-weight: bold;
+        text-align: left;
+        padding-left: 15px;
+        position: relative; /* Футер остается под контентом */
+        margin-top: auto; /* Располагает футер внизу страницы */
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header bg-transparent">
+      <nav class="navigation d-flex justify-content-between">
+        <div class="logo-container">
+          <img src="./assets/pictures/button-cart-2.png" alt="Корзина" />
+        </div>
+        <a href="./cart.html" class="cart-link">
+          <img
+            src="./assets/pictures/sign.png"
+            alt="Логотип"
+            class="img-fluid"
+          />
+        </a>
+      </nav>
+    </header>
+    <main class="main-content mt-3 flex-grow-1">
+      <div class="container">
+        <h2 class="text-center mb-4">Вкусняшки</h2>
+        <div class="row">
+          <div class="col-md-4 sweets-item">
+            <img
+              src="./assets/pictures/5e97175a5dc8f09332915eed0aa8f4e7.jpg"
+              alt="Митараши Данго"
+              class="img-fluid"
+            />
+            <h3>Митараши Данго</h3>
+            <p>
+              Это не просто сладость, это целый праздник вкуса, где нежные
+              рисовые шарики великолепно сочетаются с карамельно-сладким соусом.
+            </p>
+          </div>
+          <div class="col-md-4 sweets-item">
+            <img
+              src="./assets/pictures/9b87d564f2d9048fe9d0d7c60c407825.jpg"
+              alt="Дайфуку Мочи"
+              class="img-fluid"
+            />
+            <h3>Дайфуку Мочи</h3>
+            <p>
+              Это нежное угощение из Японии, где воздушное рисовое тесто таит в
+              себе сердцевину из сладкой анко-пасты.
+            </p>
+          </div>
+          <div class="col-md-4 sweets-item">
+            <img
+              src="./assets/pictures/3b2227198aba48f9e68d3ea7ca92e27d.jpg"
+              alt="Тайяки"
+              class="img-fluid"
+            />
+            <h3>Тайяки</h3>
+            <p>
+              Японский десерт, который покоряет сердца своим волшебным
+              сочетанием хрустящей вафли в форме рыбки и сладкой начинки.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="container">
+      <!-- Обеспечивает отступы и центрирование содержимого -->
+      <div class="row h-100">
+        <!-- h-100 устанавливает высоту всех колонок равной самой высокой в ряду -->
+        <div class="col-md-4 d-flex flex-column">
+          <!-- d-flex и flex-column позволяют управлять содержимым колонки как flex-контейнером -->
+          <section class="about-section p-3 flex-grow-1">
+            <!-- flex-grow-1 заставляет блок растягиваться на всю доступную высоту -->
+            <h2>Сотни сладостей</h2>
+            <p>
+              Уже сейчас вам доступно более сотни сладостей: от леденцов до
+              шоколадок. Скоро их станет еще больше.
+            </p>
+          </section>
+        </div>
+        <div class="col-md-4 d-flex flex-column">
+          <section class="about-section p-3 flex-grow-1">
+            <h2>Почти даром</h2>
+            <p>
+              По сравнению с другими поставщиками наши сладости стоят гораздо
+              меньше. И вы существенно экономите по деньгам, но не по вкусу,
+              наслаждайтесь.
+            </p>
+          </section>
+        </div>
+        <div class="col-md-4 d-flex flex-column">
+          <section class="newsletter bg-warning p-3 flex-grow-1">
+            <h2 class="text-center">Новости</h2>
+            <form class="form-inline justify-content-center">
+              <input
+                type="email"
+                class="form-control mr-2"
+                placeholder="Введите вашу эл. почту"
+              />
+              <!-- Кнопка с изображением -->
+              <button type="submit" class="btn">
+                <img src="./assets/pictures/button.png" alt="subscribe" />
+              </button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container text-left">
+        <nav>
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a href="./sweets.html" class="text-dark">Вкусняшки</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="./stores.html" class="text-dark">Где купить</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="./delivery.html" class="text-dark">Доставка</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="./help.html" class="text-dark">Помощь</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

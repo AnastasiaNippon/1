@@ -1,0 +1,173 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('./fonts/Montserrat-Regular.ttf');
+}
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('./fonts/Montserrat-Bold.ttf');
+}
+
+html {
+  height: 100%;
+  font-family: 'Montserrat-Regular', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat-Regular', sans-serif;
+    background-image: url('./assets/pictures/1645080401_18-klublady-ru-p-motti-yaponskaya-sladost-foto-18.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Фон останется фиксированным при прокрутке */
+    margin-bottom: 0; /* Убираем пространство под содержимым */
+}
+
+
+.header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+.logo-container img {
+    width: 150px; /* Ширина 80 пикселей */
+    height: 150px; /* Высота 80 пикселей */
+  }
+  
+.navigation1 {
+    margin-left: auto;
+  }
+
+.logo-container, .navigation1{
+    order: 1;
+}
+
+.navigation2 {
+    display: flex;
+    order: 2;
+    margin-left: 40px;
+}
+.navigation1 img {
+    width: 150px; /* Ширина 50 пикселей */
+    height: 60px; /* Высота 50 пикселей */
+  }
+  
+.navigation2 .col-2 img {
+    width: 150px; /* Ширина 100 пикселей */
+    height: 50px; /* Высота 40 пикселей */
+  }
+
+  .main-content {
+    padding: 20px;
+    color: #4e4e4e;
+  }
+  
+  .study-club-title {
+    margin-top: -80px; /* Пример отрицательного значения */
+    margin-bottom: 0px;
+    font-family: 'Montserrat-Bold';
+    font-size: 40px;
+    display: block;
+    width: 200px;
+    height: 250px;
+    text-align: right;
+  }
+  
+
+  .left-align {
+    position: fixed; /* Фиксированное позиционирование */
+    top: 50%; /* Расположение от верхнего края */
+    left: 10px; /* Расположение от левого края */
+    transform: translateY(-50%); /* Центрирование по вертикали */
+    padding-top: 120px;
+    font-size: 20px;
+}
+
+.custom-span {
+    margin-top: -50px; /* Пример отрицательного значения */
+    position: fixed; /* Фиксированная позиция */
+    top: 20px; /* Отступ сверху */
+    left: 20px; /* Отступ слева */
+    width: 250px; /* Ширина элемента */
+    height: 200px; /* Высота элемента */
+    overflow-y: auto; /* Добавление вертикальной прокрутки, если текст не помещается в заданный размер */
+    padding: 20px; /* Отступы внутри элемента */
+  }
+  
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* изменено на center */
+    align-items: flex-end; /* изменено на flex-end */
+    padding: 20px;
+    color: #000000; /* черный цвет текста */
+  }
+  
+  .main-content h1 {
+    font-family: 'Montserrat-Bold';
+    font-size: 48px;
+    color: #000000;
+  }
+  
+  .main-content p {
+    font-family: 'Montserrat-Regular';
+    font-size: 20px;
+    color: #000000;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    align-items: center; /* Вертикальное выравнивание по центру */
+    font-size: 30px;
+    background-image: url('./assets/pictures/1645080401_18-klublady-ru-p-motti-yaponskaya-sladost-foto-18.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.footer ul {
+    list-style: none;
+    display: flex; /* Добавлено для flex-раскладки */
+}
+
+.footer li {
+    margin: 0 15px; /* Пространство между элементами */
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .color1 {
+    color: rgba(102, 20, 20, 0.688);
+  }
+  
+  .footer .color2 {
+    color: rgb(208, 255, 0);
+  }
+  
+  .footer .color3 {
+    color: rgb(21, 255, 0);
+  }
+  
+  .footer .color4 {
+    color: rgb(255, 0, 174);
+  }
+  

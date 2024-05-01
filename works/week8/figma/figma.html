@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Японские сладости</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/pictures/sign.png"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="./assets/styles/normalize.css" />
+    <link rel="stylesheet" href="./assets/styles/style_figma.css" />
+  </head>
+  <body
+    style="
+      margin: 0;
+      font-family: 'Montserrat-Regular', sans-serif;
+      background-image: url('./assets/pictures/1645080401_18-klublady-ru-p-motti-yaponskaya-sladost-foto-18.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    "
+  >
+    <div class="background-container">
+      <div class="header">
+        <div class="logo-container">
+          <img src="./assets/pictures/sign.png" alt="Логотип" />
+        </div>
+        <div class="navigation1" id="navigation1">
+          <a href="Корзина"
+            ><img src="./assets/pictures/button-cart-2.png" alt="Корзина"
+          /></a>
+        </div>
+      </div>
+      <div class="navigation2" id="navigation2">
+        <div class="row">
+          <div class="col-2">
+            <a href="./week8/figma/page2.html" class="no-underline"
+              ><img src="./assets/pictures/button-buy.png" alt="Купить"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="study-club-title">Мы собрали все самое лучшее для Вас.</div>
+        <div class="left-align">
+          <span class="custom-span">
+            Мы отобрали все самые лучшие сладости со всех уголков Японии, чтобы
+            вы могли попробовать все уникальные вкусы и провести время с
+            удовольствием.
+          </span>
+        </div>
+      </div>
+      <div class="footer">
+        <ul>
+          <li>
+            <a href="./week8/figma/page2.html" class="color1">Вкусняшки</a>
+          </li>
+          <li><a href="#" class="color2">Где купить</a></li>
+          <li><a href="#" class="color3">Доставка</a></li>
+          <li><a href="#" class="color4">Помощь</a></li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      const footerWords = document.querySelectorAll(".footer span");
+
+      const colors = ["rgb(10, 10, 165)", "red", "green", "rgb(139, 0, 255)"]; // Массив цветов
+
+      footerWords.forEach((word, index) => {
+        word.style.color = colors[index]; // Применение цвета из массива к каждому слову
+      });
+    </script>
+  </body>
+</html>
