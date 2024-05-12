@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./week9/normalize.css" />
+    <title>Путешествие из Пскова в Москву</title>
+    <style>
+      .container {
+        margin: 50px auto;
+        padding: 20px;
+        width: 90%;
+        max-width: 600px;
+        border: 2px solid #333;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9;
+      }
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+      p,
+      label {
+        font-size: 16px;
+        color: #666;
+        text-align: center;
+        margin-top: 5px;
+      }
+      input,
+      button {
+        margin: 10px auto;
+        display: block;
+        padding: 10px;
+        width: 90%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Навигатор для туриста</h1>
+      <label for="fromCity">Город отправления:</label>
+      <input
+        type="text"
+        id="fromCity"
+        placeholder="Введите город отправления"
+        value="Псков"
+      />
+
+      <label for="toCity">Город прибытия:</label>
+      <input
+        type="text"
+        id="toCity"
+        placeholder="Введите город прибытия"
+        value="Москва"
+      />
+
+      <button onclick="startTrip()">Рассчитать время поездки</button>
+      <p id="message">Введите города и нажмите кнопку для начала поездки.</p>
+      <p id="farewellMessage" style="display: none">Хорошего пути!</p>
+    </div>
+    <script>
+      let time;
+
+      function updateMessage(message) {
+        document.getElementById("message").textContent = message;
+      }
+
+      function calculateTravelTime(fromCity, toCity) {
+        if (fromCity === "Псков" && toCity === "Москва") {
+          return 540; // Предполагаемое время поездки в минутах
+        } else {
+          return 120; // Стандартное время для других маршрутов
+        }
+      }
+
+      function showFarewellMessage() {
+        const farewellElement = document.getElementById("farewellMessage");
+        farewellElement.style.display = "block";
+        farewellElement.textContent = "Хорошего пути!";
+      }
+
+      function showArrivalMessage(toCity) {
+        const farewellElement = document.getElementById("farewellMessage");
+        farewellElement.textContent = `Наслаждайтесь ${toCity}, всего хорошего!`; // Новое сообщение при прибытии
+        farewellElement.style.display = "block";
+      }
+
+      function startTrip() {
+        const fromCity = document.getElementById("fromCity").value;
+        const toCity = document.getElementById("toCity").value;
+
+        if (!fromCity || !toCity) {
+          updateMessage("Пожалуйста, введите оба города.");
+          return;
+        }
+
+        const totalTravelTime = calculateTravelTime(fromCity, toCity);
+        time = totalTravelTime;
+
+        updateMessage(
+          `Старт поездки из ${fromCity} в ${toCity}. Предполагаемое время в пути: ${time} минут.`
+        );
+        showFarewellMessage();
+
+        let interval = setInterval(() => {
+          time -= 10;
+          if (time > 0) {
+            updateMessage(`Поездка продолжается. Осталось минут: ${time}`);
+          } else {
+            clearInterval(interval);
+            updateMessage(`Вы приехали. Добро пожаловать в ${toCity}.`);
+            showArrivalMessage(toCity);
+          }
+        }, 1000); // Обновление каждую секунду для имитации процесса
+      }
+    </script>
+  </body>
+</html>
