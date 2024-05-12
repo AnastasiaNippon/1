@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./week9/normalize.css" />
     <title>Путешествие из Пскова в Москву</title>
     <style>
       .container {
@@ -16,103 +15,77 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         background-color: #f9f9f9;
       }
-      h1 {
-        color: #333;
-        text-align: center;
-      }
+      h1,
       p,
-      label {
-        font-size: 16px;
-        color: #666;
+      label,
+      input,
+      button {
         text-align: center;
-        margin-top: 5px;
       }
       input,
       button {
+        width: 80%;
+        padding: 10px;
         margin: 10px auto;
         display: block;
-        padding: 10px;
-        width: 90%;
+      }
+      .input-group {
+        margin-bottom: 20px;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <h1>Навигатор для туриста</h1>
-      <label for="fromCity">Город отправления:</label>
-      <input
-        type="text"
-        id="fromCity"
-        placeholder="Введите город отправления"
-        value="Псков"
-      />
-
-      <label for="toCity">Город прибытия:</label>
-      <input
-        type="text"
-        id="toCity"
-        placeholder="Введите город прибытия"
-        value="Москва"
-      />
-
-      <button onclick="startTrip()">Рассчитать время поездки</button>
+      <div class="input-group">
+        <label for="fromCity">Город отправления:</label>
+        <input
+          type="text"
+          id="fromCity"
+          placeholder="Введите город отправления"
+          value="Псков"
+        />
+      </div>
+      <div class="input-group">
+        <label for="toCity">Город прибытия:</label>
+        <input
+          type="text"
+          id="toCity"
+          placeholder="Введите город прибытия"
+          value="Москва"
+        />
+      </div>
+      <button onclick="startTrip()">Начать поездку</button>
+      <p id="log"></p>
       <p id="message">Введите города и нажмите кнопку для начала поездки.</p>
       <p id="farewellMessage" style="display: none">Хорошего пути!</p>
     </div>
     <script>
       let time;
 
-      function updateMessage(message) {
-        document.getElementById("message").textContent = message;
-      }
-
-      function calculateTravelTime(fromCity, toCity) {
-        if (fromCity === "Псков" && toCity === "Москва") {
-          return 540; // Предполагаемое время поездки в минутах
-        } else {
-          return 120; // Стандартное время для других маршрутов
-        }
-      }
-
-      function showFarewellMessage() {
-        const farewellElement = document.getElementById("farewellMessage");
-        farewellElement.style.display = "block";
-        farewellElement.textContent = "Хорошего пути!";
-      }
-
-      function showArrivalMessage(toCity) {
-        const farewellElement = document.getElementById("farewellMessage");
-        farewellElement.textContent = `Наслаждайтесь ${toCity}, всего хорошего!`; // Новое сообщение при прибытии
-        farewellElement.style.display = "block";
-      }
+      console.log(time); // Проверяем, что начальное значение time не определено
 
       function startTrip() {
-        const fromCity = document.getElementById("fromCity").value;
-        const toCity = document.getElementById("toCity").value;
+        console.log(time); // Должно выводить undefined, так как переменная еще не определена
+        time = 34; // Инициализируем время поездки
+        console.log(`Старт поездки. Осталось минут: ${time}`); // Выводим начальное время поездки
 
-        if (!fromCity || !toCity) {
-          updateMessage("Пожалуйста, введите оба города.");
-          return;
-        }
+        setTimeout(() => {
+          time -= 15; // Уменьшаем время поездки на 15 минут
+          console.log(`Немного сторис в соцсетях. Осталось минут: ${time}`);
 
-        const totalTravelTime = calculateTravelTime(fromCity, toCity);
-        time = totalTravelTime;
+          setTimeout(() => {
+            time -= 10; // Уменьшаем время на следующие 10 минут
+            console.log(
+              `Немного не новостей, но событий. Осталось минут: ${time}`
+            );
 
-        updateMessage(
-          `Старт поездки из ${fromCity} в ${toCity}. Предполагаемое время в пути: ${time} минут.`
-        );
-        showFarewellMessage();
-
-        let interval = setInterval(() => {
-          time -= 10;
-          if (time > 0) {
-            updateMessage(`Поездка продолжается. Осталось минут: ${time}`);
-          } else {
-            clearInterval(interval);
-            updateMessage(`Вы приехали. Добро пожаловать в ${toCity}.`);
-            showArrivalMessage(toCity);
-          }
-        }, 1000); // Обновление каждую секунду для имитации процесса
+            setTimeout(() => {
+              time = 0; // Завершаем поездку, устанавливаем время в 0
+              console.log("Вы приехали. Добро пожаловать в Москву.");
+            }, 1000); // Задержка для имитации последней части поездки
+          }, 1000); // Задержка для имитации продолжения поездки
+        }, 1000); // Задержка для имитации начала поездки
       }
     </script>
   </body>
