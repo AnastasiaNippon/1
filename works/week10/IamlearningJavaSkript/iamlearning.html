@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Галерея</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+      #gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #d3d3d3;
+        padding: 20px;
+        border: 2px solid #ccc;
+      }
+      img {
+        width: 450px;
+        height: 450px;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+      button {
+        background-color: #ffcccb;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gallery">
+      <img
+        id="image"
+        src="https://natalyland.ru/wp-content/uploads/a/7/0/a707096eda6ac830dc0fcca8af981e78.jpeg"
+        alt="Галерея"
+      />
+      <div>
+        <button id="prev">Назад</button>
+        <button id="next">Вперед</button>
+      </div>
+    </div>
+    <script src="./learning.js"></script>
+  </body>
+</html>

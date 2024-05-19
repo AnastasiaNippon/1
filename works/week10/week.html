@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Рассчет стоимости покупки</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .image-wrapper {
+        width: 400px;
+        height: 460px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      img {
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+      }
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+      #totalPrice {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
+    <script>
+      function calculateTotalPrice(quantity = 2, price = 15000000) {
+        const totalPrice = quantity * price;
+        const formattedPrice = totalPrice.toLocaleString("ru-RU", {
+          style: "currency",
+          currency: "RUB",
+        });
+        document.getElementById(
+          "totalPrice"
+        ).textContent = `Стоимость покупки: ${formattedPrice}`;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-wrapper">
+        <img
+          src="https://img.razrisyika.ru/kart/58/1200/231769-van-gog-1.jpg"
+          alt="Ван Гог - Звездная Ночь"
+        />
+        <p>Ван Гог - Звездная Ночь</p>
+      </div>
+      <div class="image-wrapper">
+        <img
+          src="https://kalix.club/uploads/posts/2022-12/1671601898_kalix-club-p-van-gog-oboi-na-telefon-pinterest-54.jpg"
+          alt="Ван Гог - Цветущий Миндаль"
+        />
+        <p>Ван Гог - Цветущий Миндаль</p>
+      </div>
+    </div>
+    <button onclick="calculateTotalPrice()">Рассчитать стоимость</button>
+    <div id="totalPrice"></div>
+  </body>
+</html>
