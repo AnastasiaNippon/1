@@ -1,0 +1,78 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #ffffff;
+    position: relative;
+}
+
+h1 {
+    color: #333;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+#new-task {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#add-task {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#task-list {
+    list-style: decimal inside;
+    padding: 0;
+    width: 300px;
+}
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#task-list li.completed label {
+    text-decoration: line-through;
+    color: gray;
+}
+
+#task-list input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#task-list input[type="checkbox"]:checked + label::before {
+    content: '✔';
+    color: green;
+}
+
+.corner-image {
+    position: absolute;
+    width: 250px; /* Размер можно изменить */
+    height: 250px; /* Размер можно изменить */
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+}

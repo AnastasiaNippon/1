@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>JS 2.0. Практикум.</title>
+		<link rel="stylesheet" href="assets/style.css" />
+		<link rel="stylesheet" href="assets/skeleton.css" />
+		<link rel="stylesheet" href="assets/normalize.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<h2><a>Практикум</a></h2>
+			<h1>Неделя 11. Знакомство с DOM</h1>
+
+			<section>
+				<h4>Пример</h4>
+				<p>
+					Используйте метод querySelector, чтобы найти элемент &lt;p&gt;. При нажатии на кнопку
+					измените его текст на "Ты нашёл элемент и изменил его текст!"
+				</p>
+				<p class="hint">
+					Подсказка: Используйте метод для изменения текстового содержимого элемента
+				</p>
+				<button class="button-primary b-0">Задание 1</button>
+				<p id="practicum0" class="pr">Текст</p>
+			</section>
+
+			<section>
+				<h4>Задание 1</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;p&gt;. При нажатии на кнопку
+					измените его текст на "Привет!"
+				</p>
+				<p class="hint">
+					Подсказка: Используйте метод для изменения текстового содержимого элемента
+				</p>
+				<button class="button-primary b-1">Задание 1</button>
+				<p id="practicum"></p>
+			</section>
+
+			<section>
+				<h4>Задание 2</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;span&gt;. При нажатии на кнопку
+					измените его текст на "Привет, Мир!"
+				</p>
+				<p class="hint">
+					Подсказка: Используйте метод для изменения текстового содержимого элемента
+				</p>
+				<button class="button-primary b-2">Задание 2</button>
+				<div class="pr"><span id="practicum2"></span></div>
+			</section>
+
+			<section>
+				<h4>Задание 3</h4>
+				<p>
+					Используйте метод querySelector, чтобы найти элемент &lt;h1&gt;. При нажатии на кнопку
+					измените его текст на "Заголовок изменен!"
+				</p>
+				<p class="hint">
+					Подсказка: Используйте метод для изменения текстового содержимого элемента
+				</p>
+				<button class="button-primary b-3">Задание 3</button>
+				<h1 id="practicum3">Старый заголовок</h1>
+			</section>
+
+			<section>
+				<h4>Задание 4</h4>
+				<p>
+					Используйте метод querySelector, чтобы найти элемент &lt;div&gt;. При нажатии на кнопку
+					измените его фоновый цвет на красный.
+				</p>
+				<p class="hint">Подсказка: Используйте свойство style для изменения стилей элемента</p>
+				<button class="button-primary b-4">Задание 4</button>
+				<div id="practicum4" style="width: 200px; height: 100px; background-color: yellow"></div>
+			</section>
+
+			<section>
+				<h4>Задание 5</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;input /&gt;. При нажатии на
+					кнопку измените его значение на "Новое значение".
+				</p>
+				<p class="hint">
+					Подсказка: Используйте свойство value для изменения значения элемента формы
+				</p>
+				<button class="button-primary b-5">Задание 5</button>
+				<div class="pr"><input type="text" id="practicum5" value="Старое значение" /></div>
+			</section>
+
+			<section>
+				<h4>Задание 6</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;img /&gt;. При нажатии на кнопку
+					измените его атрибут src на "newimage.jpg", а атрибут alt на "Новое изображение".
+				</p>
+				<p class="hint">Подсказка: Используйте знак равенства для изменения атрибутов элемента</p>
+				<button class="button-primary b-6">Задание 6</button>
+				<div class="pr"><img id="practicum6" src="oldimage.jpg" alt="Старое изображение" /></div>
+			</section>
+
+			<section>
+				<h4>Задание 7</h4>
+				<p>
+					Используйте метод querySelector, чтобы найти элемент &lt;a&gt;. При нажатии на кнопку
+					измените его href на "https://www.google.com", а название ссылки на "Ссылка на Google".
+				</p>
+				<p class="hint">Подсказка: Используйте знак равенства для изменения атрибутов элемента</p>
+				<button class="button-primary b-7">Задание 7</button>
+				<div class="pr"><a id="practicum7" href="https://itgirlschool.com/">Старая ссылка</a></div>
+			</section>
+
+			<section>
+				<h4>Задание 8</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;ul&gt;. При нажатии на кнопку
+					добавьте новый элемент &lt;li&gt;&lt;/li&gt; со значением "Новый элемент" в список.
+				</p>
+				<p class="hint">
+					Подсказка: Используйте метод createElement(), который используется для динамического
+					изменения и взаимодействия с элементами веб-страницы, и метод append(item), который
+					добавляет элемент в конец списка. Новый элемент становится последним элементом списка.
+				</p>
+				<button class="button-primary b-8">Задание 8</button>
+				<div class="pr">
+					<ul id="practicum8">
+						<li>Элемент 1</li>
+						<li>Элемент 2</li>
+						<li>Элемент 3</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h4>Задание 9</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;select&gt;. При нажатии на
+					кнопку добавьте новый элемент &lt;option&gt; со значением "Новый вариант" в список.
+				</p>
+				<p class="hint">
+					Подсказка: Используйте метод createElement(), который используется для динамического
+					изменения и взаимодействия с элементами веб-страницы, и метод append(item), который
+					добавляет элемент в конец списка. Новый элемент становится последним элементом списка.
+				</p>
+				<button class="button-primary b-9">Задание 9</button>
+				<div class="pr">
+					<select id="practicum9">
+						<option>Вариант 1</option>
+						<option>Вариант 2</option>
+						<option>Вариант 3</option>
+					</select>
+				</div>
+			</section>
+
+			<section>
+				<h4>Задание 10</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;div&gt;. При нажатии на кнопку
+					измените его стиль на "display: none;", чтобы скрыть его.
+				</p>
+				<p class="hint">Подсказка: Используйте свойство display для изменения стилей элемента</p>
+				<button class="button-primary b-10">Задание 10</button>
+				<div
+					id="practicum10"
+					class="pr"
+					style="width: 200px; height: 100px; background-color: yellow"></div>
+			</section>
+
+			<section>
+				<h4>Задание 11</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;div&gt;. При нажатии на кнопку
+					измените его ширину на 400px и высоту на 200px.
+				</p>
+				<p class="hint">Подсказка: Используйте свойство style для изменения стилей элемента</p>
+				<button class="button-primary b-11">Задание 11</button>
+				<div
+					id="practicum11"
+					class="pr"
+					style="width: 200px; height: 100px; background-color: yellow"></div>
+			</section>
+
+			<section>
+				<h4>Задание 12</h4>
+				<p>
+					Используйте метод querySelector, чтобы найти элемент &lt;div&gt;. При клике на этот
+					элемент измените его ширину на 400px и высоту на 200px. При повторном клике верните его
+					размеры в исходное состояние.
+				</p>
+				<p class="hint">
+					Подсказка: нужно использовать метод toggle для добавления/удаления класса, который
+					изменяет размеры элемента
+				</p>
+				<div id="practicum12" class="resizeable pr" onclick="makeTwelve()"></div>
+			</section>
+
+			<section>
+				<h4>Задание 13</h4>
+				<p>
+					Используйте метод `getElementsByTagName`, чтобы найти первый элемент &lt;ol&gt;. Затем
+					измените его текст на "Первый!".
+				</p>
+				<p class="hint">
+					Подсказка: нужно использовать метод для изменения текстового содержимого элемента
+				</p>
+				<button class="button-primary b-13">Выполнить задание 13</button>
+				<div class="pr">
+					<ul>
+						<ol>
+							Пятый
+						</ol>
+						<ol>
+							Второй
+						</ol>
+						<ol>
+							Третий
+						</ol>
+						<ol>
+							Четвёртый
+						</ol>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h4>Задание 14</h4>
+				<p>
+					Используйте метод querySelectorAll, чтобы найти все элементы &lt;p&gt; на странице. Затем
+					измените их текст на "Огого, что могу!".
+				</p>
+				<button class="button-primary b-14">Выполнить задание 14</button>
+				<div class="pr">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<p>Nunc id metus quis ligula gravida consectetur.</p>
+					<p>Nullam nec ex ac ligula placerat mattis.</p>
+				</div>
+				<p>
+					***Если задание будет выполнено верно, то вы увидите, что все элементы &lt;p&gt; на
+					странице, в том числе и текст задний, изменят свои значения. Чтобы вернуть всё, как было
+					до выполнения задания, перезагрузите страницу.
+				</p>
+			</section>
+
+			<section>
+				<h4>Задание 15</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;div&gt;. При нажатии на кнопку
+					удалите у него класс "practicum15".
+				</p>
+				<p class="hint">Подсказка: используйте метод remove для удаления класса элемента</p>
+				<button class="button-primary b-15">Задание 15</button>
+				<div id="practicum15" class="pr practicum15"></div>
+			</section>
+
+			<section>
+				<h4>Задание 16</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;div&gt;. При нажатии на кнопку
+					добавьте ему класс "practicum16".
+				</p>
+				<p class="hint">Подсказка: используйте метод add для добавления класса элемента</p>
+				<button class="button-primary b-16">Задание 16</button>
+				<div id="practicum16" class="high pr"></div>
+			</section>
+
+			<section>
+				<h4>Задание 17</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;div&gt;. При нажатии на кнопку
+					переключите у него класс "color", который изменяет его фоновый цвет. Если класс уже
+					присутствует, удалите его, иначе добавьте.
+				</p>
+				<p class="hint">Подсказка: используйте метод toggle класса элемента</p>
+				<button class="button-primary b-17">Задание 17</button>
+				<div id="practicum17" class="color pr"></div>
+			</section>
+
+			<section>
+				<h4>Задание 18</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;div&gt;. При нажатии на кнопку
+					добавьте ему класс "active", который изменит цвет текста. При повторном нажатии удалите
+					класс "active".
+				</p>
+				<p class="hint">Подсказка: используйте метод toggle класса элемента</p>
+				<button class="button-primary b-18">Задание 18</button>
+				<div id="practicum18" class="pr">Это текст 18 задания</div>
+			</section>
+
+			<section>
+				<h4>Задание 19</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;div&gt;. При нажатии на кнопку
+					удалите у него класс "active", который изменяет его стиль, например, изменяет цвет текста.
+				</p>
+				<p class="hint">Подсказка: используйте метод remove класса элемента</p>
+				<button class="button-primary b-19">Задание 19</button>
+				<div id="practicum19" class="active pr">Это текст 19 задания</div>
+			</section>
+
+			<section>
+				<h4>Задание 20</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;div&gt;. При нажатии на кнопку
+					добавьте в начало элемента &lt;div&gt; новый дочерний элемент &lt;p&gt; с текстом
+					"Добавлено в начало".
+				</p>
+				<p class="hint">
+					Подсказка: Используйте метод prepend() для добавления нового дочернего элемента в начало
+					элемента &lt;div&gt;
+				</p>
+				<button class="button-primary b-20">Задание 20</button>
+				<div id="practicum20" class="pr">Задание 20</div>
+			</section>
+
+			<section>
+				<h4>Задание 21</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;div&gt;. При нажатии на кнопку
+					добавьте в конец элемента &lt;div&gt; новый дочерний элемент &lt;p&gt; с текстом
+					"Добавлено в конец".
+				</p>
+				<p class="hint">
+					Подсказка: Используйте метод append() для добавления нового дочернего элемента в конец
+					элемента &lt;div&gt;
+				</p>
+				<button class="button-primary b-21">Задание 21</button>
+				<div id="practicum21" class="pr">Задание 21</div>
+			</section>
+
+			<section>
+				<h4>Задание 22</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;img&gt;. Выведите информацию на
+					экран о наличии атрибута "src" у изображения.
+				</p>
+				<p class="hint">Подсказка: Используйте метод hasAttribute для проверки наличия атрибута</p>
+				<button class="button-primary b-22">Задание 22</button>
+				<div class="pr"><img id="practicum22" src="image.jpg" alt="Изображение" /></div>
+				<div id="result22" class="pr"></div>
+			</section>
+
+			<section>
+				<h4>Задание 23</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;img&gt;. Удалите атрибут "href"
+					ссылки.
+				</p>
+				<p class="hint">Подсказка: Используйте метод removeAttribute для удаления атрибута</p>
+				<button class="button-primary b-23">Задание 23</button>
+				<div class="pr"><a id="practicum23" href="https://itgirlschool.com/">Ссылка</a></div>
+			</section>
+
+			<section>
+				<h4>Задание 24</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;input&gt;. Установите атрибут
+					"value" текстового поля на значение "Новое значение".
+				</p>
+				<p class="hint">Подсказка: Используйте метод setAttribute для установки атрибута</p>
+				<button class="button-primary b-24">Задание 24</button>
+				<div class="pr"><input id="practicum24" type="text" value="Старое значение" /></div>
+			</section>
+
+			<section>
+				<h4>Задание 25</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;div&gt;. Добавьте атрибут
+					"data-info" со значением "Дополнительная информация" к элементу &lt;div&gt;. Выведите
+					значение атрибута на экран.
+				</p>
+				<p class="hint">Подсказка: Используйте метод setAttribute для добавления атрибута.</p>
+				<button class="button-primary b-25">Задание 25</button>
+				<div id="practicum25" class="pr">Элемент</div>
+				<p id="infoOutput"></p>
+			</section>
+
+			<section>
+				<h4>Задание 26</h4>
+				<p>
+					Используйте метод closest, чтобы найти ближайший родительский элемент с классом "parent".
+					При нажатии на кнопку измените его фоновый цвет на красный.
+				</p>
+				<p class="hint">
+					Подсказка: Используйте метод closest для поиска ближайшего родительского элемента
+				</p>
+				<div class="parent pr">
+					<div>
+						<div>
+							<button class="button-primary b-26">Нажми меня</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h4>Задание 27</h4>
+				<p>
+					Используйте метод `getElementById`, чтобы найти элемент &lt;div&gt;. Проверьте, содержит
+					ли данный элемент класс `highlight`. Выедите результат в &lt;div&gt;. c id result.
+				</p>
+				<p class="hint">
+					Подсказка: Используйте метод contains для проверки наличия класса у элемента
+				</p>
+				<button class="button-primary b-27">Задание 27</button>
+				<div id="practicum27" class="proposial highlight pr">Элемент</div>
+				<div id="result"></div>
+			</section>
+
+			<section>
+				<h4>Задание 28</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;button&gt;. Добавьте обработчик
+					события click, который будет выводить сообщение "Кнопка нажата" в консоль при каждом клике
+					на кнопку.
+				</p>
+				<p class="hint">
+					Подсказка: Используйте метод addEventListener для добавления обработчика события
+				</p>
+				<button id="button28" class="button-primary">Нажми меня</button>
+			</section>
+
+			<section>
+				<h4>Задание 29</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;input&gt;. Добавьте обработчик
+					события change, который будет выводить сообщение "Значение изменено" в консоль при
+					изменении значения в поле ввода. Чтобы проверить работу слушателя, нужно напечатать один
+					символ и более в поле ввода и убрать фокус с инпута, кликнув на любое место страницы.
+				</p>
+				<p class="hint">
+					Подсказка: Используйте метод addEventListener для добавления обработчика события
+				</p>
+				<input id="input29" type="text" />
+			</section>
+
+			<section>
+				<h4>Задание 30</h4>
+				<p>
+					Используйте метод getElementById, чтобы найти элемент &lt;div&gt;. Добавьте обработчик
+					события `mouseover`, который будет выводить сообщение "Курсор наведен на элемент" в
+					консоль при наведении курсора на элемент.
+				</p>
+				<p class="hint">
+					Подсказка: Используйте метод addEventListener для добавления обработчика события
+				</p>
+				<div id="div30" style="width: 200px; height: 100px; background-color: lightgray"></div>
+			</section>
+		</div>
+
+		<script src="week11.js"></script>
+	</body>
+</html>
