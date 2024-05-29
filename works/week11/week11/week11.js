@@ -15,7 +15,8 @@ document.querySelector('.b-0').onclick = makeZero;
 //Подсказка: Используйте метод для изменения текстового содержимого элемента (innerHTML/innerText/textContent)
 
 function makeOne() {
-	//Ваш код
+	const element = document.getElementById('practicum');
+	element.innerText = 'Привет!';
 }
 
 document.querySelector('.b-1').onclick = makeOne;
@@ -25,7 +26,8 @@ document.querySelector('.b-1').onclick = makeOne;
 //Подсказка: Используйте метод для изменения текстового содержимого элемента (innerHTML/innerText/textContent)
 
 function makeTwo() {
-	//Ваш код
+	const element = document.getElementById('practicum2');
+	element.innerText = 'Привет, Мир!';
 }
 
 document.querySelector('.b-2').onclick = makeTwo;
@@ -35,7 +37,8 @@ document.querySelector('.b-2').onclick = makeTwo;
 //Подсказка: Используйте метод для изменения текстового содержимого элемента (innerHTML/innerText/textContent)
 
 function makeThree() {
-	//Ваш код
+	const element = document.querySelector('h1');
+	element.innerText = 'Заголовок изменен!';
 }
 
 document.querySelector('.b-3').onclick = makeThree;
@@ -45,7 +48,8 @@ document.querySelector('.b-3').onclick = makeThree;
 //Подсказка: Используйте свойство style для изменения стилей элемента
 
 function makeFour() {
-	//Ваш код
+	const element = document.querySelector('#practicum4');
+	element.style.backgroundColor = 'red';
 }
 
 document.querySelector('.b-4').onclick = makeFour;
@@ -55,7 +59,8 @@ document.querySelector('.b-4').onclick = makeFour;
 //Подсказка: Используйте свойство value для изменения значения элемента формы
 
 function makeFive() {
-	//Ваш код
+	const element = document.getElementById('practicum5');
+	element.value = 'Новое значение';
 }
 
 document.querySelector('.b-5').onclick = makeFive;
@@ -65,7 +70,7 @@ document.querySelector('.b-5').onclick = makeFive;
 //Подсказка: Используйте знак равенства для изменения атрибутов элемента
 
 function makeSix() {
-	var img = document.getElementById('practicum6');
+	const img = document.getElementById('practicum6');
 	img.src = 'newimage.jpg';
 	img.alt = 'Новое изображение';
 }
@@ -77,7 +82,9 @@ document.querySelector('.b-6').onclick = makeSix;
 //Подсказка: Используйте знак равенства для изменения атрибутов элемента и метод для изменения текстового содержимого элемента
 
 function makeSeven() {
-	//Ваш код
+	const link = document.querySelector('#practicum7');
+	link.href = 'https://www.google.com';
+	link.innerText = 'Ссылка на Google';
 }
 
 document.querySelector('.b-7').onclick = makeSeven;
@@ -87,10 +94,10 @@ document.querySelector('.b-7').onclick = makeSeven;
 //Подсказка: Используйте метод createElement(), который используется для динамического изменения и взаимодействия с элементами веб-страницы, и метод append(item), который добавляет элемент в конец списка. Новый элемент становится последним элементом списка.
 
 function makeEight() {
-	//Найдите элемент x
-	//Создайте новый пункт списка y
-	//Добавьте значение в созданный пункт списка y
-	//Добавьте в список х новый элемент y
+	const list = document.getElementById('practicum8');
+	const newItem = document.createElement('li');
+	newItem.innerText = 'Новый элемент';
+	list.append(newItem);
 }
 
 document.querySelector('.b-8').onclick = makeEight;
@@ -100,10 +107,10 @@ document.querySelector('.b-8').onclick = makeEight;
 //Подсказка: Используйте метод createElement(), который используется для динамического изменения и взаимодействия с элементами веб-страницы, и метод append(item), который добавляет элемент в конец списка. Новый элемент становится последним элементом списка.
 
 function makeNine() {
-	//Найдите элемент
-	//Создайте новый элемент
-	//Добавьте текст в созданный эелемент
-	//Добавьте новый элемент в выпадающий список
+	const select = document.getElementById('practicum9');
+	const newOption = document.createElement('option');
+	newOption.innerText = 'Новый вариант';
+	select.append(newOption);
 }
 
 document.querySelector('.b-9').onclick = makeNine;
@@ -113,7 +120,8 @@ document.querySelector('.b-9').onclick = makeNine;
 //Подсказка: Используйте свойство display для изменения стилей элемента
 
 function makeTen() {
-	//Ваш код
+	const element = document.getElementById('practicum10');
+	element.style.display = 'none';
 }
 
 document.querySelector('.b-10').onclick = makeTen;
@@ -123,7 +131,9 @@ document.querySelector('.b-10').onclick = makeTen;
 //Подсказка: Используйте свойство style для изменения стилей элемента
 
 function makeEleven() {
-	//Ваш код
+	const element = document.getElementById('practicum11');
+	element.style.width = '400px';
+	element.style.height = '200px';
 }
 
 document.querySelector('.b-11').onclick = makeEleven;
@@ -133,41 +143,42 @@ document.querySelector('.b-11').onclick = makeEleven;
 //Подсказка: Используйте метод toggle() для добавления/удаления класса, который изменяет размеры элемента
 
 function makeTwelve() {
-	//Ваш код
+	const element = document.querySelector('#practicum12');
+	element.classList.toggle('resize');
 }
+
+document.querySelector('#practicum12').onclick = makeTwelve;
 
 //Задание 13
 //Используйте метод `getElementsByTagName`, чтобы найти первый элемент <ol>. Затем измените его текст на "Первый!".
 //Подсказка: Используйте метод для изменения текстового содержимого элемента
 
 function makeThirteen() {
-	//Ваш код
+	const elements = document.getElementsByTagName('ol');
+	elements[0].innerText = 'Первый!';
 }
 
 document.querySelector('.b-13').onclick = makeThirteen;
 
 //Задание 14
 //Используйте метод querySelectorAll, чтобы найти все элементы <p> на странице. Затем измените их текст на "Огого, что могу!".
-//Метод forEach является методом массивов в JavaScript. Он выполняет указанную функцию один раз для каждого элемента в массиве. С этим методом мы познакомимся на следующей неделе.
 
 function makeFourteen() {
-	//Найдите все элементы <p>
-	//const paragraphs = ваш код;
+	const paragraphs = document.querySelectorAll('p');
 	paragraphs.forEach(function (paragraph) {
-		//Измените их текстовое содержимое у paragraph
+		paragraph.innerText = 'Огого, что могу!';
 	});
 }
 
 document.querySelector('.b-14').onclick = makeFourteen;
-
-//Если задание выполнено верно, то вы увидите, что все элементы <p> на странице, в том числе и задния, изменили свои значения.  Чтобы вернуть всё, как было до выполнения задания, перезагрузите страницу.
 
 //Задание 15
 //Используйте метод getElementById, чтобы найти элемент <div>. При нажатии на кнопку удалите у него класс "practicum15".
 //Подсказка: Используйте метод remove для удаления класса элемента
 
 function makeFifteen() {
-	//Ваш код
+	const element = document.getElementById('practicum15');
+	element.classList.remove('practicum15');
 }
 
 document.querySelector('.b-15').onclick = makeFifteen;
@@ -177,7 +188,8 @@ document.querySelector('.b-15').onclick = makeFifteen;
 //Подсказка: Используйте метод add для добавления класса элемента
 
 function makeSixteen() {
-	//Ваш код
+	const element = document.getElementById('practicum16');
+	element.classList.add('practicum16');
 }
 
 document.querySelector('.b-16').onclick = makeSixteen;
@@ -187,7 +199,8 @@ document.querySelector('.b-16').onclick = makeSixteen;
 //Подсказка: Используйте метод toggle класса элемента
 
 function makeSeventeen() {
-	//Ваш код
+	const element = document.getElementById('practicum17');
+	element.classList.toggle('color');
 }
 
 document.querySelector('.b-17').onclick = makeSeventeen;
@@ -197,7 +210,8 @@ document.querySelector('.b-17').onclick = makeSeventeen;
 //Подсказка: Используйте метод toggle класса элемента
 
 function makeEighteen() {
-	//Ваш код
+	const element = document.getElementById('practicum18');
+	element.classList.toggle('active');
 }
 
 document.querySelector('.b-18').onclick = makeEighteen;
@@ -207,7 +221,8 @@ document.querySelector('.b-18').onclick = makeEighteen;
 //Подсказка: Используйте метод remove класса элемента
 
 function makeNineteen() {
-	//Ваш код
+	const element = document.getElementById('practicum19');
+	element.classList.remove('active');
 }
 
 document.querySelector('.b-19').onclick = makeNineteen;
@@ -217,7 +232,10 @@ document.querySelector('.b-19').onclick = makeNineteen;
 //Подсказка: Используйте метод prepend для добавления нового дочернего элемента в начало элемента <div>
 
 function makeTwenty() {
-	//Ваш код
+	const element = document.getElementById('practicum20');
+	const newElement = document.createElement('p');
+	newElement.innerText = 'Добавлено в начало';
+	element.prepend(newElement);
 }
 
 document.querySelector('.b-20').onclick = makeTwenty;
@@ -227,7 +245,10 @@ document.querySelector('.b-20').onclick = makeTwenty;
 //Подсказка: Используйте метод append для добавления нового дочернего элемента в конец элемента <div>
 
 function makeTwentyOne() {
-	//Ваш код
+	const element = document.getElementById('practicum21');
+	const newElement = document.createElement('p');
+	newElement.innerText = 'Добавлено в конец';
+	element.append(newElement);
 }
 
 document.querySelector('.b-21').onclick = makeTwentyOne;
@@ -237,10 +258,10 @@ document.querySelector('.b-21').onclick = makeTwentyOne;
 //Подсказка: Используйте метод hasAttribute для проверки наличия атрибута
 
 function makeTwentyTwo() {
-	//1 шаг: Найдите элемент
-	//2 шаг: Создайте переменную, которая проверяет наличие атрибута у найденного элемента
-	//3 шаг: Найдите элемент, в который нужно вставить значение
-	//4 шаг: Добавьте в эелемент текстовое значение 2 шага. Например: переменная = 'Атрибут "src" присутствует: ' + название переменной из 2 шага;
+	const img = document.getElementById('practicum22');
+	const result = img.hasAttribute('src');
+	const output = document.getElementById('result22');
+	output.innerText = 'Атрибут "src" присутствует: ' + result;
 }
 
 document.querySelector('.b-22').onclick = makeTwentyTwo;
@@ -250,7 +271,8 @@ document.querySelector('.b-22').onclick = makeTwentyTwo;
 //Подсказка: Используйте метод removeAttribute для удаления атрибута
 
 function makeTwentyThree() {
-	//Ваш код
+	const link = document.getElementById('practicum23');
+	link.removeAttribute('href');
 }
 
 document.querySelector('.b-23').onclick = makeTwentyThree;
@@ -260,7 +282,8 @@ document.querySelector('.b-23').onclick = makeTwentyThree;
 //Подсказка: Используйте метод setAttribute для установки атрибута
 
 function makeTwentyFour() {
-	//Ваш код
+	const input = document.getElementById('practicum24');
+	input.setAttribute('value', 'Новое значение');
 }
 
 document.querySelector('.b-24').onclick = makeTwentyFour;
@@ -270,11 +293,11 @@ document.querySelector('.b-24').onclick = makeTwentyFour;
 //Подсказка: Используйте метод setAttribute для добавления атрибута
 
 function makeTwentyFive() {
-	//1 шаг: Найдите элемент
-	//2 шаг: Добавьте элементу, найденному в первом шаге, атрибут: ('data-info', 'Дополнительная информация');
-	//3 шаг: Запишите значение атрибута в переменную
-	//4 шаг: Найдите элемент, в который нужно вставить значение из 3 шага
-	//5 шаг: Добавьте в элемент 4 шага текстовое значение 3 шага. Например: переменная = 'Добавленный атрибут: ' + название переменной из 3 шага;
+	const element = document.getElementById('practicum25');
+	element.setAttribute('data-info', 'Дополнительная информация');
+	const info = element.getAttribute('data-info');
+	const output = document.getElementById('infoOutput');
+	output.innerText = 'Добавленный атрибут: ' + info;
 }
 
 document.querySelector('.b-25').onclick = makeTwentyFive;
@@ -284,11 +307,11 @@ document.querySelector('.b-25').onclick = makeTwentyFive;
 //Подсказка: Используйте метод closest для поиска ближайшего родительского элемента
 
 const button = document.querySelector('.b-26');
-// const parent = Ваш код;
+const parent = button.closest('.parent');
 
-const makeTwentySix = () => {
+function makeTwentySix() {
 	parent.style.backgroundColor = 'red';
-};
+}
 
 document.querySelector('.b-26').onclick = makeTwentySix;
 
@@ -297,10 +320,10 @@ document.querySelector('.b-26').onclick = makeTwentySix;
 //Подсказка: Используйте метод `contains` для проверки наличия класса у элемента. В <div> должен появиться результат true или false.
 
 function makeTwentySeven() {
-	//Найдите переменную
-	//Создайте переменную и сохраните в неё результат проверки метода contains. Например: const result = p.classList.contains('active');
-	//Найдите переменную, в которую нужно вывести результат
-	//Запишите результат в переменную
+	const element = document.getElementById('practicum27');
+	const result = element.classList.contains('highlight');
+	const output = document.getElementById('result');
+	output.innerText = result;
 }
 
 document.querySelector('.b-27').onclick = makeTwentySeven;
@@ -315,24 +338,28 @@ function handleClick() {
 	console.log('Кнопка нажата');
 }
 
-//Добавьте слушатель eventListener на кнопку buttonTaskTwentyEight
+buttonTaskTwentyEight.addEventListener('click', handleClick);
 
 //Задание 29
 //Используйте метод getElementById, чтобы найти элемент <input />. Добавьте обработчик события change, который будет выводить сообщение "Значение изменено" в консоль при изменении значения в поле ввода.
 //Подсказка: Используйте метод addEventListener для добавления обработчика события. Чтобы проверить работу слушателя, нужно напечатать один символ и более в поле ввода и убрать фокус с инпута, кликнув на любое место страницы.
 
+const inputTaskTwentyNine = document.getElementById('input29');
+
 function handleChange() {
 	console.log('Значение изменено');
 }
 
-//Ваш код
+inputTaskTwentyNine.addEventListener('change', handleChange);
 
 //Задание 30
 //Используйте метод getElementById, чтобы найти элемент <div>. Добавьте обработчик события `mouseover`, который будет выводить сообщение "Курсор наведен на элемент" в консоль при наведении курсора на элемент.
-//Подсказка: Используйте метод addEventListener для добавления обработчика события. Чтобы проверить работу слушателя, нужно напечатать один символ и более в поле ввода и убрать фокус с инпута, кликнув на любое место страницы.
+//Подсказка: Используйте метод addEventListener для добавления обработчика события.
+
+const divTaskThirty = document.getElementById('div30');
 
 function handleMouseOver() {
 	console.log('Курсор наведен на элемент');
 }
 
-//Ваш код
+divTaskThirty.addEventListener('mouseover', handleMouseOver);

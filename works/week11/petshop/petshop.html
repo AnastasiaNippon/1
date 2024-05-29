@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корзина</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      h1 {
+        text-align: center;
+      }
+      .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      .cart-item img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-right: 20px;
+      }
+      .cart-item-details {
+        flex: 1;
+      }
+      .cart-item-price {
+        margin-left: 20px;
+      }
+      .total-price,
+      .apply-coupon,
+      .checkout {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .apply-coupon button,
+      .checkout button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Корзина</h1>
+    <div id="cart">
+      <!-- Товары -->
+      <div class="cart-item">
+        <input
+          type="checkbox"
+          class="item-checkbox"
+          checked
+          data-price="5000"
+          onchange="updateTotal()"
+        />
+        <img
+          src="https://natalyland.ru/wp-content/uploads/a/7/0/a707096eda6ac830dc0fcca8af981e78.jpeg"
+          alt="Котик №1"
+        />
+        <div class="cart-item-details">
+          <span>Котик №1</span>
+          <p>Цвет: белый, Вес: 3 кг, Возраст: 1 год</p>
+        </div>
+        <span class="cart-item-price">5000 рублей</span>
+      </div>
+      <div class="cart-item">
+        <input
+          type="checkbox"
+          class="item-checkbox"
+          checked
+          data-price="7000"
+          onchange="updateTotal()"
+        />
+        <img
+          src="https://ferrethome.ru/wp-content/uploads/b/b/3/bb3953bd7b5ddb12c6e9a0bc97a32cad.jpeg"
+          alt="Котик №2"
+        />
+        <div class="cart-item-details">
+          <span>Котик №2</span>
+          <p>Цвет: черепаховый, Вес: 4 кг, Возраст: 2 года</p>
+        </div>
+        <span class="cart-item-price">7000 рублей</span>
+      </div>
+      <div class="cart-item">
+        <input
+          type="checkbox"
+          class="item-checkbox"
+          checked
+          data-price="6000"
+          onchange="updateTotal()"
+        />
+        <img
+          src="https://klkfavorit.ru/wp-content/uploads/9/5/3/953e8eb90c966eab9c1b719c115a3461.jpeg"
+          alt="Котик №3"
+        />
+        <div class="cart-item-details">
+          <span>Котик №3</span>
+          <p>Цвет: белый, Вес: 3.5 кг, Возраст: 1.5 года</p>
+        </div>
+        <span class="cart-item-price">6000 рублей</span>
+      </div>
+      <div class="cart-item">
+        <input
+          type="checkbox"
+          class="item-checkbox"
+          checked
+          data-price="8000"
+          onchange="updateTotal()"
+        />
+        <img
+          src="https://koshka.top/uploads/posts/2021-11/1637788558_65-koshka-top-p-krasivikh-kotikov-pushistikh-76.jpg"
+          alt="Котик №4"
+        />
+        <div class="cart-item-details">
+          <span>Котик №4</span>
+          <p>Цвет: серый, Вес: 4.5 кг, Возраст: 2.5 года</p>
+        </div>
+        <span class="cart-item-price">8000 рублей</span>
+      </div>
+    </div>
+    <div class="total-price">
+      <strong>Итоговая стоимость: </strong
+      ><span id="total-price">26000 рублей</span>
+    </div>
+    <div class="apply-coupon">
+      <button onclick="applyCoupon()">Использовать купон на 20%</button>
+    </div>
+    <div class="checkout">
+      <button onclick="checkout()">Итог купить</button>
+    </div>
+
+    <script>
+      let prices = [5000, 7000, 6000, 8000];
+      let discountApplied = false;
+
+      function calculateTotal() {
+        const checkboxes = document.querySelectorAll(".item-checkbox");
+        let total = 0;
+        checkboxes.forEach((checkbox, index) => {
+          if (checkbox.checked) {
+            total += prices[index];
+          }
+        });
+        return total;
+      }
+
+      function applyCoupon() {
+        if (!discountApplied) {
+          prices = prices.map((price) => price * 0.8);
+          discountApplied = true;
+          updateTotal();
+        }
+      }
+
+      function updateTotal() {
+        const total = calculateTotal();
+        document.getElementById("total-price").textContent = total + " рублей";
+      }
+
+      function checkout() {
+        alert("Покупка успешно оформлена!");
+      }
+
+      window.onload = updateTotal;
+    </script>
+  </body>
+</html>
