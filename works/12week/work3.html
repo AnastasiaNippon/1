@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Генератор случайных слов</title>
+  </head>
+  <body>
+    <h1>Генератор случайных слов из четырёх букв</h1>
+    <div id="random-words"></div>
+
+    <script>
+      // Создаём переменную alphabet, в которой хранится строка с алфавитом
+      const alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+
+      // Функция для генерации случайного индекса в диапазоне от 0 до длины alphabet
+      function getRandomIndex(max) {
+        return Math.floor(Math.random() * max);
+      }
+
+      // Генерация случайного слова из четырёх букв
+      function generateRandomWord() {
+        let randomWord = "";
+        for (let i = 0; i < 4; i++) {
+          const randomIndex = getRandomIndex(alphabet.length);
+          randomWord += alphabet[randomIndex];
+        }
+        return randomWord;
+      }
+
+      // Функция для добавления нового случайного слова на экран
+      function addRandomWord() {
+        const randomWord = generateRandomWord();
+        const randomWordsDiv = document.getElementById("random-words");
+        const newParagraph = document.createElement("p");
+        newParagraph.innerText = `Ваш котик сказал: ${randomWord}`;
+        randomWordsDiv.appendChild(newParagraph);
+        console.log(`Ваш котик сказал: ${randomWord}`);
+      }
+
+      // Обработчик события нажатия клавиши
+      document.addEventListener("keydown", function (event) {
+        if (event.code === "Space") {
+          addRandomWord();
+        }
+      });
+
+      // Добавляем первое случайное слово при загрузке страницы
+      addRandomWord();
+    </script>
+  </body>
+</html>

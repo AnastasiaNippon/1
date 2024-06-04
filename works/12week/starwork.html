@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сервис комментариев со спам фильтром</title>
+    <style>
+      body {
+        background-color: #cef0ff; /* Серый фон */
+        color: #fff;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        width: 90%;
+        max-width: 1200px;
+        background-color: #1e1e1e;
+        border: 2px solid #e91e63; /* Ярко розовые рамки */
+        border-radius: 10px;
+      }
+      .form-section,
+      .chat-section {
+        padding: 20px;
+        width: 50%;
+      }
+      .form-section {
+        border-left: 2px solid #e91e63;
+      }
+      h1 {
+        text-align: center;
+        color: #e91e63; /* Ярко розовый заголовок */
+      }
+      .comment-form {
+        display: flex;
+        flex-direction: column;
+      }
+      .comment-form label {
+        margin-bottom: 5px;
+        color: #e91e63; /* Ярко розовый цвет для меток */
+      }
+      .comment-form input,
+      .comment-form textarea {
+        width: 96%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #e91e63; /* Ярко розовые рамки */
+        background-color: #b2ecff;
+        color: #fff;
+      }
+      .comment-form button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+      }
+      .comments {
+        margin-top: 20px;
+      }
+      .comment {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e91e63; /* Ярко розовые рамки */
+        padding-bottom: 10px;
+      }
+      .comment img {
+        max-width: 50px;
+        max-height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      .comment h3 {
+        margin: 0;
+        margin-right: 10px;
+      }
+      .comment p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="chat-section">
+        <h1>Чат</h1>
+        <div id="comments" class="comments"></div>
+      </div>
+      <div class="form-section">
+        <h1>Сервис комментариев со спам фильтром</h1>
+        <div class="comment-form">
+          <label for="name">Введите ваше Имя:</label>
+          <input type="text" id="name" placeholder="Введите ваше Имя" />
+
+          <label for="avatar">Введите ссылку вашего аватара:</label>
+          <input
+            type="text"
+            id="avatar"
+            placeholder="Введите ссылку вашего аватара"
+          />
+
+          <label for="message">Оставьте комментарий:</label>
+          <textarea
+            id="message"
+            rows="4"
+            placeholder="Оставьте комментарий"
+          ></textarea>
+
+          <button onclick="addComment()">Отправить</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function transformName(name) {
+        name = name.trim();
+        name = name.toLowerCase();
+        name = name.charAt(0).toUpperCase() + name.slice(1);
+        return name;
+      }
+
+      function checkSpam(str) {
+        const spamWords = ["viagra", "xxx"];
+        let result = str;
+        spamWords.forEach((word) => {
+          const regex = new RegExp(word, "gi");
+          result = result.replace(regex, "***");
+        });
+        return result;
+      }
+
+      function addComment() {
+        const nameField = document.getElementById("name");
+        const avatarField = document.getElementById("avatar");
+        const messageField = document.getElementById("message");
+
+        let name = transformName(nameField.value);
+        const avatar = avatarField.value;
+        let message = checkSpam(messageField.value);
+
+        const commentSection = document.getElementById("comments");
+
+        const comment = document.createElement("div");
+        comment.classList.add("comment");
+
+        const avatarImg = document.createElement("img");
+        avatarImg.src = avatar;
+        comment.appendChild(avatarImg);
+
+        const nameHeading = document.createElement("h3");
+        nameHeading.textContent = name;
+        comment.appendChild(nameHeading);
+
+        const messageParagraph = document.createElement("p");
+        messageParagraph.textContent = message;
+        comment.appendChild(messageParagraph);
+
+        commentSection.appendChild(comment);
+
+        nameField.value = "";
+        avatarField.value = "";
+        messageField.value = "";
+      }
+    </script>
+  </body>
+</html>
