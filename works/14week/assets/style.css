@@ -1,0 +1,36 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#results {
+    line-height: 1.6;
+}
+
+#results p {
+    margin: 10px 0;
+}
+
+#results p span {
+    font-weight: bold;
+}
