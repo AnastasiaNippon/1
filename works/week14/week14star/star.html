@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Режиссёры</title>
+    <style>
+      /* Normalize.css */
+      html {
+        line-height: 1.15; /* 1 */
+        -webkit-text-size-adjust: 100%; /* 2 */
+      }
+      body {
+        margin: 0;
+      }
+      main {
+        display: block;
+      }
+      h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+      }
+      hr {
+        box-sizing: content-box; /* 1 */
+        height: 0; /* 1 */
+        overflow: visible; /* 2 */
+      }
+      pre {
+        font-family: monospace, monospace; /* 1 */
+        font-size: 1em; /* 2 */
+      }
+      a {
+        background-color: transparent;
+      }
+      abbr[title] {
+        border-bottom: none; /* 1 */
+        text-decoration: underline; /* 2 */
+        text-decoration: underline dotted; /* 2 */
+      }
+      b,
+      strong {
+        font-weight: bolder;
+      }
+      code,
+      kbd,
+      samp {
+        font-family: monospace, monospace; /* 1 */
+        font-size: 1em; /* 2 */
+      }
+      small {
+        font-size: 80%;
+      }
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+      sub {
+        bottom: -0.25em;
+      }
+      sup {
+        top: -0.5em;
+      }
+      img {
+        border-style: none;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit; /* 1 */
+        font-size: 100%; /* 1 */
+        line-height: 1.15; /* 1 */
+        margin: 0; /* 2 */
+      }
+      button,
+      input {
+        /* 1 */
+        overflow: visible;
+      }
+      button,
+      select {
+        /* 1 */
+        text-transform: none;
+      }
+      button,
+      [type="button"],
+      [type="reset"],
+      [type="submit"] {
+        -webkit-appearance: button;
+      }
+      button::-moz-focus-inner,
+      [type="button"]::-moz-focus-inner,
+      [type="reset"]::-moz-focus-inner,
+      [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+      button:-moz-focusring,
+      [type="button"]:-moz-focusring,
+      [type="reset"]:-moz-focusring,
+      [type="submit"]:-moz-focusring {
+        outline: 1px dotted ButtonText;
+      }
+      fieldset {
+        padding: 0.35em 0.75em 0.625em;
+      }
+      legend {
+        box-sizing: border-box; /* 1 */
+        color: inherit; /* 2 */
+        display: table; /* 1 */
+        max-width: 100%; /* 1 */
+        padding: 0; /* 3 */
+        white-space: normal; /* 1 */
+      }
+      progress {
+        vertical-align: baseline;
+      }
+      textarea {
+        overflow: auto;
+      }
+      [type="checkbox"],
+      [type="radio"] {
+        box-sizing: border-box; /* 1 */
+        padding: 0; /* 2 */
+      }
+      [type="number"]::-webkit-inner-spin-button,
+      [type="number"]::-webkit-outer-spin-button {
+        height: auto;
+      }
+      [type="search"] {
+        -webkit-appearance: textfield; /* 1 */
+        outline-offset: -2px; /* 2 */
+      }
+      [type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button; /* 1 */
+        font: inherit; /* 2 */
+      }
+      details {
+        display: block;
+      }
+      summary {
+        display: list-item;
+      }
+      template {
+        display: none;
+      }
+      [hidden] {
+        display: none;
+      }
+      /* Custom styles */
+      body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+        font-family: "Arial Black", Gadget, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+      #directors-list {
+        width: 80%;
+        max-width: 1000px;
+      }
+      .director {
+        border: 2px solid #333;
+        background-color: #2a2a2a;
+        padding: 20px;
+        margin: 10px 0;
+        border-radius: 10px;
+      }
+      h2 {
+        font-size: 24px;
+        color: #f2f2f2;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 18px;
+        margin: 5px 0;
+      }
+      a {
+        color: #ff6347;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="directors-list"></div>
+
+    <script>
+      const directors = [
+        {
+          name: "Стивен Спилберг",
+          career: "Продюсер, Режиссёр, Актёр, Сценарист, Монтажёр",
+          films:
+            "https://ru.wikipedia.org/wiki/%D0%A4%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F_%D0%A1%D1%82%D0%B8%D0%B2%D0%B5%D0%BD%D0%B0_%D0%A1%D0%BF%D0%B8%D0%BB%D0%B1%D0%B5%D1%80%D0%B3%D0%B0",
+          top_rated_film: "Список Шиндлера",
+        },
+        {
+          name: "Кристофер Нолан",
+          career:
+            "Сценарист, Продюсер, Режиссёр, Оператор, Монтажёр, Актёр, Композитор",
+          films:
+            "https://www.film.ru/compilation/vse-filmy-kristofera-nolana-ot-luchshego-k-horoshemu",
+          top_rated_film: "Начало",
+        },
+        {
+          name: "Мартин МакДона",
+          career: "Сценарист, Режиссёр, Продюсер",
+          films: "https://www.film.ru/person/martin-makdonah",
+          top_rated_film: "Три билборда на границе Эббинга, Миссури",
+        },
+        {
+          name: "Алексей Балабанов",
+          career: "Режиссёр, Сценарист, Актёр, Продюсер",
+          films: "https://www.film.ru/person/aleksey-balabanov",
+          top_rated_film: "Брат",
+        },
+        {
+          name: "Питер Фаррелли",
+          career: "Продюсер, Режиссёр, Сценарист, Актёр",
+          films: "https://www.film.ru/person/piter-farrelli",
+          top_rated_film: "Зелёная книга",
+        },
+        {
+          name: "Юрий Быков",
+          career: "Актёр, Режиссёр, Сценарист, Композитор, Монтажёр, Продюсер",
+          films: "https://www.film.ru/person/yuriy-bykov",
+          top_rated_film: "Дурак",
+        },
+        {
+          name: "Жан-Марк Валле",
+          career: "Режиссер, Продюсер, Монтажёр, Актёр, Сценарист",
+          films: "https://www.film.ru/person/zhan-mark-valle",
+          top_rated_film: "Далласский клуб покупателей",
+        },
+      ];
+
+      const topFilmsList = [];
+
+      const directorsListDiv = document.getElementById("directors-list");
+
+      directors.forEach((director) => {
+        const directorDiv = document.createElement("div");
+        directorDiv.classList.add("director");
+
+        const nameElement = document.createElement("h2");
+        const careerElement = document.createElement("p");
+        const filmsElement = document.createElement("a");
+        const topRatedFilmElement = document.createElement("p");
+
+        nameElement.textContent = `Имя: ${director.name}`;
+        careerElement.textContent = `Карьера: ${director.career}`;
+        filmsElement.href = director.films;
+        filmsElement.textContent = "Фильмография";
+        filmsElement.target = "_blank";
+        topRatedFilmElement.textContent = `Лучший фильм: ${director.top_rated_film}`;
+
+        directorDiv.appendChild(nameElement);
+        directorDiv.appendChild(careerElement);
+        directorDiv.appendChild(filmsElement);
+        directorDiv.appendChild(topRatedFilmElement);
+
+        directorsListDiv.appendChild(directorDiv);
+
+        topFilmsList.push(director.top_rated_film);
+      });
+
+      console.log(topFilmsList);
+    </script>
+  </body>
+</html>
