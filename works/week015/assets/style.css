@@ -1,0 +1,40 @@
+/* Стили для страницы с небесной тематикой */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('./picture/1695873699_gas-kvas-com-p-kartinki-oblaka-33.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+h1 {
+    color: #FFD700; /* Золотистый цвет */
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.2);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
