@@ -1,0 +1,113 @@
+// Цвета
+$HakiDark: rgba(84, 90, 47, 1);
+$HakiLight: rgba(153, 161, 142, 1);
+$Brown: rgba(99, 83, 62, 1);
+$Black: rgba(26, 26, 24, 1);
+$White: rgba(255, 255, 255, 1);
+// Шрифты
+@font-face {
+    font-family: Noah-Bold;
+    src: url(../fonts/Noah-Bold.ttf);
+}
+@font-face {
+    font-family: Noah-Regular;
+    src: url(../fonts/Noah-Regular.ttf);
+}
+@font-face {
+    font-family: MarckScript-Regular;
+    src: url(../fonts/MarckScript-Regular.ttf);
+}
+
+// Variables
+$font-stack: 'Arial', sans-serif;
+$primary-color: rgba(84, 90, 47, 1);
+$icon-size: 83px;
+$icon-size-mobile: 50px;
+$contact-width: calc(50% - 10px);
+
+body {
+  font-family: $font-stack;
+  line-height: 1.6;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
+
+  .contact-header,
+  .contact-form,
+  .contact-info {
+    width: $contact-width;
+
+    h2 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    input,
+    textarea,
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+
+      &:last-child {
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      img {
+        width: $icon-size;
+        height: $icon-size;
+        margin-right: 10px;
+      }
+
+      span,
+      a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+
+    .contact-header,
+    .contact-form,
+    .contact-info {
+      width: 100%;
+
+      h2 {
+        text-align: center;
+      }
+
+      .info-item img {
+        width: $icon-size-mobile;
+        height: $icon-size-mobile;
+      }
+    }
+  }
+}

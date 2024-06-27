@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/normalize.css" />
+    <link rel="stylesheet" href="./assets/styles/style_project.css" />
+    <title>Проект</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <img
+          class="header__logo"
+          src="/assets/images/header_footer/logo.svg"
+          alt="Logo"
+        />
+        <nav class="header__nav">
+          <a href="#" class="header__nav-menu">Главная</a>
+          <a href="#" class="header__nav-menu">Портфолио</a>
+          <a href="#" class="header__nav-menu">Услуги</a>
+          <a href="#" class="header__nav-menu">Контакты</a>
+        </nav>
+        <div class="header__contact">
+          <div class="header__phone">+7 (921) 888 88 88</div>
+          <p class="header__consulting">Бесплатная консультация</p>
+        </div>
+
+        <!-- бургер -->
+
+        <div class="menu__burger">
+          <input type="checkbox" id="burger-checkbox" class="burger-checkbox" />
+          <label for="burger-checkbox" class="burger"></label>
+          <ul class="menu-list">
+            <li><a href="/home" class="menu-item">Главная</a></li>
+            <li><a href="/portfolio" class="menu-item">Портфолио</a></li>
+            <li><a href="/services" class="menu-item">Услуги</a></li>
+            <li><a href="/contact" class="menu-item">Контакты</a></li>
+            <li>
+              <button type="submit" class="menu-item burger__phone">
+                +7 (921) 888 88 88
+              </button>
+            </li>
+            <li>
+              <p class="menu-item burger__consult">Бесплатная консультация</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Слайдер -->
+
+      <div class="slider">
+        <ul class="slides">
+          <li id="slide1">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide2">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide3">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide4">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide5">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide6">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide7">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide8">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide9">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide10">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+          <li id="slide11">
+            <img src="/assets/images/project/slide.png" alt="" />
+          </li>
+        </ul>
+        <ul class="thumbnails">
+          <li class="swipe">
+            <a href="#slide1"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li class="swipe">
+            <a href="#slide2"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li class="swipe">
+            <a href="#slide3"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li class="swipe">
+            <a href="#slide4"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li class="swipe">
+            <a href="#slide5"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li class="swipe">
+            <a href="#slide6"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li class="swipe">
+            <a href="#slide7"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li class="swipe">
+            <a href="#slide8"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li class="swipe">
+            <a href="#slide9"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li class="swipe">
+            <a href="#slide10"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+          <li class="swipe">
+            <a href="#slide11"
+              ><img src="/assets/images/project/slide.png" alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="link_main">
+          <div class="pointer-back">
+            <a href="/portfolio.html">
+              <img
+                class="pointer-back__img"
+                src="/assets/images/project/back_button.png"
+                alt="Назад"
+              />
+            </a>
+          </div>
+          <a class="link_back text-24" href="/portfolio.html"
+            >Назад к портфолио</a
+          >
+        </div>
+
+        <div class="card main-card">
+          <img
+            class="card__img"
+            src="/assets/images/project/card_img1_4.png"
+            alt="Фото дизайна"
+          />
+          <div class="main-card__text">
+            <div class="card__text-title">
+              <h2 class="title_h2">Lorem ipsum</h2>
+            </div>
+            <p class="card__text-1 text-24">Lorem ipsum dolor sit amet,</p>
+            <span class="text-18">Реализация</span>
+            <span class="text-18">Площадь</span>
+            <span class="text-24">2018-2019</span>
+            <span class="text-24">35 соток</span>
+            <span class="card__text-feature-5 text-18">Месторасположение</span>
+            <span class="card__text-feature-6 text-24"
+              >Ленинградская область</span
+            >
+            <p class="card__text-2 text-24">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu
+            </p>
+          </div>
+        </div>
+
+        <div class="card card2">
+          <div class="card__text card2__text_center">
+            <p class="card2__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing...
+            </p>
+          </div>
+          <img
+            class="card__img"
+            src="/assets/images/project/card_img2.png"
+            alt="Проект"
+          />
+        </div>
+        <div class="card card3">
+          <div class="card__text">
+            <p class="text-24">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum dolore eu
+            </p>
+          </div>
+
+          <img
+            class="card__img"
+            src="/assets/images/project/card_img3.png"
+            alt="Проект"
+          />
+        </div>
+        <div class="card card4">
+          <img
+            class="card__img card__img_4"
+            src="/assets/images/project/card_img1_4.png"
+            alt="Фото дизайна"
+          />
+          <div class="card__text">
+            <p class="text-24">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum dolore eu Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu
+            </p>
+          </div>
+        </div>
+        <div class="main__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing...
+        </div>
+        <div class="main-form">
+          <div class="main-form__form">
+            <div class="form_container">
+              <div class="form__text">
+                <h2 class="title_h2 form__text_title">Хотите так же?</h2>
+                <p class="text-24 form__text_text">
+                  Укажите номер телефона, и мы свяжемся с Вами, чтобы обсудить
+                  все пожелания
+                </p>
+              </div>
+              <div class="form">
+                <form method="post">
+                  <input
+                    type="tel"
+                    class="phone"
+                    name="phone-number"
+                    placeholder="+7(___)___ __ __"
+                  />
+                  <div class="form_checkbox">
+                    <input id="checkbox" type="checkbox" checked />
+                    <label class="checkbox__label" for="checkbox"
+                      >Я даю согласие на обработку своих персональных
+                      данных</label
+                    >
+                  </div>
+                  <button type="submit" class="btn-form">
+                    Перезвоните мне
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="main-form__img form_img1">
+            <img src="/assets/images/project/form_img1.png" alt="Ландшафт" />
+          </div>
+          <div class="main-form__img form_img2">
+            <img
+              class="form__img_adapt"
+              src="/assets/images/project/form_img2.png"
+              alt="Ландшафт"
+            />
+          </div>
+          <div class="main-form__img form_img3">
+            <img src="/assets/images/project/form_img3.png" alt="Ландшафт" />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="another-projects">
+        <div class="project_preview">
+          <div class="another-project">
+            <h3 class="another-project__h3">Предыдущий проект</h3>
+            <h2 class="title_h2 another-project__name">Lorem ipsum</h2>
+            <a href="" class="another-project__pointer"></a>
+          </div>
+        </div>
+        <div class="project_next">
+          <div class="another-project another-project_next">
+            <h3 class="another-project__h3 another-project__h3_next">
+              Следующий проект
+            </h3>
+            <h2
+              class="title_h2 another-project__name another-project__name_next"
+            >
+              Lorem ipsum
+            </h2>
+            <a
+              href=""
+              class="another-project__pointer another-project__pointer_next"
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer__contacts">
+          <div class="footer__phone">+7(921) 888 88 88</div>
+          <div class="footer__email">info@vesna.ru</div>
+          <div class="footer__copyright">© 2021 VESNA</div>
+        </div>
+        <div class="footer__img">
+          <img
+            src="/assets/images/header_footer/group.svg"
+            alt="Footer logo"
+            class="footer__img-logo"
+          />
+        </div>
+        <div class="footer__socialmedia">
+          <div>
+            <a href="https://www.instagram.com" target="_blank">
+              <img
+                src="/assets/images/header_footer/instagram.svg"
+                alt="Instagram Icon"
+                class="footer__instagram"
+            /></a>
+          </div>
+          <div class="footer__confidential">Политика конфиденциальности</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

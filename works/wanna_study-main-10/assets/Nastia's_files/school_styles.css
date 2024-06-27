@@ -1,0 +1,157 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #EDF2F0;
+}
+
+.site-container {
+  min-height: 100%; /* Минимальная высота равна 100% */
+   display: flex;
+  flex-direction: column; /* Колонный флекс */
+  justify-content: space-between; /* Распределение пространства */
+  }
+
+  .background-container {
+    background-image: url("./assets/pictures/headerbackground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 0px; /* Добавил отступ снизу */
+  }
+  .header {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+  }
+.logo-container img {
+  width: 150px;
+}
+.navigation {
+  display: flex;
+  margin: 25px 25px;
+  text-decoration: none;
+}
+.navigation a {
+  display: flex;
+  text-decoration: none;
+  color: #1576bd;
+  margin-right: 10px;
+  font-size: 25px;
+  padding: 0px;
+}
+
+.no-underline, .no-underline:hover, .no-underline:visited {
+ text-decoration: none;
+ font-size: 24px;
+ color: #1576bd;
+ white-space: nowrap;
+ }
+
+.contact-icons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+.icon-links {
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+  
+}
+.icon-links img {
+  width: 27px;
+  height: 27px;
+  margin-right: 20px;
+}
+
+.container {
+  padding-top: 20px;
+  display: flex;
+  background-color: transparent;
+  font-size: 30px;
+  padding: 0 10px; /* Верх и низ без отступов, слева и справа 20px */
+}
+.text-section {
+  width: 50%; /* Задаем ширину текстового блока */
+  padding: 40px;
+  color: #1572c2;
+}
+.text-section h1 {
+  font-size: 30px; /* Увеличенный размер для заголовка */
+  text-transform: uppercase; /* Преобразование текста в верхний регистр */
+}
+.text-section h2 {
+  font-size: 20px; /* Увеличенный размер для заголовка */
+  text-transform: uppercase; /* Преобразование текста в верхний регистр */
+} 
+
+.text-section p {
+  padding: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.text-section p1 {
+  padding: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.text-section p, .text-section p1 {
+  padding-bottom: 20px;
+  font-size: larger;
+}
+
+.image-section {
+  width: 80%; /* Задаем ширину блока с изображением */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px; /* Отодвигаем изображение вниз*/
+  margin-right: 100px;
+}
+.image-section img {
+  max-width: 60%; /* Уменьшаем изображение, чтобы оно не выходило за пределы своего блока */
+  height: auto;
+  border-radius: 10px; /* Добавление закругленных углов */
+}
+.button-container {
+  text-align: center; /* Выравниваем кнопку по центру */
+  padding: 20px; /* Добавляем отступ сверху и снизу для кнопки */
+}
+.free-lesson-button {
+  background-color: #fbdd29;
+  color: #1576bd;
+  text-decoration: none;
+  padding: 20px 40px;
+  border-radius: 40px;
+  display: inline-block; /* Для центрирования кнопки */
+  font-size: 30px;
+}
+.footer {
+  background-color: #1572c2;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .icon-links {
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+}
+.footer .icon-links img {
+  width: 28px;
+  height: 28px;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}

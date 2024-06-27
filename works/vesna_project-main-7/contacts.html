@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./assets/styles/normalize.css" />
+    <link rel="stylesheet" href="./assets/styles/style_portfolio.css" />
+    <link rel="stylesheet" href="./assets/styles/style_contacts.css" />
+    <link rel="stylesheet" href="./assets/styles/style_contacts.scss" />
+    <link rel="stylesheet" href="burger-menu.css" />
+    <title>Контакты</title>
+  </head>
+  <body>
+    <header class="header">
+      <!-- Логотип и навигация -->
+      <img
+        class="header__logo"
+        src="/assets/images/header_footer/logo.svg"
+        alt="Логотип"
+      />
+      <nav class="header__nav">
+        <a href="#" class="header__nav-menu">Главная</a>
+        <a href="#" class="header__nav-menu">Портфолио</a>
+        <a href="#" class="header__nav-menu">Услуги</a>
+        <a href="#" class="header__nav-menu">Контакты</a>
+      </nav>
+      <div class="header__contact">
+        <a href="tel:+79218888888" class="header__phone">+7 (921) 888 88 88</a>
+        <a href="#myModal" class="header__consulting"
+          >Бесплатная консультация</a
+        >
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-content" style="background-image: url('assets/images/consultation.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+              <!-- Остальное содержимое модального окна -->
+            <a href="#" class="close">&times;</a>
+            <h2>Закажите<br />консультацию</h2>
+            <p>Менеджер перезвонит Вам в ближайшее время</p>
+            <input type="text" placeholder="Виктория Благовещенская" />
+            <input type="tel" placeholder="+7(___)-___-___" />
+            <div class="checkbox-container">
+              <div class="checkbox">
+                <input type="checkbox" id="consent-checkbox" />
+              </div>
+              <label for="consent-checkbox"
+                >Я даю согласие на обработку своих персональных данных</label
+              >
+            </div>
+            <button>Перезвоните мне</button>
+          </div>
+        </div>
+      </div>
+      <!-- бургер ням ням -->
+<input type="checkbox" id="menu-toggle" />
+<label for="menu-toggle" class="menu-btn">
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
+<div class="menu">
+  <nav>
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Услуги</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </nav>
+</div>
+      <div class="page-title">Контакты</div>
+    </header>
+    <main class="main">
+      <!-- Основное содержимое страницы -->
+      <div class="contact-container">
+        <div class="contact-form">
+          <h2>Свяжитесь с нами, чтобы проконсультироваться</h2>
+          <form action="#" method="post">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Виктория Благовещенская"
+            />
+            <input type="email" id="email" name="email" placeholder="Email" />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+7(___)-___-____"
+            />
+            <textarea
+              id="comment"
+              name="comment"
+              placeholder="Комментарий"
+            ></textarea>
+            <div class="consent-checkbox">
+              <input type="checkbox" id="consent" name="consent" />
+              <label for="consent"
+                >Я даю согласие на обработку своих персональных данных</label
+              >
+            </div>
+            <button type="submit">Отправить</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <!-- Контактная информация -->
+          <div class="info-item">
+            <img
+              src="assets/images/contacts/Group 256.png"
+              alt="Телефон"
+              class="icon"
+            />
+            <a href="tel:+79218888888">+7 (921) 888 88 88</a>
+          </div>
+          <div class="info-item">
+            <img
+              src="assets/images/contacts/Group 257.png"
+              alt="Email"
+              class="icon"
+            />
+            <a href="mailto:info@vesna.ru">info@vesna.ru</a>
+          </div>
+          <div class="info-item">
+            <img
+              src="assets/images/contacts/Group 163.png"
+              alt="Instagram"
+              class="icon"
+            />
+            <a href="https://instagram.com/..." target="_blank"
+              >instagram.com/...</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <!-- Подвал сайта -->
+      <div class="footer__contacts">
+        <div class="footer__phone">+7(921) 888 88 88</div>
+        <div class="footer__email">info@vesna.ru</div>
+        <div class="footer__copyright">© 2021 VESNA</div>
+      </div>
+      <div class="footer__img">
+        <img
+          src="/assets/images/header_footer/group.svg"
+          alt="Логотип в подвале"
+          class="footer__img-logo"
+        />
+      </div>
+      <div class="footer__socialmedia">
+        <a href="https://www.instagram.com" target="_blank">
+          <img
+            src="/assets/images/header_footer/instagram.svg"
+            alt="Иконка Instagram"
+            class="footer__instagram"
+          />
+        </a>
+        <div class="footer__confidential">Политика конфиденциальности</div>
+      </div>
+    </footer>
+    <script>
+      // Функция для загрузки бургер-меню
+      function loadBurgerMenu() {
+        fetch('burger-menu.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('burger-menu-container').innerHTML = html;
+          })
+          .catch(error => console.error('Ошибка загрузки бургер-меню:', error));
+      }
+  
+      loadBurgerMenu();
+    </script>
+  </body>
+</html>

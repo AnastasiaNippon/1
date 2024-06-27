@@ -1,0 +1,100 @@
+// Variables and fonts definitions
+$primary-color: #1576bd; // Blue
+$footer-background-color: #1572c2; // Darker Blue
+$font-family-base: 'Montserrat', sans-serif;
+
+// Font-face declarations
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('../fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('../fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('../fonts/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBoldItalic';
+  src: url('../fonts/Montserrat-SemiBoldItalic.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-ExtraBold';
+  src: url('../fonts/Montserrat-ExtraBold.ttf');
+}
+
+// Base styling
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f9f9;
+  font-family: $font-family-base;
+}
+
+.header {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+
+  .logo-container img {
+    width: 283px;
+  }
+
+  .navigation {
+    display: flex;
+    margin: 25px;
+
+    a {
+      color: $primary-color;
+      font-size: 25px;
+      padding: 20px;
+      margin-right: 10px;
+      text-decoration: none;
+    }
+  }
+}
+
+.footer {
+  background-color: $footer-background-color;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .icon-links {
+    display: flex;
+    gap: 10px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

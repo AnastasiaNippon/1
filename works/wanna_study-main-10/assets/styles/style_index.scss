@@ -1,0 +1,1217 @@
+// Шрифты
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: Montserrat-Medium;
+    src: url(../fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: Montserrat-SemiBold;
+    src: url(../fonts/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    font-family: Montserrat-SemiBoldItalic;
+    src: url(../fonts/Montserrat-SemiBoldItalic.ttf);
+}
+@font-face {
+    font-family: Montserrat-ExtraBold;
+    src: url(../fonts/Montserrat-ExtraBold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    // max-width: 1440px;
+    // margin: 0 auto;
+}
+
+main{
+    width: 100%;
+}
+
+// Раздел "Направления" с карточками
+
+.directions {
+    max-width: 1440px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.directions__title {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    padding-left: 3rem;
+    color: rgba(22, 119, 189, 1);
+    font-family: Montserrat-SemiBold;
+    font-weight: 600;
+    font-size: 50px;
+}
+.directions__cards {
+    font-family: Montserrat-Medium;
+    font-size: 15px;
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: rgba(255, 255, 255, 1);
+    // line-height: 2rem;
+}
+.card__box {
+    width: 390px;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        border-radius: 30px;
+    }
+}
+.card__title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.card__text {
+    margin-bottom: 1rem;
+    p {
+        margin-top: 1rem;
+    }
+}
+.card__list {
+    padding-left: 1rem;
+}
+#card__1, #card__5 {
+    background-color: rgba(31, 180, 122, 1);
+}
+#card__2, #card__6 {
+    background-color: rgba(241, 117, 168, 1);
+}
+#card__3, #card__4 {
+    background-color: #70C7E3;
+}
+// Кнопка "Записаться на бесплатное занятие" из раздела "Направления"
+.directions__btn {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.signup__btn {
+    background-color: rgba(251, 221, 41, 1);
+    color: rgba(22, 119, 189, 1);
+    font-family: Montserrat-Medium;
+    font-size: 35px;
+    padding: 1.6rem 1.8rem;
+    text-decoration: none;
+    border-radius: 60px;
+}
+
+@media screen and (max-width: 1027px) {
+  .directions__title {
+    margin: 0 auto;
+    margin-top: 1.6rem;
+    margin-bottom: 1.2rem;
+    font-size: 3rem;
+    padding-left: 0;
+}
+  .signup__btn {
+  margin: 0 auto;
+  max-width: 95%;
+  // padding: 20px 0; 
+    font-size: 30px;/* Увеличиваем верхний и нижний отступы */
+} 
+}
+
+
+
+@media screen and (max-width: 426px) {
+    .directions {
+        max-width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        // padding: 0 1rem;
+    }
+    .directions__title {
+        max-width: 100%;
+        font-size: 2.5rem;
+        margin: 0 auto;
+        margin-top: 1.6rem;
+        margin-bottom: 1.2rem;
+        padding-left: 0;
+    }
+    .directions__cards {
+        max-width: 100%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        margin-bottom: 1rem;
+        // line-height: 1.5rem;
+    }
+    .card__box {
+        max-width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    .card__list {
+        padding-left: 1rem;
+    }    
+    .card__title {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .card__text {
+        margin-bottom: 1rem;
+        p {
+            margin-top: 1rem;
+        }
+    }
+    .card__title-2 {
+        margin-top: 2rem;
+    }
+    }
+
+    // Кнопка "Записаться на бесплатное занятие" из раздела "Направления"
+    .directions__btn {
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .signup__btn {
+        margin: 0.1rem;
+        font-size: 20px;
+        padding: 1rem 1.2rem;
+    }
+}
+
+// Раздел "Педагоги"
+.teachers {
+    padding: 140px 75px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.teachers__title {
+    margin-bottom: 35px;
+    font-family: Montserrat-SemiBold;
+    font-size: 50px;
+    text-align: left;
+    color: #1677BD;
+}
+
+.teachers__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin: 0 auto;
+    column-gap: 10px;
+    row-gap: 30px;
+}
+
+.card__teacher {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 390px;
+    height: 690px;
+    padding: 15px;
+    background-color: rgb(198, 231, 218, 0.5);
+    border-radius: 25px;
+}
+
+.card__teacher:nth-of-type(1) {
+    flex: 1 250px;
+}
+
+.card__teacher:nth-of-type(2) {
+    flex: 1 250px;
+}
+
+.card__teacher:nth-of-type(3) {
+    flex: 1 250px;
+}
+
+.teachers__pic1, .teachers__pic2, .teachers__pic3 {
+    width: 345px;
+    height: 415px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.teachers__name {
+    margin: 10px 0 15px;
+    font-family: Montserrat-Regular;
+    font-size: 28px;
+}
+
+.teachers__introduction1 {
+    margin-bottom: 15px;
+    padding-left: 10px;
+    font-family: Montserrat-Regular;
+    font-size: 20px;
+    text-align: left;
+}
+
+.teachers__introduction2 {
+    margin-bottom: 15px;
+    padding-right: 10px;
+    font-family: Montserrat-Regular;
+    font-size: 20px;
+    text-align: left;
+}
+
+.teachers__introduction3 {
+    margin-right: 80px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: Montserrat-Regular;
+    font-size: 20px;
+    text-align: left;
+}
+
+.more__introduction1 {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: Montserrat-Regular;
+    font-size: 20px;
+    text-align: left;
+}
+
+.more__introduction2 {
+    margin-right: 19px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: Montserrat-Regular;
+    font-size: 20px;
+    text-align: left;
+}
+
+.more__introduction3 {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: Montserrat-Regular;
+    font-size: 20px;
+    text-align: left;
+}
+
+@media screen and (max-width: 426px) {
+    .teachers {
+        width: 100%;
+        margin: 0 auto;
+        padding: 60px 5px;
+    }
+
+    .teachers__title {
+        max-width: 100%;
+        margin-bottom: 35px;
+        padding-left: 5px;
+        font-size: 45px;
+        text-align: center;
+    }
+
+    .teachers__cards {
+        max-width: 100%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 40px;
+    }
+
+    .card__teacher {
+        max-width: 300px;
+        height: 680px;
+        padding: 15px;
+    }
+
+    .teachers__pic1, .teachers__pic2, .teachers__pic3 {
+        width: 250px;
+        height: 350px;
+    }
+
+    .teachers__name {
+        font-size: 20px;
+    }
+
+    .teachers__introduction1, .teachers__introduction2, .teachers__introduction3 {
+        font-size: 18px;
+    }
+
+    .teachers__introduction1 {
+        padding-left: 5px;
+        margin-right: 60px;
+    }
+
+    .teachers__introduction2 {
+        padding-left: 3px;
+    }
+
+    .teachers__introduction3 {
+        width: 250px;
+        margin-left: 57px;
+    }
+
+    .more__introduction1, .more__introduction2, .more__introduction3 {
+        font-size: 18px;
+    }
+
+    .more__introduction1 {
+        padding-left: 7px;
+    }
+
+    .more__introduction2 {
+        margin-right: 1px;
+        padding-left: 2px;
+    }
+}
+
+
+// Отзывы - слайдер
+.feedbacks__background {
+  background-color: rgb(198, 231, 218, 0.5);
+}
+
+.feedbacks {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 126px;
+    min-height: 40rem;
+    // background-color: rgb(198, 231, 218, 0.5);
+}
+
+.feedbacks__title {
+    margin: 50px 0 50px 5%;
+    color: rgba(22, 119, 189, 1);
+    font-family: Montserrat-SemiBold;
+    font-weight: 600;
+    font-size: 50px;    
+}
+
+.slider {     
+    height: 480px;
+    overflow: hidden;
+}
+
+.slide_navigation {
+    position: absolute;
+    bottom: 5rem;
+    right: 15%;
+    display: flex;
+    transform: translateX(-50%)
+}
+
+.bar {
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    cursor: pointer;
+    background-image: url("../images/feedback/Arrow-prewiev.svg");
+    transition:all .4s ease;
+}
+
+.bar_next {
+    background-image: url("../images/feedback/Arrow-next.svg");
+}  
+
+.bar:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides {
+    width: 200%;  
+    display: flex;  
+}
+
+.slide {
+    display: flex;  
+    width: 50%;
+    transition: all 1.1s ease;
+}
+
+.slide__img {
+    display: flex;
+    justify-content: center;  
+    gap: 20px;
+    width: 100%;  
+}
+
+.slide__img img {  
+    width: 30%; 
+    max-width: 650px;
+    max-height: 480px; 
+    border-radius: 20px;    
+}
+
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+
+#r2:checked ~ .s1 {
+    margin-left: -50%;
+}
+
+// media для слайдера
+
+@media screen and (max-width: 1026px) {
+    .feedbacks {
+      height: 75rem;
+    }   
+    .feedbacks__title {
+      margin-left: 10%;    
+      font-size: 50px;;
+    }  
+    .slides {
+      height: 100%;
+    }  
+    .slider {      
+      height: 55rem;
+      overflow: hidden;
+    }  
+    .slide__img {
+      flex-direction: column;
+      align-items: center;
+    }  
+    .slide__img img {
+      min-width: 500px;  
+      height: 245px;
+    }
+  }
+  
+  @media screen and (max-width: 520px) {
+    .feedbacks {
+      max-width: 520px;
+      height: 60rem;
+    } 
+    .slider {          
+      height: 40rem;
+      overflow: hidden;
+    }  
+    .feedbacks__title {
+      margin-left: 0;    
+      font-size: 45px;
+      text-align: center;
+    }
+    .slide__img img {
+      min-width: 360px;  
+      height: 190px;
+    }
+    .slide_navigation {    
+        bottom: 3rem;
+        right: 25%;
+        display: flex;
+        transform: translateX(-50%);      
+    }    
+  }
+
+
+// Раздел "Акции"
+
+// поменяла местами стили для promo и promo__image-background (чтобы задать ширину контента)
+.promo{ 
+  background-image: url("../pictures/promo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100vw;
+    font-family: Montserrat-Regular; 
+    padding-top: 5%;
+}
+
+.promo__image-background{   
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+.promo__title{
+    color: rgba(22, 119, 189, 1);
+    font-family: Montserrat-SemiBold;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    padding-left: 6%;
+    font-weight: 600;
+    font-size: 50px;
+}
+.promo__maintext-first{
+    font-size: 40px;
+    line-height: 50px;
+    padding-left: 6%;
+    padding-top: 5%;
+
+}
+.promo__maintext-second{
+    font-size: 40px;
+    padding-top: 3%;
+    line-height:50px;
+    padding-left: 6%;
+    padding-bottom: 20%;
+}
+.maintext__bold{
+    font-family: Montserrat-SemiBold;
+}
+@media screen and (max-width: 426px){
+  .promo__title {font-size: 45px;
+}
+.promo__maintext-first {
+  font-size: 25px;
+  line-height:25px;
+}
+.promo__maintext-second{
+  font-size: 25px;
+  line-height:25px;
+}
+}
+// Раздел "Контакты"
+.contacts{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 7%;
+}
+.contacts__title
+{
+    font-family: Montserrat-SemiBold;
+    color:rgba(22, 119, 189, 1);
+    padding-bottom: 5%;
+    font-size:50px;
+
+}
+.contacts__adress
+{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    height: 48%;
+    padding-left: 6%;
+}
+.contacts__map
+{
+    margin-left: 4%;
+    padding-bottom: 10%;
+    padding-top: 7%;
+    padding-right: 8%;
+}
+.contacts__photo{
+    width: 640px;
+    height: 431px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.contacts__adress-titles{
+    font-family: Montserrat-SemiBold;
+    color:rgb(7, 7, 7);
+    font-size: 35px;
+    padding-bottom: 5%;
+}
+.contacts__adress-main{
+    font-family: Montserrat-SemiBold;
+    color:rgb(7, 7, 7);
+    font-size: 25px;
+    padding-bottom: 5%;
+}
+.contacts__adress-bold{
+    font-size: 25px;
+}
+@media screen and (max-width: 426px){
+  .contacts__title {font-size: 45px;
+}
+.contacts__adress-titles {
+  font-size: 30px;
+  line-height:25px;
+}
+.contacts__adress-main{
+  font-size: 25px;
+  line-height:25px;}
+.contacts__photo{
+  width: 640px;
+  height: 311px;
+}
+}
+
+
+//  ХЭДЕР И ФУТЕР
+.site-container {
+    display: flex;
+    flex-direction: column; /* Колонный флекс */    
+    font-family: Montserrat-SemiBold;
+    padding-top: 20px;
+    margin: 0 auto;
+    margin-block-start: 0%;
+    max-width: 1440px;
+  }
+  
+  .background-container1 {
+    background-image: url("./assets/pictures/headerbackground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: table-column-group;
+    margin-block-start: 0%;
+    padding-bottom: 2rem; /* Добавил отступ снизу */
+  }
+  
+  .header {
+    display: flex;
+    margin-block: 0px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    padding-bottom: 1px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  
+  .logo-container {
+    display: flex; /* Применяем flex к контейнеру, а не к изображению */
+    text-align: start;
+    padding-top: 0px;
+  }
+ 
+  .logo-container img {
+    width: 210px; 
+    height: 210px;
+    padding-top: 0px;
+  }
+  
+  .study-club-title {
+    font-family: Montserrat-SemiBold;
+    text-align: left; /* Выравнивание текста по краю */
+    font-size: 38px; /* Большой размер шрифта */
+    font-weight: bold; /* Жирный текст */
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 20px;    
+  }
+  
+  .study-club_text { 
+    font-family: Montserrat-SemiBold;
+    font-size: 22px;  
+    padding-bottom: 30px;
+  }
+  
+
+  .study-club-title_italic {
+    font-family: Montserrat-SemiBoldItalic;
+    font-size: 25px;
+    padding-bottom: 30px;
+  }
+
+  .navigation1 {   
+    display: flex; 
+    flex-wrap: wrap;
+    align-items: center; 
+    margin-bottom: 30px; 
+    text-decoration: none; 
+    padding-left: 30px; 
+  }
+  .navigation1{
+    display: flex;
+    margin-right: 10px;
+    align-items: baseline;
+    }
+  
+  .navigation1 a {
+    display: flex;
+    text-decoration: none;
+    font-weight: 100;
+    color: #1576bd;
+    font-size: 22px;
+    padding: 10px;
+  }
+  
+  .navigation1 a:hover {
+    transform: scale(1.1);
+    color: #0f9437;
+  }
+
+ 
+.navigation1 img { 
+    width: 35px; 
+    height: 35px; 
+    margin-right: 5px; 
+}
+  
+//   new
+  .no-underline, .no-underline:visited { 
+    text-decoration: none; 
+    font-weight: bold; 
+    display: flex; 
+    font-size: 24px; color: #1576bd;
+   }
+  
+  .menu__burger {
+    display: none;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center; /* Распределение контента по ширине */
+    padding: 5px;
+    background-color: transparent;
+    font-size: 30px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .text-section {
+    width: 80%; /* Задаем ширину текстового блока */
+    padding: 20px;
+    color: #1572c2;
+    padding-left: 3rem;
+    padding-top: 10px;
+  }
+  
+  
+  .image-section img {
+    text-align: end;
+    margin-block-end: 0%;
+    width: 516px; /* Уменьшаем изображение, чтобы оно не выходило за пределы своего блока */
+    height: 353px;
+    border-radius: 50px; /* Добавление закругленных углов */
+  }
+  
+  .button-container {
+    text-align: center; /* Выравниваем кнопку по центру */
+    padding: 20px; /* Добавляем отступ сверху и снизу для кнопки */
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+  .button-container a {
+    font-family: Montserrat-Medium;
+    font-size: 35px;
+    border-radius: 60px;
+  }
+  .image-section {
+    width: 80%; /* Задаем ширину блока с изображением */
+    display: flex;    
+    margin: 5px;
+    justify-content: flex-end;
+    padding-right: 3rem;
+  }
+  
+  .free-lesson-button {
+    background-color: #fbdd29;
+    color: #1576bd;
+    text-decoration: none;
+    padding: 20px 40px;
+    border-radius: 20px;
+    display: inline-block; /* Для центрирования кнопки */
+    font-size: 30px;
+  }
+    
+  // footer
+  .footer__background {
+    background-color: #1572c2;
+  }
+
+
+  .footer {
+    
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat-SemiBold', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .footer__links {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+    
+  .contact-icons {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .contact-icons img {
+    width: 46px;
+    height: 46px;
+    margin-right: 1.5rem;
+  }
+  
+  .icon-links {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+  
+  .footer a {
+    color: azure;
+    display: fixed;
+    margin-block-start: 10px;
+    padding-right: 5px;
+    text-decoration: none;
+  }
+
+    
+  .footer a .icon-links {
+    position: relative; /* или relative, fixed, sticky */
+  }
+  /*# sourceMappingURL=style_index.css.map */
+  @media screen and (max-width: 1026px) {
+    .site-container {
+      padding-top: 20px; /* Уменьшаем отступ сверху */
+    }
+  
+    .header {
+      flex-direction: column; /* Выравниваем элементы по вертикали */
+      align-items: center; /* Центрируем элементы */
+      padding-left: 0;
+    }
+  
+    .logo-container img {
+      width: 180px; /* Уменьшаем размер логотипа */
+      height: auto; /* Автоматическое определение высоты */
+      margin-bottom: 10px; /* Добавляем отступ снизу */
+    }
+
+    .study-club-title { 
+      font-size: 30px;    
+     
+    }
+  
+    .navigation1 {
+      font-style: none;
+      flex-direction: column; /* Размещаем навигационные ссылки по вертикали */
+      align-items: center; /* Центрируем элементы */
+      margin-top: 20px; /* Добавляем отступ сверху */
+    }
+  
+    .navigation1 a {
+      display: flex;
+      font-size: 24px; /* Уменьшаем размер шрифта навигационных ссылок */
+      padding: 5px; /* Уменьшаем отступы */
+      font-style: none;
+    }
+
+    .contact-icons {
+      flex-direction: column; /* Размещаем контактные иконки по вертикали */
+      align-items: center; /* Центрируем элементы */
+      margin-bottom: 20px; /* Увеличиваем отступ снизу */
+    }
+  
+    .icon-links img {
+      width: 20px; /* Уменьшаем размер иконок */
+      height: 20px;
+      margin-right: 10px; /* Уменьшаем отступ между иконками */
+    }
+  
+    
+  
+    .text-section {
+      padding: 20px; /* Увеличиваем отступы в текстовом блоке */
+      
+    }
+  
+    .study-club_text {
+      font-size: 20px; /* Уменьшаем размер шрифта параграфов */
+    }
+
+    .image-section {
+      padding: 20px;
+      margin: 0;
+
+    }
+  
+    .image-section img {
+      max-width: 100%; /* Изображение занимает всю доступную ширину */     
+      margin: 0 auto; /* Центрируем изображение */      
+      display: block; /* Убираем пробелы между изображением и его контейнером */
+    }
+  
+    .button-container {
+      margin: 0 auto;
+      max-width: 95%;
+      padding: 20px 0; 
+      a {
+        font-size: 30px;/* Увеличиваем верхний и нижний отступы */
+    } 
+  }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        max-width: 400px;
+        max-height: 250px;
+      }
+    }
+
+  
+  .footer {
+    height: auto; /* Для автоматического растяжения футера в зависимости от контента */
+  }
+  
+  .footer__links {
+    grid-column: auto; /* Отменяем жестко заданное положение */
+    grid-row: auto; /* Отменяем жестко заданное положение */
+    justify-self: auto; /* Отменяем жестко заданное положение */
+    text-align: center;
+  }
+
+ 
+  
+  .icon-links {
+    margin-top: 1rem; /* Добавляем отступ между иконками и текстом */
+  }
+  
+  .footer__confidential {
+    padding-top: 2rem; /* Уменьшаем верхний отступ */
+    text-align: center; /* Выравниваем текст по центру */
+    font-size: 14px; /* Уменьшаем размер шрифта */
+  }
+  }
+  
+  /* Adaptive phone */
+  @media screen and (max-width: 520px) {
+    .navigation1, .header__contact {
+      display: none;
+    }
+
+    .header {
+      padding: 0;
+    }
+    .logo-container {
+      z-index: 5;
+      padding: 0;
+    }
+    
+    .header__nav {
+      display: none;
+    }
+    .header__contact {
+      display: none;
+    }
+    .menu__burger {
+      display: block;
+    }
+    .burger-checkbox {
+      position: absolute;
+      visibility: hidden;
+    }
+    .burger {
+      z-index: 5;
+      cursor: pointer;
+      display: block;
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      border: none;
+      background: transparent;
+      width: 40px;
+      height: 26px;
+    }
+    .burger::before,
+    .burger::after {
+      content: "";
+      left: 0;
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 5px;
+      border-radius: 10px;
+      background: #1572c2;
+    }
+    .burger::before {
+      top: 0;
+      box-shadow: 0 11px 0 #1572c2;
+      transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+    }
+    .burger::after {
+      bottom: 0;
+      transition: bottom 0.3s 0.15s, transform 0.3s;      
+    }
+   
+    .burger-checkbox:checked + .burger::before {
+      top: 11px;
+      transform: rotate(45deg);
+      box-shadow: 0px 0 #1576bd;
+      transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+    }
+    .burger-checkbox:checked + .burger::after {
+      bottom: 11px;
+      transform: rotate(-45deg);
+      transition: bottom 0.3s, transform 0.3s 0.15s;
+    }
+
+    .menu-list {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 4;
+      list-style: none;
+      padding: 13rem 3rem 0 3rem;
+      margin: 0;
+      display: none;
+      background: rgb(205, 235, 223);
+      text-align: center;
+      overflow: auto;    
+    }
+    .burger-checkbox:checked ~ .menu-list {
+      display: block;
+    }
+    .menu-item {
+      display: block;
+      padding: 20px;
+      border-bottom: 1px solid #bbcfcd;
+      color: #1576bd;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    .menu-item:hover {
+      background: rgb(155, 206, 206);
+    }
+
+    .burger_phone {
+      padding-top: 60px;
+      border-bottom: none;
+    }
+
+    .burger_phone:hover {
+      background: none;
+    }
+
+    .burger_contact-icons {
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 30px;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 30px;
+    }
+    
+    .burger_contact-icons a {
+      display: inline-block; /* Помещаем иконки внутри <a> в строчный блок */      
+    }
+    
+    .burger_contact-icons img {
+      width: 40px; /* Устанавливаем ширину иконок */
+      height: 40px; /* Устанавливаем высоту иконок */
+    }
+
+    // Убирает картинку в моб версии
+    .image-section {
+        display: none;
+    }   
+
+    .text-section {
+      width: 100%;
+    }
+
+    .study-club-title {      
+      font-size: 23px; 
+    }
+    
+    .study-club_text {      
+      font-size: 18px;
+    }
+    
+  
+    .study-club-title_italic {      
+      font-size: 17px;
+      
+    }
+
+    .button-container {
+      width: 100%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
+  
+    .button-container a {
+      font-size: 20px;
+      margin: 0.1rem;
+      padding: 1rem 1.2rem;
+    }
+      .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        height: auto; /* Для автоматического растяжения футера в зависимости от контента */
+      }
+    
+      .footer__links {
+        display: grid;
+        grid-template-columns: 1fr;
+        // grid-column: auto; /* Отменяем жестко заданное положение */
+        // grid-row: auto; /* Отменяем жестко заданное положение */
+        // justify-self: auto; /* Отменяем жестко заданное положение */
+        // text-align: center;
+      }
+
+      .contact-icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding-top: 12%;
+        padding-left: 6%;
+      }
+    
+      .icon-links {
+        margin: 0 auto;
+        margin-bottom: 5%;
+        padding-left: 3%;
+        padding-bottom: 3%;
+        // margin-top: 0.5rem; /* Добавляем отступ между иконками и текстом */
+      }
+    
+      .footer__confidential {
+        padding-top: 2rem; /* Уменьшаем верхний отступ */
+        text-align: center; /* Выравниваем текст по центру */
+        font-size: 14px; /* Уменьшаем размер шрифта */
+      }
+    }
+  
+  
+
+
+
+
+

@@ -1,0 +1,246 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url(../fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url(../fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: Montserrat-SemiBold;
+  src: url(../fonts/Montserrat-SemiBold.ttf);
+}
+@font-face {
+  font-family: Montserrat-SemiBoldItalic;
+  src: url(../fonts/Montserrat-SemiBoldItalic.ttf);
+}
+@font-face {
+  font-family: Montserrat-ExtraBold;
+  src: url(../fonts/Montserrat-ExtraBold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main {
+  width: 100%;
+}
+@media screen and (max-width: 1440px) {
+  .directions{
+    min-width: 1024px;
+  }
+}
+
+@media screen and (max-width: 1026px) {
+  .directions {
+    max-width: 858px;
+  }
+}
+.site-container {
+  display: flex;
+  flex-direction: column; /* Колонный флекс */
+  font-family: Montserrat-SemiBold;
+  padding-top: 30px;
+  margin-block-start: 0%;
+}
+
+.background-container1 {
+  background-image: url("./assets/pictures/headerbackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: table-column-group;
+  margin-block-start: 0%;
+  padding-bottom: 40px; /* Добавил отступ снизу */
+}
+
+.header {
+  display: flex;
+  margin-block: 0px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+  padding-bottom: 40px;
+}
+
+.stydy-club-title {
+  text-align: left; /* Выравнивание текста по краю */
+  font-size: 36px; /* Большой размер шрифта */
+  font-weight: bold; /* Жирный текст */
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.logo-container {
+  display: flex; /* Применяем flex к контейнеру, а не к изображению */
+  justify-content: center; /* Это выровняет содержимое контейнера по правому краю */
+  padding-top: 0px;
+}
+
+.logo-container img {
+  width: 220px; 
+  height: 220px;
+  padding-top: 0px;
+}
+
+.navigation1 {
+  display: flex;
+  margin: 25px;
+  text-decoration: none;
+  padding-top: 0px;
+}
+
+.navigation1 a {
+  display: flex;
+  text-decoration: none;
+  font-weight: 100;
+  color: #1576bd;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.navigation1 a:hover {
+  font-size: 30px;
+  color: #0f9437;
+}
+
+.no-underline, .no-underline:visited {
+  text-decoration: none;
+  font-weight: 30px;
+  display: flex;
+  font-size: 24px;
+  color: #1576bd;
+}
+
+.no-underline, .no-underline:visited a:hover {
+  font-size: 30px;
+  color: #0f9437;
+}
+
+.contact-icons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  text-decoration: none;
+  padding-left: 30 px;
+}
+
+.icon-links {
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.icon-links img {
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Распределение контента по ширине */
+  padding: 20px;
+  background-color: transparent;
+  font-size: 30px;
+}
+
+.text-section {
+  width: 50%; /* Задаем ширину текстового блока */
+  padding: 20px;
+  color: #1572c2;
+  padding-left: 90px;
+  padding-top: 10px;
+}
+
+.text-section p {
+  font-size: 30px; /* Увеличенный размер для заголовка */
+  padding-bottom: 30px;
+}
+
+.image-section img {
+  margin-block-end: 0%;
+  max-width: 500px; /* Уменьшаем изображение, чтобы оно не выходило за пределы своего блока */
+  height: 400px;
+  border-radius: 20px; /* Добавление закругленных углов */
+}
+
+.button-container {
+  text-align: center; /* Выравниваем кнопку по центру */
+  padding: 20px; /* Добавляем отступ сверху и снизу для кнопки */
+}
+
+.image-section {
+  width: 50%; /* Задаем ширину блока с изображением */
+  display: flex;
+  margin: 20px;
+}
+
+.free-lesson-button {
+  background-color: #fbdd29;
+  color: #1576bd;
+  text-decoration: none;
+  padding: 20px 40px;
+  border-radius: 20px;
+  display: inline-block; /* Для центрирования кнопки */
+  font-size: 30px;
+}
+
+
+.footer {
+  background-color: #1572c2;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Montserrat-SemiBold', sans-serif;
+  font-size: 25px;
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+}
+
+.contact-icons {
+  display: flex;
+  align-items: center;
+}
+
+.contact-icons img {
+  width: 46px;
+  height: 46px;
+  margin-right: 1rem;
+}
+
+.icon-links {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer a {
+  color: azure;
+  display: fixed;
+  margin-block-start: 10px;
+  text-decoration: none;
+}
+
+.footer a .icon-links {
+  position: relative; /* или relative, fixed, sticky */
+}
+/*# sourceMappingURL=style_index.css.map */

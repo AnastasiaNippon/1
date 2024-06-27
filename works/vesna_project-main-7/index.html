@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/normalize.css" />
+    <link rel="stylesheet" href="./assets/styles/style_index.css" />
+    <title>Vesna</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__main">
+      <img
+        class="header__logo"
+        src="/assets/images/header_footer/logo.svg"
+        alt="Logo"
+      />
+      <nav class="header__nav">
+        <a href="http://127.0.0.1:5500/index.html" class="header__nav-menu">Главная</a>
+        <a href="http://127.0.0.1:5500/portfolio.html" class="header__nav-menu">Портфолио</a>
+        <a href="http://127.0.0.1:5500/services.html#order" class="header__nav-menu">Услуги</a>
+        <a href="http://127.0.0.1:5500/contacts.html" class="header__nav-menu">Контакты</a>
+      </nav>
+
+      <div class="header__contact">
+        <button type="submit" class="header__phone">+7 (921) 888 88 88</button>
+        <p class="header__consulting">Бесплатная консультация</p>
+      </div>
+      </div>
+
+      <div class="header__pictures">
+        <div class="header__text">
+          <p class="header__text-small">Ландшафтная студия Vesna</p>
+          <h1 class="header__main-title">Создаем авторские ландшафты с вашим характером</h1>
+          <h2 class="header__second-title">От идеи до полной реализации</h2>
+        </div>
+
+        <div class="header__background">
+          <img
+            class="header__leaves"
+            src="assets/images/main/Layer1002.png"
+            alt="Leaves"
+          />
+        </div>
+        </div>
+
+        <div class="header__pictures-navigation">
+        <div class="header__slider-wrapper">
+          <div class="header__slider-project">
+            <h3 class="header__slider-title">Последний проект</h3>
+            <div class="header__slider-icon">
+              <img src="assets/images/main/arrow.svg" alt="Стрелочка" class="slider-icon">
+            </div>
+            <a href="#!" class="header__slider-img">
+              <img src="assets/images/main/slider_project.svg" alt="Фото проекта" class="slider__project">
+            </a>
+          </div>
+          </div>
+
+          <div class="header__arrows">
+            <a href="#" class="arrows__left">
+              <img src="assets/images/main/left_arrow.svg" alt="Левая стрелочка">
+            </a>
+            <a href="#" class="arrows__right">
+              <img src="assets/images/main/right_arrow.svg" alt="Правая стрелочка">
+            </a>
+          </div>
+
+          <div class="arrows__pages">
+            <img src="assets/images/main/pages_numbers.svg" alt="Номера страниц" class="pages__numbers">
+          </div>
+        </div>
+
+         <!-- бургер -->
+
+      <div class="menu__burger">
+        <input type="checkbox" id="burger-checkbox" class="burger-checkbox" />
+        <label for="burger-checkbox" class="burger"></label>
+        <ul class="menu-list">
+          <li><a href="/home" class="menu-item">Главная</a></li>
+          <li><a href="/portfolio" class="menu-item">Портфолио</a></li>
+          <li><a href="/services" class="menu-item">Услуги</a></li>
+          <li><a href="/contact" class="menu-item">Контакты</a></li>
+          <li>
+            <button type="submit" class="menu-item burger__phone">
+              +7 (921) 888 88 88
+            </button>
+          </li>
+          <li>
+            <p class="menu-item burger__consult">Бесплатная консультация</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </header>
+
+    <main>
+      <!--Тут начинается текст + 3 картинки вместе-->
+      <div class="main__explanation">
+        <div class="main__explanation-leaves">
+          <!--Часть с текстом и листочками слева и справа-->
+          <div class="main__explanation-left">
+            <img
+              class="main__explanation-ll"
+              src="assets/images/main/Layer_left.png"
+              alt="Left leaves"
+            /> <!--левые листочки-->
+          </div>
+          <div class="main__explanation-text">
+            <h2 class="explanation-text__title">Создаем не просто красивый сад с картинки,</h2>
+            <h2 class="explanation-text__title2">а место, куда захочется возвращаться</h2>
+            <p class="explanation-text__about">
+              От проекта до ухода за садом – один подрядчик. Мы несем
+              ответственность за все этапы работ. Ваш сад будет органичен и
+              выполнен в одном стиле. Мы делаем участок практичным, безопасным и
+              комфортным для всех членов семьи. В работе мы используем
+              современные и качественные материалы, как залог долговечности
+              производимых работ. Благодаря нашему подходу исключаются возможные
+              ошибки до начала строительных работ и предотвращаются
+              непредвиденные расходы.
+            </p>
+          </div>
+          <div>
+            <img
+              class="main__explanation-rl"
+              src="assets/images/main/Layer_right.png"
+              alt="Right leaves"
+            /> <!--правые листочки-->
+          </div>
+        </div>
+
+        <!--Часть с тремя фото-->
+        <div class="main__examples">
+          <img src="assets/images/main/1.png" alt="First project" class="examples__pic1"/>
+          <img src="assets/images/main/2.png" alt="Second project" class="examples__pic2"/>
+          <img src="assets/images/main/3.png" alt="Third" class="examples__pic3"/>
+        </div>
+      </div>
+
+      <!--Часть "доверьте свой участок"-->
+      <div class="main__trust">
+        <div class="main__trust-title">
+          <h2 class="main__trust-title1">Доверьте свой участок профессионалам -</h2>
+          <h2 class="main__trust-title2">пусть они позаботятся о ландшафтном дизайне и благоустройстве</h2>
+        </div>
+        <div class="main__trust-options">
+          <div class="trust-options__pictures">
+            <p class="trust-options__title">Пример 3D-визуализации</p>
+            <div class="pictures__wrap">
+            <img src="assets/images/main/image5.png" alt="Example 1" class="pictures__example1"/>
+            <img src="assets/images/main/image6.png" alt="Example 2" class="pictures__example2"/>
+          </div>
+          </div>
+
+          <div class="trust-options__points">
+            <div class="points__logo">
+              <img
+                src="assets/images/main/akar-icons_circle-check-fill.svg"
+                alt="Check" class="logo-1"
+              />
+              <img
+              src="assets/images/main/akar-icons_circle-check-fill.svg"
+              alt="Check" class="logo-2"
+            />
+            <img
+            src="assets/images/main/akar-icons_circle-check-fill.svg"
+            alt="Check" class="logo-3"
+          />
+            </div>
+            <div class="points__text">
+              <p class="points__text-1">
+                Вы оцените будущий ландшафт с помощью 3D-визуализации и, если
+                это требуется, внесете изменения.
+              </p>
+              <p class="points__text-2">
+                Вам не придется контролировать качество нашей работы: отдыхайте
+                и занимайтесь своими делами, пока специалисты технадзора следят
+                за процессом.
+              </p>
+              <p class="points__text-3">
+                Вы подарите себе красивый и ухоженный сад, переложите заботы по
+                уходу на наши плечи и получите гарантию на все работы.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Тут начинается часть "Что мы делаем"-->
+      <div class="main__do">
+        <h2 class="main__do-title">Что мы делаем</h2>
+        <div class="main__service">
+          <div class="main__service1">
+            <img
+              src="assets/images/main/iconoir_design-pencil.svg"
+              alt="Pencil"
+            />
+            <h3 class="service1__title">Проектирование</h3>
+            <ul class="service1__points">
+              <li class="points1">Новый качественный подход к проектированию</li>
+              <li class="points1">Детальная разработка всех инженерных разделов проекта</li>
+              <li class="points1">Расчет освещенности участка</li>
+              <li class="points1">Реализация идей любой сложности</li>
+              <li class="points1">Европейский подход</li>
+              <li class="points1">Применение нестандартных современных идей и технологий</li>
+              <li class="points1">Точный расчет бюджетов строительства</li>
+            </ul>
+          </div>
+          <div class="main__service2">
+            <img src="assets/images/main/ph_tree-thin.svg" alt="Tree" />
+            <h3 class="service2__title">Озеленение</h3>
+            <ul class="service2__points">
+              <li class="points2">
+                Прямые поставки посадочного материала из лучших европейских
+                питомников
+              </li>
+              <li class="points2">Использование новейших технологий при посадке</li>
+              <li class="points2">Новый качественный подход к созданию пространств</li>
+              <li class="points2">Европейские решения</li>
+              <li class="points2">Длительная гарантия на все работы и посадочный материал</li>
+              <li class="points2">Сервисное обслуживание</li>
+            </ul>
+          </div>
+          <div class="main__service3">
+            <img src="assets/images/main/tabler_fence.svg" alt="Fence" />
+            <h3 class="service3__title">Благоустройство</h3>
+            <ul class="service3__points">
+              <li class="points3">
+                Все виды строительно-монтажных работ по благоустройству
+              </li>
+              <li class="points3">Инновационные решения</li>
+              <li class="points3">Длительная гарантия на все работы</li>
+              <li class="points3">Строительство водоемов любой сложности</li>
+              <li class="points3">Разработка индивидуальных малых архитектурных объектов</li>
+          </div>
+        </div>
+
+        <!--Кнопка внизу блока-->
+        <div class="main__service-button">
+          <button type="button" class="service-button">
+            Выбрать услугу
+          </button>
+        </div>
+      </div>
+
+      <!--Как выбрать растения-->
+      <div class="main__choose">
+        <div class="main__form">
+        <h2 class="main__choose-title">
+          Как выбрать растения для сада?
+        </h2>
+        <div class="main__choose-form">
+          <form class="form">
+            <p class="choose-form__title">Пришлем инструкцию!</p>
+            <label for="email"></label>
+            <input type="email" name="email" required placeholder="Ваш E-mail" class="choose-form__email">
+            <div>
+            <input type="checkbox" name="personal_information" value="yes">
+            <label for="personal_information" class="personal__text">Я даю согласие на обработку своих персональных данных
+            </label>
+            </div>
+          </form>
+          <div class="main__choose-button">
+            <button type="button" class="choose-button">
+              Хочу инструкцию
+            </button>
+          </div>
+          </div>
+          </div>
+          <div class="main__journal">
+            <img src="assets/images/main/journal.png" alt="Journal" class="journal__pic">
+          </div>
+      </div>
+
+      <!--Тут начинается вторая часть. Наши проекты-->
+      <div class="main__projects">
+        <h2 class="main__projects-title">Наши проекты</h2>
+        <div class="main__projects-pic">
+          <div class="projects__button">
+            <button type="button" class="all_button">
+              Все проекты
+            <img src="assets/images/main/arrow_project.svg" alt="all" class="arrow">
+            </button>
+          </div>
+          <div class="projects-pic1">
+          <a href="http://example.com">
+          <img src="assets/images/main/project1.png" alt="project1" class="project">
+          </a>
+        </div>
+        <div class="projects-pic2">
+          <a href="http://example.com">
+          <img src="assets/images/main/project2.png" alt="project2" class="project">
+          </a>
+        </div>
+        <div class="projects-pic3">
+          <a href="http://example.com">
+          <img src="assets/images/main/project3.png" alt="project3" class="project">
+          </a>
+        </div>
+        <div class="projects-pic4">
+          <a href="http://example.com">
+          <img src="assets/images/main/project4.png" alt="project4" class="project">
+          </a>
+        </div>
+      </div>
+      </div>
+
+      <!--Часть 4 шага-->
+      <div class="main__dreams">
+        <div class="main__titles">
+        <h2 class="main__dreams-title1">4 шага до реализации проекта</h2>
+        <h2 class="main__dreams-title2">вашей мечты</h2>
+        </div>
+
+        <div class="dreams__points">
+          <p class="points__number-1">01</p>
+          <div class="dreams__points-1">
+            <h3 class="dreams__points-title">Расскажите нам, что вы хотите увидеть на своем участке</h3>
+            <p>Побеседуйте с нашим специалистом. Он приедет к вам в любое удобное время.</p>
+          </div>
+          <p class="points__number-2">02</p>
+          <div class="dreams__points-2">
+            <h3 class="dreams__points-title">Оцените проект, который разрабатывают наши специалисты, и внесите изменения</h3>
+            <p>Архитектор разработает проект ландшафтного дизайна и сделает 3D-визуализацию.</p>
+          </div>
+          <p class="points__number-3">03</p>
+          <div class="dreams__points-3">
+            <h3 class="dreams__points-title">Дождитесь окончания ландшафтных работ</h3>
+            <p>Вы получите идеальный участок с хорошим дренажом, мощеными дорожками и площадками, высаженными растениями — деревьями, кустарниками, цветами и газоном.</p>
+          </div>
+          <p class="points__number-4">04</p>
+          <div class="dreams__points-4">
+            <h3 class="dreams__points-title">Делегируйте уход за участком профессионалам</h3>
+            <p>При необходимости мы будем приезжать регулярно и следить за состоянием участка.</p>
+          </div>
+        </div>
+      </div>
+
+      <!--Почему нас выбирают-->
+      <div class="main__why">
+      <h2 class="main__why-title">Почему нас выбирают</h2>
+      <div class="main__why-points">
+        <div class="why-points__reason1">
+          <img src="assets/images/main/carbon_schematics.svg" alt="reason1">
+          <p class="reasons__text">Создаем проекты, которые точно можно реализовать</p>
+        </div>
+        <div class="why-points__reason2">
+          <img src="assets/images/main/cil_flower.svg" alt="reason2">
+          <p class="reasons__text">Наши объекты легко эксплуатировать</p>
+        </div>
+        <div class="why-points__reason3">
+          <img src="assets/images/main/dashicons_money-alt.svg" alt="reason3">
+          <p class="reasons__text">Делаем с умом под любой бюджет</p>
+        </div>
+        <div class="why-points__reason4">
+          <img src="assets/images/main/mdi-light_diamond.svg" alt="reason4">
+          <p class="reasons__text">У нас высокое качество посадочного материала</p>
+        </div>
+        <div class="why-points__reason5">
+          <img src="assets/images/main/carbon_security.svg" alt="reason5">
+          <p class="reasons__text">Даем гарантию на все виды работ</p>
+        </div>
+      </div>
+    </div>
+
+    <!--Отзывы о нас-->
+    <div class="main__feedback">
+      <h2 class="main__feedback-title">Отзывы о нас</h2>
+      <div class="feedback__example">
+        <div>
+          <img src="assets/images/main/feedback_pic.png" alt="feedback" class="feedback__pic">
+        </div>
+        <div class="feedback">
+          <img src="assets/images/main/ph_tree-thin.svg" alt="feedback_logo" class="feedback__logo">
+          <h3 class="feedback__title">Анна Смирнова</h3>
+          <h4 class="feedback__title2">Благоустройство сада в Агалотово</h4>
+          <p class="feedback__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu </p>
+          <img src="assets/images/main/feedback_arrows.svg" alt="feedback_arrows" class="feedback__arrows">
+        </div>
+      </div>
+      <div class="feedback__numbers">
+        <img src="assets/images/main/feedback__numbers.svg" alt="feedback_numbers" class="numbers">
+      </div>
+    </div>
+
+    <!--Часто задаваемые вопросы-->
+    <div class="main__questions">
+      <div class="questions__points">
+        <h2 class="questions__points-title">Часто задаваемые вопросы</h2>
+        <details class="points-body">
+          <summary class="points-body__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+          </summary>
+          <p class="points-body__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+        </details>
+
+        <details class="points-body">
+          <summary class="points-body__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+          </summary>
+          <p class="points-body__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+        </details>
+
+        <details class="points-body">
+          <summary class="points-body__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+          </summary>
+          <p class="points-body__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+        </details>
+
+        <details class="points-body">
+          <summary class="points-body__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+          </summary>
+          <p class="points-body__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+        </details>
+
+        <details class="points-body">
+          <summary class="points-body__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+          </summary>
+          <p class="points-body__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+        </details>
+      </div>
+
+      <div class="questions__sidebar">
+        <h3 class="sidebar__title">Как выбрать растения для сада?</h3>
+        <p class="sidebar__subtitle">Пришлем инструкцию!</p>
+        <div class="sidebar__img">
+          <img src="assets/images/main/journal copy.png" alt="Пример инструкции" class="img__instruction">
+        </div>
+        <form class="sidebar__form">
+          <input class="sidebar__email" placeholder="Ваш email" type="text">
+          <div class="sidebar__checkbox">
+            <input type="checkbox" name="personal">
+            <label for="personal">
+              Я даю согласие на обработку своих своих
+              <a href="#" target="_blank">Персональных данных</a>
+            </label>
+          </div>
+          <div class="sidebar__button-wrap">
+          <button class="sidebar__button">Хочу инструкцию</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!--Часть Остались вопросы-->
+    <div class="main__more-questions">
+      <div class="more-questions__wrapper">
+      <h2 class="more-questions__title">Остались вопросы?</h2>
+      <p class="more-questions__text">Пригласите ландшафтного дизайнера на участок!</p>
+      </div>
+      <img src="assets/images/main/arrow__questions.svg" alt="Стрелочка к кнопке" class="arrow__questions">
+      <div class="call__button">
+      <button type="button" class="questions__call">Перезвоните мне</button>
+      </div>
+      <div class="up__button">
+      <button type="button" class="questions__up">
+        <img src="assets/images/main/arrow_up.svg" alt="Кнопка наверх" class="arrow__up">
+        <p class="up__button-name">Наверх</p>
+      </button>
+      </div>
+    </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__contacts">
+        <div class="footer__phone">+7(921) 888 88 88</div>
+        <div class="footer__email">info@vesna.ru</div>
+        <div class="footer__copyright">© 2021 VESNA</div>
+      </div>
+      <div class="footer__img">
+        <img
+          src="/assets/images/header_footer/group.svg"
+          alt="Footer logo"
+          class="footer__img-logo"
+        />
+      </div>
+      <div class="footer__socialmedia">
+        <div>
+          <a href="https://www.instagram.com" target="_blank">
+            <img
+              src="/assets/images/header_footer/instagram.svg"
+              alt="Instagram Icon"
+              class="footer__instagram"
+          /></a>
+        </div>
+        <div class="footer__confidential">Политика конфиденциальности</div>
+      </div>
+    </footer>
+  </body>
+</html>

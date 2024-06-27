@@ -1,0 +1,142 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #EDF2F0;
+}
+
+.site-container {
+ min-height: 100%; /* Минимальная высота равна 100% */
+  display: flex;
+ flex-direction: column; /* Колонный флекс */
+ justify-content: space-between; /* Распределение пространства */
+ }
+
+.background-container {
+  background-image: url("./assets/pictures/headerbackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 0px; /* Добавил отступ снизу */
+}
+.header {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+}
+.logo-container img {
+  display: flex;
+  width: 230px;
+}
+.navigation {
+  display: flex;
+  margin: 25px 25px;
+  text-decoration: none;
+}
+.navigation a {
+  display: flex;
+  text-decoration: none;
+  font-weight: 100;
+  color: #1576bd;
+  margin-right: 10px;
+  font-size: 25px;
+  padding: 20px;
+}
+
+.no-underline, .no-underline:hover, .no-underline:visited {
+ text-decoration: none;
+ font-weight: 100;
+ display: flex;
+ font-size: 24px;
+ color: #1576bd;
+ white-space: nowrap;
+ }
+
+.contact-icons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+.icon-links {
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+  
+}
+.icon-links img {
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+}
+.container {
+  display: flex;
+  justify-content: space-between; /* Распределение контента по ширине */
+  padding: 20px;
+  background-color: transparent;
+  font-size: 30px;
+}
+.text-section {
+  width: 50%; /* Задаем ширину текстового блока */
+  padding: 20px;
+  color: #1572c2;
+}
+.text-section h1 {
+  font-size: 30px; /* Увеличенный размер для заголовка */
+  text-transform: uppercase; /* Преобразование текста в верхний регистр */
+}
+.text-section h2 {
+  font-size: 20px; /* Увеличенный размер для заголовка */
+  text-transform: uppercase; /* Преобразование текста в верхний регистр */
+} 
+
+.image-section {
+  width: 50%; /* Задаем ширину блока с изображением */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-section img {
+  max-width: 60%; /* Уменьшаем изображение, чтобы оно не выходило за пределы своего блока */
+  height: auto;
+  border-radius: 10px; /* Добавление закругленных углов */
+}
+.button-container {
+  text-align: center; /* Выравниваем кнопку по центру */
+  padding: 20px; /* Добавляем отступ сверху и снизу для кнопки */
+}
+.free-lesson-button {
+  background-color: #fbdd29;
+  color: #1576bd;
+  text-decoration: none;
+  padding: 20px 40px;
+  border-radius: 20px;
+  display: inline-block; /* Для центрирования кнопки */
+  font-size: 30px;
+}
+.footer {
+  background-color: #1572c2;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .icon-links {
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+}
+.footer .icon-links img {
+  width: 24px;
+  height: 24px;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+

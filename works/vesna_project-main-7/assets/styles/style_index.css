@@ -1,0 +1,1480 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Noah-Bold;
+  src: url(../fonts/Noah-Bold.ttf);
+}
+@font-face {
+  font-family: Noah-Regular;
+  src: url(../fonts/Noah-Regular.ttf);
+}
+@font-face {
+  font-family: MarckScript-Regular;
+  src: url(../fonts/MarckScript-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Тут начинается header*/
+.header {
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-repeat: no-repeat;
+  background-image: url("/assets/images/main/Rectangle101.png");
+  background-position: center center;
+  background-attachment: fixed;
+} /*тут фон под меню*/
+.header__main {
+  display: grid;
+  grid-template-columns: 1fr 40% 20%;
+  grid-template-rows: 1fr;
+  gap: 1%;
+  padding-top: 2%;
+} /*Обертка для меню навигации*/
+.header__logo {
+  padding-left: 12%;
+} /*логопотип в header слева*/
+.header__nav {
+  width: 95%;
+  height: 20vh;
+  padding-top: 9%;
+  padding-left: 3%;
+  font-family: Noah-Regular;
+} /*меню*/
+.header__nav-menu {
+  padding-top: 4%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 3%;
+  font-size: 14pt;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+} /*кнопочки меню*/
+.header__nav a:hover {
+  border-bottom: 1px solid rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.2);
+} /*подчеркивание под пунктами меню при наведении*/
+.header__contact {
+  width: 85%;
+  height: 20vh;
+  padding-top: 7%;
+  font-family: Noah-Regular;
+} /*Кнопочка контакта*/
+.header__consulting {
+  padding-top: 2%;
+  padding-left: 4%;
+  font-family: Noah-Bold;
+  font-size: 12pt;
+  color: rgb(255, 255, 255);
+} /*Фраза в кнопочке контакта*/
+.header__phone {
+  width: 75%;
+  height: 7vh;
+  padding-top: 3%;
+  padding-right: 7%;
+  padding-left: 7%;
+  font-size: 14pt;
+  background-color: rgb(255, 255, 255);
+} /*Сам телефон*/
+.menu__burger {
+  display: none;
+}
+
+.header__phone:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(84, 90, 47);
+}
+
+.header__pictures {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+} /*Тут у нас обертка части заглавия страницы и листочов справа + слайды */
+.header__text {
+  padding-top: 10%;
+  padding-left: 30%;
+  color: rgb(255, 255, 255);
+} /*Обертка текста на странице*/
+.header__text-small {
+  font-family: Noah-Regular;
+  font-size: 14pt;
+  font-weight: 100;
+} /*К надписи "Ландшафтная студия весна"*/
+.header__main-title {
+  width: 45vw;
+  font-family: Noah-Bold;
+  font-size: 37pt;
+} /*самое главное заглавие*/
+.header__second-title {
+  font-family: Noah-Regular;
+  font-size: 25pt;
+  font-weight: 100;
+}
+
+.header__background {
+  padding-top: 1%;
+  padding-left: 41%;
+} /*Обертка листочков*/
+.header__leaves {
+  border-style: none;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+} /*Листочки справа*/
+.header__pictures-navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-top: 3%;
+} /*Нижняя часть с навигацией слайда картинок*/
+/*Левая часть*/
+.header__slider-wrapper {
+  padding-top: 25%;
+  padding-left: 45%;
+}
+
+.header__slider-project {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: 13vh;
+  color: rgb(255, 255, 255);
+  background-color: rgba(99, 83, 62, 0.4);
+}
+
+.header__slider-title {
+  width: 10%;
+  padding-top: 30%;
+  padding-left: 17%;
+  font-family: Noah-Regular;
+  font-size: 13pt;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+.header__slider-icon {
+  border-style: none;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-top: 45%;
+  padding-left: 29%;
+}
+
+.slider-icon {
+  width: 25%;
+}
+
+.slider__project {
+  width: 75%;
+  padding-top: 20%;
+}
+
+/*Стрелочки*/
+.header__arrows {
+  width: 100%;
+  padding-top: 30%;
+  padding-left: 50%;
+}
+
+.arrows__left {
+  padding-right: 35%;
+  text-decoration: none;
+}
+
+/*Отсюда начинаются стили для цифрового слайда*/
+.arrows__pages {
+  padding-top: 19%;
+  padding-left: 23%;
+}
+
+.pages__numbers {
+  padding-top: 15%;
+}
+
+/*Main part*/
+.main__explanation-leaves {
+  display: grid;
+  grid-template-columns: 20% 1fr 20%;
+  grid-template-rows: 1fr;
+}
+
+.main__explanation-ll {
+  width: 19vw;
+  padding-top: 75%;
+}
+
+.main__explanation-rl {
+  width: 19vw;
+  padding-top: 75%;
+}
+
+.main__explanation-text {
+  max-width: 100%;
+  padding-top: 15%;
+  padding-bottom: 1%;
+  text-align: center;
+}
+
+.explanation-text__title {
+  font-family: Noah-Regular;
+  font-size: 24pt;
+  font-weight: 100;
+}
+
+.explanation-text__title2 {
+  font-family: Noah-Bold;
+  font-size: 22pt;
+}
+
+.explanation-text__about {
+  padding-top: 5%;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-family: Noah-Regular;
+  font-size: 14pt;
+}
+
+/*Part with the three pic*/
+.main__examples {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: 75vh;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.examples__pic1, .examples__pic2, .examples__pic3 {
+  width: 100%;
+  padding: 1%;
+}
+
+/*Trust to professionals*/
+.main__trust-title {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.main__trust-title1 {
+  font-family: Noah-Bold;
+  font-size: 35pt;
+}
+
+.main__trust-title2 {
+  font-family: Noah-Regular;
+  font-size: 25pt;
+  font-weight: 100;
+}
+
+.main__trust-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-top: 6%;
+}
+
+.main__trust-options {
+  background-image: url("/assets/images/main/Group197.png");
+  background-size: 65% 95%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.trust-options__pictures {
+  padding-left: 6%;
+}
+
+.trust-options__title {
+  font-family: Noah-Regular;
+  font-size: 12pt;
+  text-align: center;
+  padding-bottom: 2.5%;
+}
+
+.pictures__wrap {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.pictures__example1 {
+  position: relative;
+  top: 0;
+  left: 5%;
+  width: 90%;
+}
+
+.pictures__example2 {
+  position: absolute;
+  top: 85%;
+  left: 45%;
+  width: 60%;
+}
+
+.trust-options__points {
+  display: grid;
+  grid-template-columns: 10% 1fr;
+  padding-top: 12%;
+  padding-left: 10%;
+  padding-bottom: 10%;
+}
+
+.logo-2, .logo-3 {
+  padding-top: 25vh;
+}
+
+.logo-2 {
+  padding-left: 3.5vw;
+}
+
+.logo-3 {
+  padding-left: 6.5vw;
+}
+
+.points__text {
+  padding-top: 1vh;
+  padding-left: 2vw;
+  font-family: Noah-Regular;
+}
+
+.points__text-2, .points__text-3 {
+  padding-top: 28vh;
+}
+
+.points__text-2 {
+  padding-left: 3vw;
+}
+
+.points__text-3 {
+  padding-left: 6vw;
+}
+
+/*What do we do*/
+.main__do {
+  padding-top: 15%;
+  font-family: Noah-Regular;
+}
+
+.main__do-title {
+  text-align: center;
+  font-size: 26pt;
+  font-weight: 100;
+}
+
+.main__service {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 3%;
+  padding-left: 10%;
+  padding-right: 10%;
+  gap: 9%;
+}
+
+.service1__title {
+  font-size: 16pt;
+  padding-bottom: 7%;
+}
+
+.service1__points {
+  padding-left: 5%;
+  line-height: 1.5;
+}
+
+.points1 {
+  padding-bottom: 10%;
+}
+
+.service2__title {
+  font-size: 16pt;
+  padding-bottom: 7%;
+}
+
+.service2__points {
+  padding-left: 5%;
+  line-height: 1.5;
+}
+
+.points2 {
+  padding-bottom: 10%;
+}
+
+.service3__title {
+  font-size: 16pt;
+  padding-bottom: 7%;
+}
+
+.service3__points {
+  padding-left: 5%;
+  line-height: 1.5;
+}
+
+.points3 {
+  padding-bottom: 10%;
+}
+
+.main__service-button {
+  padding-top: 2%;
+  padding-bottom: 3%;
+  text-align: center;
+}
+
+.service-button {
+  width: 13%;
+  height: 5vh;
+  font-family: Noah-Regular;
+  color: rgb(255, 255, 255);
+  background-color: rgb(84, 90, 47);
+}
+
+/*How to choose a plant*/
+.main__choose {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.main__journal {
+  position: absolute;
+}
+
+.journal__pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main__form {
+  padding-top: 14%;
+  padding-bottom: 15%;
+  font-family: Noah-Regular;
+}
+
+.main__choose-title {
+  width: 85vw;
+  padding-left: 60%;
+  padding-bottom: 2%;
+  font-size: 24pt;
+  font-weight: 100;
+}
+
+.main__choose-form {
+  padding-top: 2%;
+  padding-bottom: 5%;
+  background-color: #99A18E;
+  border: none;
+}
+
+.form {
+  padding-left: 62%;
+  line-height: 2;
+}
+
+.choose-form__title {
+  font-size: 12pt;
+}
+
+.choose-form__email {
+  width: 60%;
+  height: 4vh;
+}
+
+.personal__text {
+  font-size: 9pt;
+}
+
+.main__choose-button {
+  padding-top: 1%;
+  padding-left: 62%;
+}
+
+.choose-button {
+  width: 30%;
+  height: 5vh;
+  color: rgb(255, 255, 255);
+  background-color: rgb(84, 90, 47);
+}
+
+/*Our projects*/
+.main__projects {
+  padding-top: 10%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.main__projects-title {
+  font-family: Noah-Regular;
+  font-weight: 100;
+  font-size: 27pt;
+  text-align: center;
+}
+
+.main__projects-pic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  position: relative;
+  gap: 0.5%;
+  width: 100%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+
+.project {
+  width: 100%;
+}
+
+.projects__button {
+  position: absolute;
+  top: 42%;
+  left: 46.5%;
+  font-family: Noah-Regular;
+}
+
+.all_button {
+  width: 80%;
+  height: 15vh;
+  padding-top: 0.5%;
+  border-radius: 70%;
+}
+
+.all_button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(84, 90, 47);
+}
+
+/*Four steps to the dreams*/
+.main__dreams {
+  padding-top: 4%;
+}
+
+.main__titles {
+  text-align: center;
+  font-family: Noah-Regular;
+}
+
+.main__dreams-title1 {
+  font-weight: 100;
+  font-size: 24pt;
+}
+
+.main__dreams-title2 {
+  font-size: 22pt;
+}
+
+.dreams__points {
+  display: grid;
+  grid-template-columns: 5% 1fr 5% 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding-top: 5%;
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-bottom: 5%;
+}
+
+.points__number-1, .points__number-2, .points__number-3, .points__number-4 {
+  font-family: MarckScript-Regular;
+  font-size: 35pt;
+}
+
+.dreams__points-title {
+  font-family: Noah-Bold;
+}
+
+.dreams__points-1, .dreams__points-2, .dreams__points-3, .dreams__points-4 {
+  font-family: Noah-Regular;
+}
+
+.dreams__points-3, .dreams__points-4 {
+  padding-top: 7%;
+}
+
+.dreams__points-2, .dreams__points-4 {
+  padding-left: 5%;
+}
+
+.points__number-2, .points__number-4 {
+  padding-left: 2vw;
+}
+
+.points__number-3, .points__number-4 {
+  padding-top: 5vh;
+}
+
+/*Тут часть "Почему нас выбирают*/
+.main__why {
+  padding-top: 5%;
+  background-color: #DDE3E1;
+}
+
+.main__why-title {
+  font-family: Noah-Regular;
+  font-size: 25pt;
+  font-weight: 100;
+  text-align: center;
+}
+
+.main__why-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr 15%;
+  grid-template-rows: 1fr 1fr;
+  padding-top: 5%;
+  padding-left: 13%;
+  padding-right: 13%;
+  padding-bottom: 5%;
+  font-family: Noah-Regular;
+}
+
+.why-points__reason1, .why-points__reason2 {
+  width: 15vw;
+  padding-left: 10%;
+}
+
+.why-points__reason4, .why-points__reason5 {
+  padding-top: 7%;
+  padding-left: 60%;
+}
+
+.reasons__text {
+  padding-top: 5%;
+}
+
+/*Тут начинается часть Отзывы о нас*/
+.main__feedback {
+  padding-top: 8%;
+}
+
+.main__feedback-title {
+  font-family: Noah-Regular;
+  font-size: 30pt;
+  font-weight: 100;
+  text-align: center;
+}
+
+.feedback__example {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 5%;
+  padding-left: 10%;
+  padding-right: 15%;
+  padding-bottom: 3%;
+  font-family: Noah-Regular;
+}
+
+.feedback__pic {
+  width: 90%;
+}
+
+.feedback {
+  width: 35vw;
+  padding-left: 7%;
+}
+
+.feedback__logo {
+  color: #5B6460;
+}
+
+.feedback__title, .feedback__title2 {
+  color: #5B6460;
+}
+
+.feedback__title {
+  font-size: 20pt;
+  font-weight: 100;
+}
+
+.feedback__title2 {
+  padding-top: 1%;
+  font-size: 12pt;
+  font-weight: 100;
+}
+
+.feedback__text {
+  padding-top: 5%;
+  font-size: 16pt;
+  font-weight: 100;
+}
+
+.feedback__arrows {
+  padding-top: 7%;
+  padding-left: 25vw;
+}
+
+.feedback__numbers {
+  padding-top: 1%;
+  padding-left: 45%;
+  padding-bottom: 5%;
+}
+
+/*Часто задаваемые вопросы*/
+.main__questions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-top: 5%;
+  padding-left: 15%;
+}
+
+.questions__points {
+  max-width: 45vw;
+  margin: 0 auto;
+  padding-top: 5%;
+  padding-bottom: 25%;
+}
+
+.questions__points-title {
+  font-family: Noah-Regular;
+  font-weight: 100;
+  font-size: 28pt;
+}
+
+.points-body {
+  width: 35vw;
+  padding: 5% 0 5% 0;
+  border-bottom: 1px solid rgb(153, 161, 142);
+  cursor: pointer;
+}
+
+.points-body__title::after {
+  width: 3%;
+  height: 6%;
+  position: absolute;
+  background-image: url("/assets/images/main/plus_icon.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+}
+
+/*Часть справа "Хочу инструкцию*/
+.questions__sidebar {
+  width: 48%;
+  margin-left: 5%;
+  background-color: #DDE3E1;
+}
+
+.img__instruction {
+  width: 22vw;
+  padding-left: 2%;
+}
+
+.sidebar__form {
+  padding-left: 7%;
+}
+
+.sidebar__email {
+  width: 93%;
+  padding: 1%;
+  font-family: Noah-Regular;
+  border: none;
+}
+
+.sidebar__title {
+  padding-top: 10%;
+  padding-left: 23%;
+  padding-right: 23%;
+  font-family: Noah-Regular;
+  font-size: 16pt;
+  font-weight: 100;
+  text-align: center;
+}
+
+.sidebar__subtitle {
+  padding-top: 2%;
+  font-family: Noah-Regular;
+  text-align: center;
+}
+
+.sidebar__img {
+  width: 22vw;
+  height: 42vh;
+}
+
+.sidebar__checkbox {
+  padding-top: 3%;
+  padding-right: 5%;
+  padding-bottom: 3%;
+  font-family: Noah-Regular;
+  font-size: 9pt;
+  line-height: 1.5;
+}
+
+.sidebar__button-wrap {
+  padding-top: 3%;
+  padding-left: 8%;
+}
+
+.sidebar__button {
+  width: 15vw;
+  padding: 4%;
+  font-family: Noah-Regular;
+  color: rgb(255, 255, 255);
+  background-color: rgb(84, 90, 47);
+}
+
+/*Часть Остались вопросы*/
+.main__more-questions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-top: 10%;
+  padding-left: 17%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+}
+
+.more-questions__title {
+  width: 27vw;
+  height: 8vh;
+  font-family: Noah-Bold;
+  font-size: 35pt;
+}
+
+.more-questions__text {
+  width: 25vw;
+  font-family: Noah-Regular;
+  font-size: 18pt;
+  line-height: 1.3;
+}
+
+/*Стрелочка к кнопке*/
+.arrow__questions {
+  width: 17vw;
+  padding-top: 22%;
+  padding-right: 10%;
+}
+
+.call__button {
+  padding-top: 10%;
+}
+
+.questions__call {
+  width: 15vw;
+  height: 7vh;
+  font-family: Noah-Regular;
+  color: rgb(255, 255, 255);
+  background-color: rgb(84, 90, 47);
+}
+
+.questions__call:hover {
+  color: rgb(26, 26, 24);
+  background-color: rgb(255, 255, 255);
+}
+
+.up__button {
+  padding-top: 25%;
+  padding-left: 45%;
+}
+
+.questions__up {
+  width: 7vw;
+  height: 15vh;
+  color: rgb(255, 255, 255);
+  background-color: rgb(153, 161, 142);
+  border-radius: 50%;
+}
+
+.arrow__up {
+  width: 1vw;
+  height: 5vh;
+  padding-bottom: 2%;
+}
+
+.up__button-name {
+  font-family: Noah-Regular;
+}
+
+/*Здесь футер*/
+.footer {
+  display: grid;
+  grid-template-columns: 35% 1fr 20%;
+  grid-template-rows: 1fr;
+  gap: 2px;
+  width: 100%;
+  height: 14rem;
+  background-color: #545A2F;
+}
+
+.footer__contacts {
+  padding-top: 3.5rem;
+  padding-left: 5rem;
+  font-family: Noah-Regular;
+  color: rgb(255, 255, 255);
+}
+
+.footer__email {
+  padding-top: 1rem;
+}
+
+.footer__copyright {
+  padding-top: 5rem;
+  font-size: 9pt;
+}
+
+.footer__img {
+  padding-top: 1.5rem;
+  padding-left: 7rem;
+}
+
+.footer__instagram {
+  padding-top: 2.5rem;
+  padding-left: 10rem;
+}
+
+.footer__confidential {
+  padding-top: 6rem;
+  padding-left: 3rem;
+  font-family: Noah-Regular;
+  font-size: 9pt;
+  color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    padding-top: 10px;
+  }
+  .header__main {
+    font-size: 18px;
+  }
+  .header__logo {
+    max-width: 120px;
+  }
+  .header__text-small {
+    font-size: 18px;
+    min-height: 20px;
+    margin: 0;
+  }
+  .header__main-title {
+    padding: 10px 0 0;
+  }
+  .header__pictures-navigation {
+    margin: 60px 0 0;
+  }
+  .explanation-text__title, .explanation-text__title2 {
+    font-size: 24px;
+  }
+  .main__do-title {
+    font-size: 45px;
+  }
+  .main__service1, .main__service2, .main__service3 {
+    padding-right: 3%;
+    font-size: 20px;
+  }
+  .service-button {
+    padding: 15px 50px;
+    margin-top: 5rem;
+  }
+  .main__projects-title {
+    font-size: 55px;
+  }
+  .main__projects-pic {
+    grid-template-columns: auto;
+    gap: 3px;
+    width: calc(100% - 80px);
+    padding-top: 50px;
+  }
+  .main__titles {
+    font-size: 24px;
+    margin: 0px 40px;
+    padding: 0px 0px 22px 0px;
+  }
+  .dreams__points {
+    max-width: 85%;
+  }
+  .main__why-title {
+    font-size: 45px;
+    padding-top: 50px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .header {
+    background-size: 100% 100%;
+    padding-top: 10px;
+  }
+  .header__main {
+    width: calc(100% - 32px);
+    padding: 6px 0;
+    min-height: 70px;
+  }
+  .header__logo {
+    max-width: 107px;
+    padding-top: 10px;
+  }
+  .header__nav, .header__contact {
+    display: none;
+  }
+  .header__pictures {
+    grid-template-columns: 50% 40%;
+    justify-items: end;
+    margin-bottom: 10px;
+    padding: 60px 0px 0px 5px;
+  }
+  .header__text-small {
+    font-size: 14px;
+  }
+  .header__main-title {
+    min-height: 50px;
+    font-size: 22px;
+    padding: 5px 0 0;
+  }
+  .header__second-title {
+    width: 15%;
+    font-size: 18px;
+  }
+  .header__background {
+    padding-top: 170px;
+    max-width: 50rem;
+  }
+  .header__leaves {
+    width: 10rem;
+  }
+  .header__pictures-navigation {
+    grid-template-areas: "project";
+  }
+  .header__slider-wrapper {
+    min-height: 60px;
+    max-width: 174px;
+    grid-template-columns: 60% 5% 35%;
+    gap: 3px;
+    padding: 20px 7px;
+  }
+  .header__slider-title {
+    font-size: 16px;
+  }
+  .slider__project {
+    width: 40px;
+    height: 40px;
+    padding-top: 1rem;
+  }
+  .header__arrows, .arrows__pages {
+    display: none;
+  }
+  header {
+    position: relative;
+  }
+  .header__logo {
+    z-index: 5;
+    padding: 0;
+    width: 107px;
+  }
+  .header__nav {
+    display: none;
+  }
+  .header__contact {
+    display: none;
+  }
+  .menu__burger {
+    display: block;
+  }
+  .burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+  }
+  .burger {
+    z-index: 5;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 26px;
+  }
+  .burger::before,
+  .burger::after {
+    content: "";
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+  }
+  .burger::before {
+    top: 0;
+    box-shadow: 0 11px 0 rgb(255, 255, 255);
+    transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+  }
+  .burger::after {
+    bottom: 0;
+    transition: bottom 0.3s 0.15s, transform 0.3s;
+  }
+  .burger-checkbox:checked + .burger::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+    transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+  }
+  .burger-checkbox:checked + .burger::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    transition: bottom 0.3s, transform 0.3s 0.15s;
+  }
+  .menu-list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 4;
+    list-style: none;
+    padding: 10rem 3rem 0 3rem;
+    margin: 0;
+    display: none;
+    background: rgb(84, 90, 47);
+    text-align: center;
+    overflow: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  .burger-checkbox:checked ~ .menu-list {
+    display: block;
+  }
+  .menu-item {
+    display: block;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+  }
+  .menu-item:hover {
+    background: rgb(153, 161, 142);
+  }
+  .burger__phone {
+    margin: auto;
+    margin-top: 5rem;
+    padding: 15px 15px;
+    color: rgb(26, 26, 24);
+    border: none;
+    text-align: center;
+    font-size: 24px;
+  }
+  .burger__consult {
+    border: none;
+    padding: 20px 0;
+  }
+  .main__explanation {
+    margin-bottom: 70px;
+  }
+  .explanation-text__title, .explanation-text__title2 {
+    max-width: 100%;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: center;
+    font-family: Noah-Regular;
+    padding: 1rem;
+  }
+  .main__explanation-text {
+    grid-template-columns: none;
+    margin: 0 20px;
+    padding: 0;
+  }
+  .main__explanation-ll, .main__explanation-rl {
+    display: none;
+  }
+  .explanation-text__about {
+    font-size: 18px;
+  }
+  .main__examples {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    max-width: 100%;
+    margin: 0;
+  }
+  .main__trust-options {
+    background-image: none;
+  }
+  .main__trust {
+    max-width: 320px;
+  }
+  .main__trust-title1 {
+    max-width: 288px;
+    font-size: 24px;
+    padding-top: 35%;
+    padding-left: 15%;
+  }
+  .main__trust-title2 {
+    max-width: 288px;
+    font-size: 24px;
+    padding-left: 15%;
+  }
+  .main__trust-options {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .trust-options__title {
+    display: none;
+  }
+  .pictures__example1 {
+    max-width: 70vw;
+    margin: 0;
+  }
+  .pictures__example2 {
+    max-width: 35vw;
+    padding-right: 3%;
+    margin: 0;
+  }
+  .trust-options__points {
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    min-width: 75vw;
+    padding-top: 20%;
+    padding-right: 10%;
+  }
+  .points__logo {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .logo-1 {
+    width: 50%;
+  }
+  .logo-2 {
+    width: 15vw;
+  }
+  .logo-3 {
+    width: 16vw;
+  }
+  .main__do-title {
+    font-size: 24px;
+  }
+  .main__service {
+    grid-template-columns: 1fr;
+    gap: 37px;
+    padding-top: 30px;
+  }
+  .main__service1, .main__service2, .main__service3 {
+    padding-right: 3%;
+    font-size: 16px;
+  }
+  .service-button {
+    width: 100%;
+    height: 53px;
+    margin-top: 30px;
+  }
+  .main__choose {
+    display: none;
+  }
+  .main__projects {
+    margin-bottom: 70px;
+  }
+  .main__projects-title {
+    padding-top: 80px;
+    font-size: 35px;
+  }
+  .main__projects-pic {
+    grid-template-columns: auto;
+    gap: 4px;
+    width: calc(100% - 10px);
+    padding-top: 27px;
+  }
+  .projects__button {
+    text-align: center;
+    padding-top: 45vh;
+  }
+  .all_button {
+    display: none;
+  }
+  .main__titles {
+    font-size: 25px;
+    max-width: 85vw;
+    margin: auto;
+    padding-bottom: 56px;
+  }
+  .dreams__points {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 5% 1fr 5% 1fr 7% 1fr 7% 1fr;
+    max-width: 320px;
+    margin: 0;
+    padding: 0;
+  }
+  .points__number-1, .points__number-2, .points__number-3, .points__number-4 {
+    text-align: center;
+  }
+  .dreams__points-1, .dreams__points-2, .dreams__points-3, .dreams__points-4 {
+    width: 85vw;
+    padding-left: 7%;
+    padding-right: 1%;
+    text-align: left;
+  }
+  .main__why-title {
+    font-family: "Noah-Bold";
+    font-size: 24px;
+  }
+  .main__why-points {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
+  .why-points__reason1 {
+    grid-template-columns: 15% 1fr;
+  }
+  .main__feedback {
+    font-size: 20pt;
+    padding-right: 3%;
+    text-align: center;
+  }
+  .main__feedback-title {
+    text-align: center;
+    font-size: 20pt;
+  }
+  .feedback {
+    text-align: left;
+  }
+  .feedback__example {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .feedback__title {
+    width: 55vw;
+    height: 6vh;
+    font-size: 24px;
+  }
+  .feedback__title2 {
+    width: 65vw;
+    font-size: 20px;
+  }
+  .feedback__text {
+    width: 65vw;
+    font-size: 16px;
+  }
+  .feedback__arrows {
+    display: none;
+  }
+  .feedback__numbers {
+    display: none;
+  }
+  .questions__points-title {
+    width: 45vw;
+    text-align: left;
+    font-size: 24px;
+  }
+  .main__questions {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .questions__sidebar {
+    width: 75vw;
+    height: 75vh;
+    -moz-column-gap: 0%;
+         column-gap: 0%;
+    text-align: center;
+  }
+  .sidebar__title {
+    width: 85vw;
+    text-align: center;
+    font-size: 20px;
+  }
+  .img__instruction {
+    width: 85vw;
+  }
+  .sidebar__button-wrap {
+    padding-right: 12%;
+  }
+  .sidebar__button {
+    width: 100%;
+  }
+  .main__more-questions {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 60px 1fr;
+    -moz-column-gap: 0%;
+         column-gap: 0%;
+  }
+  .more-questions__wrapper {
+    padding-top: 10%;
+    text-align: center;
+  }
+  .more-questions__title {
+    width: 100%;
+    font-size: 28px;
+  }
+  .more-questions__text {
+    width: 100%;
+    font-size: 22px;
+  }
+  .questions__call {
+    width: 100%;
+    font-size: 20px;
+  }
+  .arrow__questions {
+    display: none;
+  }
+  .up__button {
+    padding-right: 45vw;
+  }
+  .questions__up {
+    width: 25vw;
+    height: 12vh;
+    text-align: center;
+  }
+  .footer {
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2px;
+    margin: 0 auto;
+    width: 100%;
+    height: 35rem;
+  }
+  .footer__contacts {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 0;
+    justify-self: center;
+    text-align: center;
+  }
+  .footer__phone {
+    font-size: 20px;
+  }
+  .footer__email {
+    font-size: 20px;
+  }
+  .footer__copyright {
+    display: none;
+  }
+  .footer__img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 0;
+    padding-top: 3rem;
+    justify-self: center;
+  }
+  .footer__socialmedia {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding: 0;
+    justify-self: center;
+    text-align: center;
+    width: 330px;
+  }
+  .footer__instagram {
+    padding: 0;
+    text-align: center;
+  }
+  .footer__confidential {
+    padding: 0;
+    padding-top: 4rem;
+    text-align: left;
+    font-size: 16px;
+  }
+  .footer__confidential::after {
+    content: "© 2021 VESNA";
+    display: block;
+    padding-top: 0.5rem;
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=style_index.css.map */
