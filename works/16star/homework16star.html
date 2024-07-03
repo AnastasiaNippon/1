@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор стоимости автомобиля</title>
+    <link rel="stylesheet" href="./assets/normalize.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/skeleton.css">
+</head>
+<body>
+    <div class="calculator">
+        <h2>Калькулятор стоимости автомобиля</h2>
+        <div class="form-group">
+            <label for="brand">Марка автомобиля</label>
+            <select id="brand" onchange="updateModels()">
+                <option value="toyota">Toyota</option>
+                <option value="honda">Honda</option>
+                <option value="mazda">Mazda</option>
+                <option value="lexus">Lexus</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="model">Модель автомобиля</label>
+            <select id="model">
+                <!-- Динамическое обновление -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Тип топлива</label>
+            <div class="input-group">
+                <input type="radio" name="fuel" value="benzin" checked> Бензин
+                <input type="radio" name="fuel" value="diesel"> Дизель
+                <input type="radio" name="fuel" value="gaz"> Газ
+                <input type="radio" name="fuel" value="electric"> Электричество
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="engine">Объем двигателя (литры)</label>
+            <input type="number" id="engine" min="1.1" max="3.5" step="0.1">
+        </div>
+        <div class="form-group">
+            <label>Состояние автомобиля</label>
+            <div class="input-group">
+                <input type="radio" name="condition" value="new" checked> Новый
+                <input type="radio" name="condition" value="used"> Подержанный
+            </div>
+        </div>
+        <div class="form-group" id="owner-group" style="display: none;">
+            <label>Количество владельцев</label>
+            <div class="input-group">
+                <input type="radio" name="owners" value="1-2"> 1-2 владельца
+                <input type="radio" name="owners" value="3+"> Более 3-х владельцев
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Способ оплаты</label>
+            <div class="input-group">
+                <input type="radio" name="payment" value="card" checked> Картой
+                <input type="radio" name="payment" value="cash"> Наличными
+                <input type="radio" name="payment" value="invoice"> Счет на юридическое лицо
+            </div>
+        </div>
+        <div class="form-group">
+            <button onclick="calculatePrice()">Рассчитать стоимость</button>
+        </div>
+        <div class="price" id="price">Стоимость: 0 руб.</div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

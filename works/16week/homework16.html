@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма регистрации</title>
+    <link rel="stylesheet" href="./assets/normalize.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <form id="registrationForm">
+      <label for="name">Имя:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Введите имя"
+        required
+      />
+
+      <label for="email">Электронная почта:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Введите email"
+        required
+      />
+
+      <label for="age">Возраст:</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        placeholder="Введите возраст"
+        required
+      />
+
+      <label>Пол:</label>
+      <input type="radio" id="male" name="gender" value="Мужчина" required />
+      Мужчина
+      <input type="radio" id="female" name="gender" value="Женщина" required />
+      Женщина
+
+      <label for="profession">Профессия:</label>
+      <select id="profession" name="profession" required>
+        <option value="" disabled selected>Выберите профессию</option>
+        <option value="doctor">Врач</option>
+        <option value="programmer">Программист</option>
+        <option value="teacher">Учитель</option>
+        <option value="designer">Дизайнер</option>
+        <option value="engineer">Инженер</option>
+        <option value="seller">Продавец</option>
+        <option value="other">Другое</option>
+      </select>
+
+      <label for="password">Пароль:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Введите пароль"
+        required
+        minlength="8"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+      />
+
+      <label>
+        <input type="checkbox" id="agreement" name="agreement" required />
+        Согласен с обработкой данных
+      </label>
+
+      <button type="submit" id="submitBtn" disabled>Зарегистрироваться</button>
+    </form>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
