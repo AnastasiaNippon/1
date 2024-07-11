@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  main {
+    padding: 2em;
+  }
+  
+  #transport-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+  }
+  
+  .transport-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 300px;
+  }
+  
+  .transport-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .transport-card-info {
+    padding: 1em;
+  }
+  
+  .transport-card-info h2 {
+    margin-top: 0;
+  }
+  
+  .transport-card-info p {
+    margin: 0.5em 0;
+  }
+  
