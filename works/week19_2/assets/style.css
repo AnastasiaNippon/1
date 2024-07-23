@@ -1,0 +1,85 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #E0F7FA; /* Light cyan */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    width: 50px;
+    height: auto;
+  }
+  
+  main {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    max-width: 600px;
+    min-width: 300px;
+  }
+  
+  .post {
+    border: 1px solid #0288D1; /* Light blue */
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #B3E5FC; /* Light blue background */
+    border-radius: 5px;
+  }
+  
+  .post h2 {
+    margin-bottom: 10px;
+    color: #01579B; /* Dark blue */
+  }
+  
+  form {
+    margin-top: 20px;
+    background-color: #E1F5FE; /* Light blue */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #0288D1; /* Light blue */
+    border-radius: 5px;
+    background-color: #B3E5FC; /* Light blue background */
+  }
+  
+  form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0288D1; /* Light blue */
+    color: white;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+  }
+  
+  form button:hover {
+    background-color: #0277BD; /* Darker blue */
+  }
+  
