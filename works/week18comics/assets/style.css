@@ -74,6 +74,9 @@ body {
 
 .rating {
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    direction: ltr; /* Ensure that the stars are aligned from left to right */
 }
 
 .rating input {
