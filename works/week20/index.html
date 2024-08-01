@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swapi API Example</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <h1 class="title">Swapi API Example</h1>
+    <div class="container">
+      <label for="entity">Choose entity: </label>
+      <select id="entity">
+        <option value="people">People</option>
+        <option value="films">Films</option>
+        <option value="planets">Planets</option>
+        <option value="species">Species</option>
+        <option value="starships">Starships</option>
+        <option value="vehicles">Vehicles</option>
+      </select>
+      <label for="id">ID: </label>
+      <input type="number" id="id" min="1" max="10" value="1" />
+      <button id="fetchData">Fetch Data</button>
+    </div>
+
+    <div id="loading" class="loading">Loading...</div>
+    <div id="result" class="result"></div>
+    <div id="error" class="error"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
