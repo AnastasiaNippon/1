@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fantasy Movies</title>
+    <link rel="stylesheet" href="./assets/Styles/normalize.css" />
+    <link rel="stylesheet" href="./assets/Styles/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Geostar+Fill&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.css"
+    />
+    <link
+      rel="icon"
+      href="./assets/images/Header/atb_toplist.gif"
+      type="image/gif"
+    />
+  </head>
+  <body>
+    <header>
+       <nav>
+        <div class="nav-container">
+          <img
+            src="./assets/images/Header/dataset-card.png"
+            alt="Logo"
+            class="header-logo"
+          />
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#harry-potter">Harry Potter</a></li>
+            <li><a href="#lotr">Lord of the Rings</a></li>
+            <li><a href="#gameofthones">Game of Thrones</a></li>
+            <li><a href="#star-wars">Star Wars</a></li>
+          </ul>
+          <div class="burger-menu" id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+    
+      <div id="home">
+        <img src="./assets/images/Header/123344555.jpg" alt="">
+        <div class="header__text">
+        <h1 class="header__title">Welcome to Fantasy Movies</h1>
+        <p class="header__p">
+          Explore the worlds of Harry Potter, Lord of the Rings, Game of
+          Thrones, and Star Wars
+        </p>
+        </div>
+      </div>
+
+      <!-- Блок по Гарри Поттеру -->
+      <section id="harry-potter">
+        <div id="HPLogo__container">
+              <img src="./assets/images/HP/pngwing.com.png" alt="Harry Potter"
+              width="900px"
+              class="HPLogo">
+            </div>
+        <p>Enter the magical world of Hogwarts.</p>
+        <div class="HP__container">
+            <div id="HP__quote"></div>
+            <div id="HP__author"></div>
+          </div>
+          <div class="HP__btn">
+            <a class="HP__button" id="generate">Generate Quote</a>
+          </div>
+        </div>
+        <h2>Harry Potter Characters</h2>
+    <div id="HP__characters">
+    </div>
+  <h2>Harry Potter Books</h2>
+  <div id="book-list"></div>
+</section>
+
+      <!--Блок по Властелину Колец-->
+      <section id="lotr">
+        <div class="lights-wrapper">
+        <div id="LOTRlogo__container">
+        <img class="LOTR_logo" src="./assets/images/LOTR/lord-of-the-rings-logo.png" alt="">
+        <h3 id="journey-title">Journey through Middle-earth.</h3>
+        </div>
+        <div id="container">
+          <div id="character-container"></div>
+          <button type="submit" id="lotr__button">My precious</button>
+        </div>
+        <div>
+          <h2 id="cards-title">
+            How to watch The Lord of the Rings and The Hobbit movies in order
+          </h2>
+          <div class="swiper-container movies-swiper">
+            <div class="swiper-wrapper movies-swiper-wrapper">
+              </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div>
+          <!-- Слайдер для книг -->
+          <h2 id="books-title">Books</h2>
+          <div class="swiper-container books-swiper">
+            <div class="swiper-wrapper books-swiper-wrapper">
+            </div>
+            <!-- Навигационные кнопки -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        </div>          
+      </section>
+
+      <!-- Блок по игре престолов -->
+<section id="gameofthones">
+  
+  <div class="GOT__container">
+  
+    <div class="GOTtvSeries_logoContainer">
+      <img
+        class="GOTtvSeries_logo"
+        src="./assets/images/GOT/GOT_logo5.png"
+        alt="Game of Trones Logo"
+        />
+        <h3 class="GOT_winter">WINTER IS COMING...</h3>
+    </div>
+
+    <div class="GOT__quotes">
+      <div id="GOT__quotes--container"></div>
+      <button class="GOT__buttons__style" id="GOT__button" type="button">Another quote!</button>
+    </div>
+    
+    <div  class="GOTbookcards">
+      <h3 class="GOT_h3">Books in the A Song of Ice and Fire series</h3>
+      <a class='GOT__a' href="https://www.litres.ru/author/dzhordzh-r-r-martin-45006/" target="_blank">Read books on litres.ru</a>
+      <div id="GOTcards__container"></div>
+    </div>
+ 
+
+    <div class="GOTtvSeries">
+      <h3  class="GOT_h3">TV series episodes</h3>
+      <a class='GOT__a' href="https://www.amediateka.ru/watch/series_11223_finaligra-prestolov/season_1_11646" target="_blank">Whatch TV series on amediateka.ru</a>
+      <div id="GOTtvSeries__container"></div>
+    </div>
+    
+    <div id="GOT__characters__mainContainer">
+      <h3  class="GOT_h3">Game of Thrones characters</h3>
+      <div id="GOT__characters--container"></div>
+      <button class="GOT__buttons__style" id="GOT__characters--button" type="button">Another character!</button>
+    </div>
+
+  </div>
+</section>
+   
+  <!-- Блок по Звездным войнам -->
+  <section class="star-wars_visible" id="star-wars">
+    <div class="sw_logo_container">
+      <img
+        class="sw_logo"
+        src="./assets/images/SW/png-star-wars-starwars-logo-png-1837.png"
+        alt="Star Wars"
+      />
+    </div>
+    <div class="sw_btn_next__container">
+      <button class="sw_btn_next">May the force be with you</button>
+    </div>
+    <div class="sw_quotes_container">
+      <div class="sw_quotes__content"></div>
+      <div class="sw_quotes__author"></div>
+      <button class="sw_quotes__btn">Generate</button>
+    </div>    
+  </section>
+  <!-- Секция с фильмами -->
+  <section class="star-wars-movies_hide" id="star-wars-movies">
+    <div class="sw_movies__title">
+      <h2>A long time ago in a galaxy far, far away....</h2>
+      </div>      
+    <div class="sw_card__container">     
+    </div> 
+  </section>
+  </main>
+  
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Fantasy Movies. All rights reserved.</p>
+    </footer>
+
+       <!-- Кнопка "Наверх" -->
+    <button id="back-to-top" class="back-to-top">↑ Наверх</button>
+      
+    <!-- СКРИПТЫ -->
+    <script type="module" src="./JavaScript/header.burger.js"></script>
+    <script type="module" src="./JavaScript/gameOfThrones.js"></script>
+    <script type="module" src="./JavaScript/harryPotter.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="module">
+      import swiper from 'https://cdn.jsdelivr.net/npm/swiper@11.1.9/+esm'
+      </script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/swiper@11.1.9/swiper-bundle.min.js
+    "></script>
+    <script type="module" src="./JavaScript/lotr.js"></script>
+    <script src="./JavaScript/starWars.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  </body>
+</html>
