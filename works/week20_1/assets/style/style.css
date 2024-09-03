@@ -1,0 +1,178 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  header {
+    background-color: #1a1a1a;
+    padding: 10px 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  nav ul li a:hover {
+    color: #ffd700;
+    text-shadow: 0 0 10px #ffd700;
+  }
+  
+  main {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  section {
+    margin: 20px 0;
+  }
+  
+  footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    cursor: url('https://cybersoft.ru/uploads/posts/2021-04/thumbs/1618167045_videoshow.png') 0 0, auto; /* Добавляем кастомный курсор */
+  }
+  
+  header {
+    background-color: #1a1a1a;
+    padding: 10px 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  nav ul li a:hover {
+    color: #ffd700;
+    text-shadow: 0 0 10px #ffd700;
+  }
+  
+  main {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  section {
+    margin: 20px 0;
+  }
+  
+  footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  
+  .burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  .burger-menu span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-links a:hover {
+    color: #ffd700;
+    text-shadow: 0 0 10px #ffd700;
+  }
+  
+  main {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  section {
+    margin: 20px 0;
+  }
+
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .burger-menu {
+      display: flex;
+    }
+  
+    .nav-links {
+      position: fixed;
+      right: 0;
+      height: 100vh;
+      top: 0;
+      background-color: #1a1a1a;
+      flex-direction: column;
+      width: 100%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in-out;
+      gap: 30px;
+      padding-top: 50px;
+      z-index: 1000;
+      text-align: center;
+    }
+  
+    .nav-links.active {
+      transform: translateX(0);
+    }
+  
+    .nav-links a {
+      font-size: 24px;
+    }
+  }
+  
