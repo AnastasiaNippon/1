@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8f5; /* light green background */
+    color: #2f4f4f; /* dark green text */
+    line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 80px; /* отступ для футера */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #2e8b57; /* deep green */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.profile-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.name {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    padding-top: 100px;
+}
+
+.title {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+section {
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 2em;
+    color: #3cb371; /* medium green */
+    border-bottom: 2px solid #2e8b57;
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding: 5px 0;
+}
+
+.job {
+    margin-bottom: 20px;
+}
+
+.spacer {
+    height: 60px; /* пустой div для создания отступа над футером */
+}
+
+.footer {
+    background-color: #2e8b57;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
