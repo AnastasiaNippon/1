@@ -1,0 +1,1481 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Fruktur:ital@0;1&family=Grey+Qo&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap");
+.bona-nova-sc-regular {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  cursor: url("https://cybersoft.ru/uploads/posts/2021-04/thumbs/1618167045_videoshow.png") 0 0, auto; /* Кастомный курсор */
+}
+
+* {
+  cursor: url("https://cybersoft.ru/uploads/posts/2021-04/thumbs/1618167045_videoshow.png") 0 0, auto;
+  box-sizing: border-box; /* Обеспечивает правильное вычисление размеров элементов */
+}
+
+header {
+  background-color: #1a1a1a;
+  padding: 10px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  width: 50px;
+  height: auto;
+  margin-left: 10px;
+  z-index: 1001;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffd700;
+}
+
+main {
+  text-align: center;
+  flex: 1;
+}
+
+#home {
+  width: 100%;
+}
+
+#home img {
+  width: 100%;
+}
+
+.header__text {
+  font-family: "Trajan Pro", serif;
+  color: goldenrod;
+  margin-bottom: 3rem;
+  padding: 0.5rem;
+}
+
+.header__title {
+  font-size: 5.3rem;
+  transition: color 0.5s;
+}
+
+.header__p {
+  font-size: 1.5rem;
+  transition: color 0.5s;
+}
+
+/* Эффект мерцания */
+.header__title:hover,
+.header__p:hover {
+  animation: shimmer 1s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    color: goldenrod;
+  }
+  50% {
+    color: gold; /* Цвет мерцания */
+  }
+  100% {
+    color: goldenrod;
+  }
+}
+@media (max-width: 1024px) {
+  .header__title {
+    font-size: 5.1rem;
+  }
+  .header__p {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 768px) {
+  #home img {
+    display: none; /* Скрываем изображение на мобильных устройствах */
+  }
+  .header__title {
+    font-size: 5rem;
+  }
+  .header__p {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 425px) {
+  .header__title {
+    font-size: 3.8rem;
+  }
+  .header__p {
+    font-size: 0.8rem;
+  }
+}
+section {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.content-wrapper {
+  flex: 1;
+}
+
+footer {
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.burger-menu {
+  display: none; /* Скрываем бургер-меню на больших экранах */
+  width: 35px;
+  height: 25px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  margin-right: 10px;
+  z-index: 1001; /* Устанавливаем высокий z-index, чтобы бургер-меню было сверху */
+}
+
+.burger-menu span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #ffd700; /* Желтый цвет */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  position: relative;
+}
+
+.burger-menu.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
+}
+
+.burger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: -10px;
+}
+
+.menu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.menu.active {
+  display: flex;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffd700;
+}
+
+/* Кнопка "Back to top" */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffd700;
+  color: #000;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hidden {
+  display: none;
+}
+
+.back-to-top:hover {
+  background-color: rgb(233, 172, 19);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex; /* Показываем бургер-меню только на мобильных устройствах */
+    margin-left: 20px;
+  }
+  .nav-links {
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    top: 0;
+    background-color: #1a1a1a;
+    flex-direction: column;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    gap: 30px;
+    padding-top: 50px;
+    z-index: 1000;
+    text-align: center;
+  }
+  .nav-links.active {
+    transform: translateX(0);
+  }
+  .nav-links a {
+    font-size: 24px;
+  }
+  /* Кнопка "Back to top" видна на мобильных устройствах */
+  .back-to-top {
+    display: block;
+  }
+}
+@font-face {
+  font-family: "Trajan Pro";
+  src: url("../fonts/trajanpro_bold.otf") format("opentype"); /* Путь к шрифту */
+  font-weight: bold; /* Устанавливаем жирный стиль */
+  font-style: normal;
+}
+#gameofthones {
+  font-family: "Trajan Pro", serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: wheat;
+  padding: 0.3rem;
+  max-width: 1350px;
+  margin: 2rem auto 3rem;
+}
+
+.GOTtvSeries_logoContainer {
+  width: 45rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.GOTtvSeries_logo {
+  padding-top: 0.5rem;
+  width: 100%;
+}
+
+.GOT_winter {
+  font-family: "Trajan Pro", serif;
+  font-size: 3rem;
+  color: goldenrod;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 2rem;
+  transition: color 0.5s;
+}
+
+.GOT_winter:hover {
+  animation: shimmer 1s infinite;
+}
+
+.GOT_h3 {
+  font-size: 1.7rem;
+}
+
+.GOT__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.GOT__quotes {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 55rem;
+  height: 12rem;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+#GOT__quotes--container {
+  width: 100%;
+}
+
+.GOTquote__sentence {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.GOTquote__character {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.GOT__buttons__style {
+  cursor: pointer;
+  border: none;
+  padding: 1.1rem 2.5rem;
+  border-radius: 25px;
+  background-color: goldenrod;
+  font-size: 1.2rem;
+  transition: transform 0.1s ease;
+}
+
+.GOT__buttons__style:hover {
+  background-color: rgb(241, 188, 52);
+}
+
+.GOT__buttons__style:active {
+  transform: translateY(2px);
+}
+
+#GOTcards__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.GOTcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 18rem;
+  height: 29.5rem;
+  padding: 0.3rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.GOTcard:hover {
+  transform: scale(1.03);
+}
+
+.GOTcard__text {
+  text-align: center;
+}
+
+.GOTcard__title {
+  font-size: 1.2rem;
+}
+
+.GOTcard__p {
+  font-size: 0.8rem;
+  padding: 0.3rem;
+}
+
+.GOTcard__image {
+  padding-top: 0.3rem;
+  width: 93%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.GOTcard__front,
+.GOTcard__back {
+  padding: 0.3rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+
+.GOTcard__front {
+  background-color: black;
+  border: 2px solid goldenrod;
+  border-radius: 10px;
+}
+
+.GOTcard__back {
+  background-color: black;
+  border: 2px solid goldenrod;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+  overflow: hidden;
+}
+
+.GOTcard.flipped .GOTcard__front {
+  transform: rotateY(180deg);
+}
+
+.GOTcard.flipped .GOTcard__back {
+  transform: rotateY(0deg);
+}
+
+#GOTtvSeries__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.GOT__a {
+  color: wheat;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.GOT__a:hover {
+  color: goldenrod;
+}
+
+.GOTtvSeries__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 18rem;
+  height: 27rem;
+  padding: 0.3rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.GOTtvSeries__box:hover {
+  transform: scale(1.03);
+}
+
+.GOTtvSeries__text {
+  text-align: center;
+}
+
+.GOTtvSeries__title {
+  font-size: 1.2rem;
+}
+
+.GOTtvSeries__p {
+  font-size: 0.7rem;
+  padding: 0.3rem;
+}
+
+.GOTtvSeries_img {
+  padding-top: 0.3rem;
+  width: 93%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.GOTTtvSeries__front,
+.GOTTtvSeries__back {
+  padding: 0.3rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+
+.GOTTtvSeries__front {
+  background-color: black;
+  border: 2px solid goldenrod;
+  border-radius: 10px;
+}
+
+.GOTTtvSeries__back {
+  background-color: black;
+  border: 2px solid goldenrod;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+  overflow: hidden;
+}
+
+.GOTtvSeries__box.flipped .GOTTtvSeries__front {
+  transform: rotateY(180deg);
+}
+
+.GOTtvSeries__box.flipped .GOTTtvSeries__back {
+  transform: rotateY(0deg);
+}
+
+#GOT__characters__mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.GOTchar_img,
+.GOTcharDownload {
+  height: 18.75rem;
+  border: 2px solid goldenrod;
+  border-radius: 10px;
+}
+
+.GOTcharDownload {
+  width: 12.5;
+  display: flex;
+}
+
+.GOTchar_p {
+  font-size: 1rem;
+  padding: 0.3rem;
+}
+
+.GOTchar_text {
+  margin: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  #gameofthones {
+    margin: 1.8rem auto 2.8rem;
+  }
+  .GOTtvSeries_logoContainer {
+    width: 42rem;
+  }
+  .GOT_winter {
+    font-size: 2.5rem;
+  }
+  .GOT_h3 {
+    font-size: 1.5rem;
+  }
+  #GOTcards__container {
+    gap: 1rem;
+  }
+  .GOTcard {
+    width: 18rem;
+    height: 29.5rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .GOTcard__title {
+    font-size: 1.2rem;
+  }
+  .GOTcard__p {
+    font-size: 0.79rem;
+  }
+  #GOTtvSeries__container {
+    gap: 1rem;
+  }
+  .GOTtvSeries__box {
+    width: 18rem;
+    height: 27rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .GOTtvSeries__title {
+    font-size: 1.2rem;
+  }
+  .GOTtvSeries__p {
+    font-size: 0.65rem;
+  }
+  #GOT__characters__mainContainer {
+    margin-bottom: 1.5rem;
+  }
+  .GOTcharDownload {
+    width: 200px;
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  #gameofthones {
+    margin: 1.6rem auto 2.6rem;
+  }
+  .GOTtvSeries_logoContainer {
+    width: 38rem;
+  }
+  .GOT_winter {
+    font-size: 2.2rem;
+  }
+  .GOT_h3 {
+    font-size: 1.4rem;
+  }
+  .GOT__quotes {
+    width: 45rem;
+  }
+  .GOTcard {
+    width: 18rem;
+    height: 29rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .GOTcard__title {
+    font-size: 1rem;
+  }
+  .GOTcard__p {
+    font-size: 0.79rem;
+  }
+  #GOTtvSeries__container {
+    gap: 1rem;
+  }
+  .GOTtvSeries__box {
+    width: 18rem;
+    height: 26.4rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .GOTtvSeries__title {
+    font-size: 1rem;
+  }
+  .GOTtvSeries__p {
+    font-size: 0.64rem;
+  }
+  #GOT__characters__mainContainer {
+    margin-bottom: 1.3rem;
+  }
+  .GOTcharDownload {
+    width: 200px;
+    display: flex;
+  }
+}
+@media (max-width: 425px) {
+  #GOTcards__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #gameofthones {
+    margin: 1rem auto 2rem;
+  }
+  .GOTtvSeries_logoContainer {
+    width: 30rem;
+  }
+  .GOT_winter {
+    font-size: 1.7rem;
+  }
+  .GOT_h3 {
+    font-size: 1.2rem;
+  }
+  .GOT__quotes {
+    width: 25rem;
+    height: 11rem;
+  }
+  .GOTquote__sentence {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+  }
+  .GOTquote__character {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .GOT__buttons__style {
+    font-size: 0.9rem;
+  }
+  .GOTcard {
+    width: 18rem;
+    height: 28rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
+  .GOTcard__title {
+    font-size: 0.9rem;
+  }
+  .GOTcard__p {
+    font-size: 0.79rem;
+  }
+  #GOTtvSeries__container {
+    gap: 0.5rem;
+  }
+  .GOTtvSeries__box {
+    width: 18rem;
+    height: 25.6rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .GOTtvSeries__title {
+    font-size: 0.9rem;
+  }
+  .GOTtvSeries__p {
+    font-size: 0.63rem;
+  }
+  .GOTchar_img,
+  .GOTcharDownload {
+    max-width: 26rem;
+    height: 17rem;
+  }
+  .GOTcharDownload {
+    width: 26rem;
+    display: flex;
+  }
+  .GOTchar_p {
+    font-size: 0.9rem;
+    padding: 0.3rem;
+  }
+  .GOTchar_text {
+    margin: 1rem;
+  }
+}
+.HP__container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+#HPLogo__container {
+  width: 100%;
+}
+
+#HP__quote {
+  font-size: 11pt;
+}
+
+#HP__author {
+  font-size: 12pt;
+  font-weight: bold;
+  font-style: italic;
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: auto;
+}
+
+.HP__button {
+  color: white;
+  font-size: 18pt;
+  background: #3e0c10;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 3px;
+  font-family: "Walter Turncoat";
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.HP__button:hover {
+  color: #3e0c10;
+  background: transparent;
+  padding: 8px 13px;
+  border: 2px solid #c51120;
+}
+
+#HP__characters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 80%;
+  padding: 0.5rem;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+#HP_character {
+  border: 10px solid black;
+  margin: 0.375rem;
+  text-align: center;
+  background-color: black;
+  transition: transform 0.3s ease;
+}
+
+#HP_character:hover {
+  transform: scale(1.03);
+}
+
+#book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+
+.HP__book {
+  width: 26rem;
+  height: 12rem;
+  border: 1px solid goldenrod;
+  border-radius: 10px;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+  background-color: black;
+}
+
+.HP__book:hover {
+  transform: scale(1.03);
+  border: 2px solid goldenrod;
+}
+
+#harry-potter {
+  background-image: url("../images/HP/HP_walpaper.jpg");
+}
+
+@media (max-width: 768px) {
+  .HPLogo {
+    width: 85%;
+  }
+}
+/* Властелин колец */
+#lotr {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 20px 0;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  background-image: url("../images/LOTR/1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#lotr::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный слой */
+  z-index: 0; /* Позволяет фону находиться позади содержимого */
+}
+
+.LOTR_logo {
+  width: 750px;
+}
+
+.lights-wrapper {
+  position: relative;
+}
+
+#LOTRlogo__container {
+  width: 900px;
+  z-index: 1; /* Чтобы логотип был виден поверх фона */
+  text-align: center;
+}
+
+.books-all {
+  margin-top: 50px;
+}
+
+#journey-title,
+#cards-title,
+#books-title {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#cards-title {
+  font-size: 18px;
+  display: block;
+  padding-bottom: 16px;
+  text-align: center;
+}
+
+#books-title {
+  margin-top: 36px;
+}
+
+#character-container {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+#lotr__button {
+  width: 150px;
+  height: 50px;
+  padding-bottom: 6px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 1px rgba(113, 113, 113, 0.4588235294), -1px -1px 0 rgb(255, 196, 0);
+  color: rgb(85, 85, 85);
+  background-color: rgb(233, 172, 19);
+  border-radius: 45px;
+  border-color: rgb(198, 116, 1);
+  background: linear-gradient(to bottom right, #ff8400, rgba(255, 231, 111, 0.8274509804));
+  box-shadow: 0 0 10px rgba(219, 219, 219, 0.7), inset 0 0 20px rgba(255, 153, 0, 0.7);
+}
+
+#lotr__button:hover {
+  color: #ff6600;
+  background: transparent;
+  padding: 8px 13px;
+  border: 2px solid #ffd900;
+}
+
+/* Swiper */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.books-swiper,
+.movies-swiper {
+  width: 827px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1; /* Задаем z-index, чтобы элементы были видны поверх фона */
+}
+
+.books-swiper {
+  width: 1000px; /* или любое другое значение */
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff;
+  z-index: 10; /* Повышаем z-index кнопок, чтобы они были поверх слайдов */
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25vw; /* 25% от ширины окна просмотра */
+  height: 35vh; /* 35% от высоты окна просмотра */
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.book-img {
+  max-width: 275px;
+  min-height: 400px;
+}
+
+.book-title,
+.movie-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-top: 10px;
+}
+
+.book-year,
+.movie-year {
+  font-size: 16px;
+  color: #666;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.movie-genres {
+  font-size: 16px;
+  color: #666;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  background: #333;
+}
+
+/* Для экранов шириной 425px и меньше */
+@media (max-width: 425px) {
+  #lotr {
+    padding: 10px 0;
+  }
+  #LOTRlogo__container {
+    width: 35%;
+    margin: 0 auto;
+  }
+  .LOTR_logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  #lotr__button:hover {
+    padding: 8px 10px;
+    border: 2px solid #ffd900;
+  }
+  #journey-title,
+  #cards-title {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #journey-title {
+    margin-top: 15px;
+  }
+  #cards-title {
+    width: 35%;
+    margin: 12px auto;
+    text-align: center;
+  }
+  #character-container {
+    font-size: 14px;
+  }
+  #lotr__button {
+    width: 120px;
+    margin-top: 16px;
+  }
+  .books-all {
+    margin-top: 30px;
+  }
+}
+/* Для экранов шириной от 425px и выше */
+@media (min-width: 425px) {
+  #LOTRlogo__container {
+    width: 57%;
+    margin: 0 auto;
+  }
+  .LOTR_logo {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  #cards-title {
+    width: 40%;
+    margin: 15px auto;
+    text-align: center;
+  }
+}
+/* Для экранов шириной от 426px до 768px */
+@media (min-width: 426px) and (max-width: 768px) {
+  #lotr {
+    padding: 20px 0;
+  }
+  #LOTRlogo__container {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .LOTR_logo {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  #journey-title,
+  #cards-title {
+    font-size: 18px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #cards-title {
+    width: 100%;
+    margin: 12px auto;
+    text-align: center;
+  }
+  #character-container {
+    font-size: 16px;
+  }
+  #lotr__button {
+    width: 150px;
+    height: 50px;
+  }
+  .books-all {
+    margin-top: 40px;
+  }
+}
+/* Для экранов шириной от 769px до 1440px */
+@media (min-width: 769px) and (max-width: 1440px) {
+  #lotr {
+    padding: 30px 0;
+  }
+  #LOTRlogo__container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .LOTR_logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  #journey-title,
+  #cards-title {
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #cards-title {
+    width: 100%;
+    margin: 15px auto;
+    text-align: center;
+  }
+  #character-container {
+    font-size: 18px;
+  }
+  #lotr__button {
+    width: 180px;
+    height: 50px;
+    margin-top: 16px;
+  }
+  .books-all {
+    margin-top: 50px;
+  }
+}
+/* Для экранов шириной больше 1440px */
+@media (min-width: 1441px) {
+  #lotr {
+    padding: 40px 0;
+  }
+  #LOTRlogo__container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .LOTR_logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  #journey-title,
+  #cards-title {
+    font-size: 22px;
+    display: block;
+    text-align: center;
+  }
+  #cards-title {
+    width: 100%;
+    margin: 15px auto;
+    text-align: center;
+  }
+  #character-container {
+    font-size: 20px;
+  }
+  #lotr__button {
+    width: 200px;
+    height: 60px;
+    margin-top: 16px;
+  }
+  .books-all {
+    margin-top: 60px;
+  }
+}
+.star-wars_visible {
+  display: flex;
+}
+
+#star-wars {
+  box-sizing: border-box;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  min-height: 50rem;
+  background-image: url(../images/SW/maxresdefault.jpg);
+  border: 1px solid rgb(219, 201, 34);
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sw_logo_container {
+  padding: 19px;
+  max-width: 40rem;
+  min-height: 20rem;
+}
+
+.sw_logo {
+  width: 100%;
+}
+
+.sw_btn_next__container {
+  margin-top: 5rem;
+}
+
+.sw_btn_next {
+  cursor: pointer;
+  border: 2px solid rgb(219, 201, 34);
+  padding: 20px 45px;
+  background-color: transparent;
+  font-size: 35px;
+  font-family: "Geostar Fill", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  transition: transform 0.1s ease;
+}
+
+.sw_btn_next:hover {
+  border: 2px dashed rgb(219, 201, 34);
+}
+
+.sw_btn_next:active {
+  transform: translateY(2px);
+}
+
+.sw_quotes_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 650px;
+  height: 8rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  margin-top: 5rem;
+  font-size: 18px;
+}
+
+.sw_quotes__author {
+  margin-top: 15px;
+  margin-left: auto;
+  font-style: italic;
+}
+
+.sw_quotes__btn {
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  background-color: rgb(219, 201, 34);
+  font-family: "Geostar Fill", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  transition: transform 0.1s ease;
+}
+
+.sw_quotes__btn:active {
+  transform: translateY(2px);
+}
+
+.sw_quotes__btn:hover {
+  background-color: rgb(224, 213, 114);
+}
+
+.star-wars-movies_hide {
+  display: none;
+}
+
+#star-wars-movies {
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 3rem;
+  min-height: 50rem;
+  background-image: url(../images/SW/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid rgb(219, 201, 34);
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sw_movies__title {
+  align-self: flex-start;
+  margin: 0;
+  padding: 20px;
+  max-width: 650px;
+  text-align: left;
+  font-size: 35px;
+  color: #358aeb;
+}
+
+.sw_card__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-self: flex-start;
+  gap: 10px;
+  margin-top: 100px;
+  max-width: 700px;
+}
+
+.sw_movie_card {
+  padding: 20px;
+  height: 450px;
+  width: 205px;
+  border: 1px solid rgb(219, 201, 34);
+  background-color: #000000;
+  background-size: 200px 300px;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.sw_movie_card:nth-child(1) {
+  background-image: url(../images/SW/ep_4-2.webp);
+}
+
+.sw_movie_card:nth-child(2) {
+  background-image: url(../images/SW/ep5.jpg);
+}
+
+.sw_movie_card:nth-child(3) {
+  background-image: url(../images/SW/ep6.jpg);
+}
+
+.sw_movie_card:nth-child(4) {
+  background-image: url(../images/SW/ep1.jpg);
+}
+
+.sw_movie_card:nth-child(5) {
+  background-image: url(../images/SW/ep2.jpg);
+}
+
+.sw_movie_card:nth-child(6) {
+  background-image: url(../images/SW/ep3.jpg);
+}
+
+.sw_card_title {
+  margin-top: 310px;
+  font-size: 17px;
+}
+
+.sw_card_dir {
+  font-size: 14px;
+}
+
+.sw_card_release {
+  font-size: 14px;
+}
+
+.sw_movies__btn-back {
+  cursor: pointer;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  background-color: rgb(219, 201, 34);
+  transition: transform 0.1s ease;
+}
+
+.star-wars-movies_visible {
+  display: flex;
+}
+
+.star-wars_hide {
+  display: none;
+}
+
+.sw_logo_animation {
+  position: absolute;
+  top: 21%;
+  left: 50%;
+  z-index: 1;
+  animation: logo 6s ease-out 0s;
+  opacity: 0;
+}
+
+@keyframes logo {
+  0% {
+    width: 18em;
+    margin: 0 -9em 0 -9em;
+    transform: scale(2.2);
+    opacity: 1;
+  }
+  20% {
+    width: 18em;
+    margin: 0 -9em 0 -9em;
+  }
+  50% {
+    opacity: 1;
+    width: 18em;
+    margin: 0 -9em 0 -9em;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.1);
+    width: 18em;
+    margin: 0 -9em 0 -9em;
+  }
+}
+@media (max-width: 720px) {
+  .sw_btn_next__container {
+    max-width: 600px;
+    padding: 15px;
+  }
+  .sw_btn_next {
+    padding: 20px 35px;
+    font-size: 30px;
+  }
+}
+@media (max-width: 537px) {
+  .sw_movies__title {
+    padding: 5px;
+    font-size: 21px;
+  }
+  .sw_card__container {
+    justify-content: center;
+  }
+  #star-wars-movies {
+    background-size: cover;
+    background-position: top right;
+  }
+}/*# sourceMappingURL=style.css.map */
