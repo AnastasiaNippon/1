@@ -1,0 +1,25 @@
+.word-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .word-table th, .word-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .word-table th {
+    background-color: #f0f0f0;
+  }
+  
+  .word-table td button {
+    margin-right: 5px;
+  }
+  
+  .word-table input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  
