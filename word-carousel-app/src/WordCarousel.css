@@ -1,0 +1,58 @@
+/* WordCarousel.css */
+.word-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .arrow-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .arrow-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .card-container {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 0 15px;
+  }
+  
+  .word-card {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  .word-card:hover {
+    transform: rotateY(180deg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .word-card h3, .word-card p {
+    margin: 0;
+    padding: 10px;
+  }
+  
+  .word-card p {
+    color: #888;
+    font-size: 18px;
+  }
+  
