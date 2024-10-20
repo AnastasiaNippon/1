@@ -1,0 +1,42 @@
+.menu {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    width: 50px; /* Размер логотипа */
+    height: auto;
+  }
+  
+  .menu-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu-links li {
+    display: inline;
+  }
+  
+  .menu-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .menu-links a:hover {
+    text-decoration: underline;
+  }
+  
