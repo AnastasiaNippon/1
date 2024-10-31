@@ -5,14 +5,20 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Header и Footer */
-header, footer {
+/* Основной контейнер приложения */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex: 1; /* Контейнер заполняет доступное пространство */
+}
+
+/* Header */
+header {
   background-color: #333;
   color: white;
   padding: 20px;
@@ -21,7 +27,9 @@ header, footer {
   box-sizing: border-box;
 }
 
+/* Основное содержимое */
 main {
+  flex: 1;
   background-color: white;
   padding: 20px;
   border-radius: 8px;
@@ -29,13 +37,16 @@ main {
   max-width: 800px;
   margin: 20px auto;
   text-align: center;
+  box-sizing: border-box;
 }
 
+/* Заголовки */
 h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
+/* Кнопки */
 button {
   padding: 10px;
   border: none;
@@ -47,4 +58,18 @@ button {
 
 button:hover {
   background-color: #555;
+}
+
+/* Стили для футера */
+footer {
+  background-color: #333; /* Цвет фона */
+  color: white; /* Цвет текста */
+  padding: 20px;
+  text-align: center;
+  width: 100%; /* Занимает всю ширину экрана */
+  display: flex;
+  justify-content: center; /* Центрирует текст внутри футера */
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: auto; /* Позволяет футеру всегда быть внизу */
 }

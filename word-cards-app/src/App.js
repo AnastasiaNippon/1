@@ -1,7 +1,8 @@
-import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import WordCard from './WordCard';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Menu from './components/Menu';
+import WordTable from './components/WordTable';
+import WordTrainer from './components/WordTrainer';
+import Footer from './components/Footer'; 
 
 const App = () => {
   const words = [
@@ -20,21 +21,16 @@ const App = () => {
   ];
 
   return (
-    <div className="app">
-      <Header />
-      <div className="word-list">
-        {words.map((wordData, index) => (
-          <WordCard 
-            key={index}
-            word={wordData.word}
-            transcription={wordData.transcription}
-            translation={wordData.translation}
-            topic={wordData.topic}
-          />
-        ))}
+    <Router>
+      <div className="app-container">
+        <Menu />
+        <Routes>
+          <Route path="/" element={<WordTable words={words} />} />
+          <Route path="/game" element={<WordTrainer words={words} />} />
+        </Routes>
+        <Footer /> {/* Добавляем футер */}
       </div>
-      <Footer />
-    </div>
+    </Router>
   );
 };
 
