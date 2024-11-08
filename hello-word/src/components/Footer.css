@@ -1,16 +1,16 @@
 footer {
-    background-color: #333; /* Цвет фона */
-    color: white; /* Цвет текста */
-    padding: 15px 0;
-    text-align: center;
-    width: 100vw; /* Ширина по всему экрану */
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center; /* Центрируем содержимое футера */
-    align-items: center;
-    z-index: 1000; /* Приоритет отображения футера */
-  }
-  
+  background-color: #333; /* Цвет фона */
+  color: white; /* Цвет текста */
+  padding: 5px 0; /* Уменьшенный внутренний отступ */
+  text-align: center;
+  width: 100vw; /* Ширина по всему экрану */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* Центрируем содержимое футера */
+  align-items: center;
+  z-index: 1000; /* Приоритет отображения футера */
+  font-size: 0.9rem; /* Меньший размер шрифта, если нужно */
+}

@@ -1,8 +1,11 @@
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Menu from './components/Menu';
 import Home from './components/Home';
 import WordTrainer from './components/WordTrainer';
 import Footer from './components/Footer';
+import FormattedTextInput from './components/FormattedTextInput'; // Импортируем компонент
+
 
 const App = () => {
   const words = [
