@@ -1,45 +1,60 @@
-.card {
-    width: 300px;
-    height: 200px;
-    perspective: 1000px;
-    margin: 20px auto;
-    position: relative;
-  }
-  
-  .card-front, .card-back {
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    position: absolute;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.8s;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card-front {
-    background-color: #333;
-    color: white;
-  }
-  
-  .card-back {
-    background-color: #f0f0f0;
-    color: #333;
-    transform: rotateY(180deg);
-  }
-  
-  .card.flipped .card-front {
-    transform: rotateY(180deg);
-  }
-  
-  .card.flipped .card-back {
-    transform: rotateY(0deg);
-  }
-  
+/* Основной контейнер WordTrainer */
+.trainer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Стили для карточки слова */
+.word-card {
+  background-color: #00e1ff; /* Более светлый оттенок для контраста */
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin-bottom: 20px; /* Отступ между карточкой и кнопками */
+}
+
+/* Контейнер для управления кнопками */
+.trainer-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Стили для кнопок */
+.trainer-controls button {
+  padding: 12px 20px;
+  margin: 8px 0; /* Отступы между кнопками */
+  border: none;
+  background-color: #596169; /* Ярко-синий цвет для видимости */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(208, 201, 201, 0.2); /* Легкая тень для эффекта */
+}
+
+/* Эффекты при наведении на кнопки */
+.trainer-controls button:hover {
+  background-color: #293b4f; /* Темно-синий для контраста при наведении */
+  transform: translateY(-2px); /* Легкое приподнимание */
+}
+
+.trainer-controls button:active {
+  background-color: #003366; /* Еще темнее при клике */
+  transform: translateY(0); /* Убираем приподнимание при клике */
+}
+
+/* Стиль для счетчика изученных слов */
+.trainer-controls p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #444; /* Более светлый цвет для видимости */
+  margin: 10px 0;
+}

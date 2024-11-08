@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Menu from './components/Menu';
-import WordTable from './components/WordTable';
+import Home from './components/Home';
 import WordTrainer from './components/WordTrainer';
-import Footer from './components/Footer'; // Подключаем футер
+import Footer from './components/Footer';
 
 const App = () => {
   const words = [
@@ -36,14 +36,12 @@ const App = () => {
 
   return (
     <Router>
-      <div className="app-container">
-        <Menu />
-        <Routes>
-          <Route path="/" element={<WordTable words={words} />} />
-          <Route path="/game" element={<WordTrainer words={words} />} />
-        </Routes>
-        <Footer /> 
-      </div>
+      <Menu />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/game" element={<WordTrainer words={words} />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 };

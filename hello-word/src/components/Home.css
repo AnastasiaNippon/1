@@ -1,0 +1,53 @@
+/* Home.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h2 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 10px;
+    animation: pulse 2s infinite; /* Анимация для создания "живого" эффекта */
+  }
+  
+  p {
+    font-size: 1.5rem;
+    color: #666;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+  
+  /* Анимация "пульсации" для заголовка */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      color: #333;
+    }
+    50% {
+      transform: scale(1.05);
+      color: #555;
+    }
+    100% {
+      transform: scale(1);
+      color: #333;
+    }
+  }
+  
