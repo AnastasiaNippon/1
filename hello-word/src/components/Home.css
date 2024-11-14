@@ -23,7 +23,7 @@ body, html {
   
   h2 {
     font-size: 3rem;
-    color: #333;
+    color: #00e5ff;
     margin-bottom: 10px;
     animation: pulse 2s infinite; /* Анимация для создания "живого" эффекта */
   }

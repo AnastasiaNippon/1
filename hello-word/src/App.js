@@ -4,8 +4,7 @@ import Menu from './components/Menu';
 import Home from './components/Home';
 import WordTrainer from './components/WordTrainer';
 import Footer from './components/Footer';
-import FormattedTextInput from './components/FormattedTextInput'; // Импортируем компонент
-
+import TextDisplay from './components/TextDisplay';
 
 const App = () => {
   const words = [
@@ -35,7 +34,6 @@ const App = () => {
     { id: 24, word: 'student', transcription: 'ˈstjuːdənt', translation: 'студент', theme: 'Education' },
     { id: 25, word: 'teacher', transcription: 'ˈtiːtʃər', translation: 'учитель', theme: 'Education' }
   ];
-  
 
   return (
     <Router>
@@ -44,6 +42,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/game" element={<WordTrainer words={words} />} />
       </Routes>
+      <TextDisplay />
       <Footer />
     </Router>
   );

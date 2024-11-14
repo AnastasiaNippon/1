@@ -1,7 +1,7 @@
 footer {
   background-color: #333; /* Цвет фона */
   color: white; /* Цвет текста */
-  padding: 5px 0; /* Уменьшенный внутренний отступ */
+  padding: -60px 0; /* Уменьшенный внутренний отступ */
   text-align: center;
   width: 100vw; /* Ширина по всему экрану */
   position: fixed;
