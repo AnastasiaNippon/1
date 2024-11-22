@@ -4,8 +4,34 @@ import Menu from "./components/Menu";
 import Home from "./components/Home";
 import WordTrainer from "./components/WordTrainer";
 import Footer from "./components/Footer";
-import TextDisplay from "./components/TextDisplay";
+import TextDisplay from "./components/TextDisplay";import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import { WordsProvider } from "./context/WordsContext"; // Провайдер контекста
+
+ReactDOM.render(
+  <React.StrictMode>
+    <WordsProvider>
+      <App />
+    </WordsProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
+);
+
 import "./themes.css";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import { WordsProvider } from "./context/WordsContext";
+
+ReactDOM.render(
+  <React.StrictMode>
+    <WordsProvider>
+      <App />
+    </WordsProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
+);
 
 function App() {
   const [theme, setTheme] = useState("light");
