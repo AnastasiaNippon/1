@@ -42,3 +42,25 @@
     text-decoration: underline;
   }
   
+  .menu {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  .menu-links a {
+    color: var(--text-color);
+  }
+  
+  .theme-toggle {
+    padding: 10px 20px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .theme-toggle:hover {
+    opacity: 0.8;
+  }
+  

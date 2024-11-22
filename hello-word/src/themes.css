@@ -1,0 +1,33 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --button-bg: #e0e0e0;
+    --button-text: #000000;
+  }
+  
+  [data-theme="dark"] {
+    --bg-color: #333333; /* Тёмный фон */
+    --text-color: #000000; /* Чёрный текст */
+    --button-bg: #555555;
+    --button-text: #000000; /* Чёрный текст на кнопке */
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  

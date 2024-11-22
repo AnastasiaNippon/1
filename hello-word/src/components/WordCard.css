@@ -58,3 +58,8 @@
   color: #444; /* Более светлый цвет для видимости */
   margin: 10px 0;
 }
+
+.word-card {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
