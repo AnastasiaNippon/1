@@ -7,7 +7,6 @@ export const WordsProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Функция для получения слов с сервера
   useEffect(() => {
     const fetchWords = async () => {
       try {
@@ -23,10 +22,10 @@ export const WordsProvider = ({ children }) => {
         setLoading(false);
       }
     };
+
     fetchWords();
   }, []);
 
-  // Методы для управления словами
   const addWord = async (word) => {
     try {
       const response = await fetch("http://itgirlschool.justmakeit.ru/api/words/add", {
@@ -38,9 +37,9 @@ export const WordsProvider = ({ children }) => {
         throw new Error("Failed to add word");
       }
       const newWord = await response.json();
-      setWords((prev) => [...prev, newWord]);
+      setWords((prev) => [...prev, newWord]); // Добавляем новое слово в состояние
     } catch (err) {
-      setError(err.message);
+      console.error(err.message);
     }
   };
 
@@ -54,10 +53,12 @@ export const WordsProvider = ({ children }) => {
       if (!response.ok) {
         throw new Error("Failed to update word");
       }
-      const data = await response.json();
-      setWords((prev) => prev.map((word) => (word.id === id ? data : word)));
+      const updatedData = await response.json();
+      setWords((prev) =>
+        prev.map((word) => (word.id === id ? updatedData : word)) // Обновляем слово в списке
+      );
     } catch (err) {
-      setError(err.message);
+      console.error(err.message);
     }
   };
 
@@ -69,9 +70,9 @@ export const WordsProvider = ({ children }) => {
       if (!response.ok) {
         throw new Error("Failed to delete word");
       }
-      setWords((prev) => prev.filter((word) => word.id !== id));
+      setWords((prev) => prev.filter((word) => word.id !== id)); // Удаляем слово из состояния
     } catch (err) {
-      setError(err.message);
+      console.error(err.message);
     }
   };
 
