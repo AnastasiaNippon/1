@@ -26,7 +26,6 @@ const WordCard = ({ word, onLearned }) => {
         <div className="card-front">
           <h3>{word.word}</h3>
           <p>Transcription: {word.transcription}</p>
-          <p>Theme: {word.theme}</p>
           <button ref={buttonRef} onClick={handleFlip}>
             Посмотреть перевод
           </button>

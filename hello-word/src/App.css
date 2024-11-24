@@ -1,75 +1,35 @@
-/* Центрирование основного контента */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-/* Основной контейнер приложения */
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  flex: 1; /* Контейнер заполняет доступное пространство */
-}
-
-/* Header */
-header {
-  background-color: #333;
-  color: white;
+.container {
+  text-align: center;
   padding: 20px;
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
 }
 
-/* Основное содержимое */
-main {
-  flex: 1;
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  margin: 20px auto;
-  text-align: center;
-  box-sizing: border-box;
+.word-table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
 }
 
-/* Заголовки */
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Кнопки */
-button {
+.word-table th,
+.word-table td {
   padding: 10px;
-  border: none;
-  background-color: #333;
+  border: 1px solid #ddd;
+}
+
+input {
+  padding: 8px;
+  margin: 5px;
+}
+
+button {
+  padding: 8px;
+  margin: 5px;
+  background-color: #007bff;
   color: white;
-  cursor: pointer;
+  border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 button:hover {
-  background-color: #555;
-}
-
-/* Стили для футера */
-footer {
-  background-color: #333; /* Цвет фона */
-  color: white; /* Цвет текста */
-  padding: 20px;
-  text-align: center;
-  width: 100%; /* Занимает всю ширину экрана */
-  display: flex;
-  justify-content: center; /* Центрирует текст внутри футера */
-  align-items: center;
-  box-sizing: border-box;
-  margin-top: auto; /* Позволяет футеру всегда быть внизу */
+  background-color: #0056b3;
 }
