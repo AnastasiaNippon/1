@@ -7,7 +7,7 @@
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between; /* Разделяет логотип и ссылки по краям */
+    justify-content: space-between; 
     align-items: center;
     box-sizing: border-box;
   }
@@ -18,7 +18,7 @@
   }
   
   .logo-image {
-    width: 50px; /* Размер логотипа */
+    width: 50px; 
     height: auto;
   }
   
@@ -26,7 +26,7 @@
     list-style: none;
     display: flex;
     gap: 50px;
-    justify-content: center; /* Центрируем сами ссылки внутри контейнера */
+    justify-content: center; 
   }
   
   .menu-links li {

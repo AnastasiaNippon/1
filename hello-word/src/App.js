@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Menu from "./components/Menu"; // Убедитесь, что компонент Menu подключен
-import Footer from "./components/Footer"; // Убедитесь, что компонент Footer подключен
-import WordTrainer from "./components/WordTrainer"; // Убедитесь, что компонент WordTrainer подключен
-import "./App.css"; // Ваши стили
-import "./themes.css"; // Стили для темы
+import Menu from "./components/Menu"; 
+import Footer from "./components/Footer"; 
+import WordTrainer from "./components/WordTrainer"; 
+import "./App.css"; 
+import "./themes.css";
 
-const API_BASE_URL = "http://itgirlschool.justmakeit.ru/api/words"; // Путь к API
+const API_BASE_URL = "http://itgirlschool.justmakeit.ru/api/words";
 
 const App = () => {
   const [words, setWords] = useState([]);

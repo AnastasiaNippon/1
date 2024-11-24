@@ -35,7 +35,7 @@ const Home = () => {
     <main className="home-container">
       <h2>Добро пожаловать!</h2>
       <p>Здесь вы можете изучать слова с помощью карточек.</p>
-      <WordTable words={words} /> {/* Вставка таблицы слов */}
+      <WordTable words={words} /> 
     </main>
   );
 };

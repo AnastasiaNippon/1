@@ -25,7 +25,7 @@ body, html {
     font-size: 3rem;
     color: #00e5ff;
     margin-bottom: 10px;
-    animation: pulse 2s infinite; /* Анимация для создания "живого" эффекта */
+    animation: pulse 2s infinite;
   }
   
   p {
@@ -35,7 +35,7 @@ body, html {
     line-height: 1.6;
   }
   
-  /* Анимация "пульсации" для заголовка */
+  
   @keyframes pulse {
     0% {
       transform: scale(1);

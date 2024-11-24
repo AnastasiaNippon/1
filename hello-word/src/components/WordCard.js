@@ -6,17 +6,17 @@ const WordCard = ({ word, onLearned }) => {
   const buttonRef = useRef(null);
 
   useEffect(() => {
-    // Устанавливаем фокус на кнопку при рендере новой карточки
+    
     if (buttonRef.current) {
       buttonRef.current.focus();
     }
-    setFlipped(false); // Переворачиваем карточку лицом вперёд при рендере новой карточки
-  }, [word]); // Срабатывает при изменении слова
+    setFlipped(false); 
+  }, [word]); 
 
   const handleFlip = () => {
-    setFlipped(!flipped); // Переключаем состояние flipped
+    setFlipped(!flipped); 
     if (!flipped) {
-      onLearned(); // Отмечаем как изученное только при первом перевороте
+      onLearned(); 
     }
   };
 
@@ -33,7 +33,7 @@ const WordCard = ({ word, onLearned }) => {
       ) : (
         <div className="card-back">
           <p>Translation: {word.translation}</p>
-          <button onClick={handleFlip}>Назад</button> {/* Кнопка для переворота назад */}
+          <button onClick={handleFlip}>Назад</button> 
         </div>
       )}
     </div>

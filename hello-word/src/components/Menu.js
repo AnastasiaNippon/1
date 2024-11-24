@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 import React from "react";
 import './Menu.css';
-import logo from '../assets/группа-в-составе-сыгранности-работая-вектор-логотипа-друзей-121304871.jpg'; // Корректный импорт логотипа
+import logo from '../assets/группа-в-составе-сыгранности-работая-вектор-логотипа-друзей-121304871.jpg'; 
 
 const Menu = ({ theme, toggleTheme }) => {
   return (
     <div className="menu">
       <div className="logo">
-        <img src={logo} alt="Logo" className="logo-image" /> {/* Используем корректный путь */}
+        <img src={logo} alt="Logo" className="logo-image" /> 
       </div>
       <ul className="menu-links">
         <li>

@@ -37,7 +37,7 @@ export const WordsProvider = ({ children }) => {
         throw new Error("Failed to add word");
       }
       const newWord = await response.json();
-      setWords((prev) => [...prev, newWord]); // Добавляем новое слово в состояние
+      setWords((prev) => [...prev, newWord]); 
     } catch (err) {
       console.error(err.message);
     }
@@ -55,7 +55,7 @@ export const WordsProvider = ({ children }) => {
       }
       const updatedData = await response.json();
       setWords((prev) =>
-        prev.map((word) => (word.id === id ? updatedData : word)) // Обновляем слово в списке
+        prev.map((word) => (word.id === id ? updatedData : word)) 
       );
     } catch (err) {
       console.error(err.message);
@@ -70,7 +70,7 @@ export const WordsProvider = ({ children }) => {
       if (!response.ok) {
         throw new Error("Failed to delete word");
       }
-      setWords((prev) => prev.filter((word) => word.id !== id)); // Удаляем слово из состояния
+      setWords((prev) => prev.filter((word) => word.id !== id)); 
     } catch (err) {
       console.error(err.message);
     }

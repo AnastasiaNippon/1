@@ -9,7 +9,7 @@ const TextDisplay = () => {
   };
 
   const handleButtonClick = () => {
-    setDisplayText(text.toUpperCase()); // Пример форматирования: преобразование текста в заглавные буквы
+    setDisplayText(text.toUpperCase());
   };
 
   

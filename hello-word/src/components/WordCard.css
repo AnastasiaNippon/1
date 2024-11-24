@@ -47,15 +47,15 @@
 }
 
 .trainer-controls button:active {
-  background-color: #003366; /* Еще темнее при клике */
-  transform: translateY(0); /* Убираем приподнимание при клике */
+  background-color: #003366;
+  transform: translateY(0); 
 }
 
-/* Стиль для счетчика изученных слов */
+
 .trainer-controls p {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #1aff00; /* Более светлый цвет для видимости */
+  color: #1aff00; 
   margin: 10px 0;
 }
 
