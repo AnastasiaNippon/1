@@ -2,7 +2,18 @@ import React from "react";
 import WordTable from "./WordTable";
 import "./Home.css";
 
-const Home = ({ words, newWord, setNewWord, addWord, error, isLoading }) => {
+const Home = ({
+  words,
+  newWord,
+  setNewWord,
+  addWord,
+  error,
+  isLoading,
+  editingWord,
+  setEditingWord,
+  saveWord,
+  deleteWord,
+}) => {
   return (
     <main className="home-container">
       <div className="animated-title-container">
@@ -13,7 +24,13 @@ const Home = ({ words, newWord, setNewWord, addWord, error, isLoading }) => {
         <div className="loading-spinner"></div>
       ) : (
         <>
-          <WordTable words={words} />
+          <WordTable
+            words={words}
+            editingWord={editingWord}
+            setEditingWord={setEditingWord}
+            saveWord={saveWord}
+            deleteWord={deleteWord}
+          />
           <h2>Добавить новое слово</h2>
           <div>
             <input
@@ -32,7 +49,9 @@ const Home = ({ words, newWord, setNewWord, addWord, error, isLoading }) => {
               type="text"
               placeholder="Транскрипция"
               value={newWord.transcription}
-              onChange={(e) => setNewWord({ ...newWord, transcription: e.target.value })}
+              onChange={(e) =>
+                setNewWord({ ...newWord, transcription: e.target.value })
+              }
             />
             <button onClick={addWord}>Добавить</button>
             {error && <p style={{ color: "red" }}>{error}</p>}

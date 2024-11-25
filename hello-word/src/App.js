@@ -142,7 +142,11 @@ const App = () => {
                 setNewWord={setNewWord}
                 addWord={addWord}
                 error={error}
-                isLoading={isLoading} // Передаём состояние загрузки
+                isLoading={isLoading}
+                editingWord={editingWord}
+                setEditingWord={setEditingWord}
+                saveWord={saveWord}
+                deleteWord={deleteWord}
               />
             }
           />

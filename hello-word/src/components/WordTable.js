@@ -1,18 +1,12 @@
 import React from "react";
 import "./WordTable.css";
 
-const WordTable = ({
-  words,
-  deleteWord,
-  editingWord,
-  setEditingWord,
-  saveWord,
-}) => {
+const WordTable = ({ words, editingWord, setEditingWord, saveWord, deleteWord }) => {
   return (
     <table className="word-table">
       <thead>
         <tr>
-          <th>Слово (на английском)</th>
+          <th>Слово</th>
           <th>Перевод</th>
           <th>Транскрипция</th>
           <th>Действия</th>
@@ -34,10 +28,7 @@ const WordTable = ({
                 <input
                   value={editingWord.russian}
                   onChange={(e) =>
-                    setEditingWord({
-                      ...editingWord,
-                      russian: e.target.value,
-                    })
+                    setEditingWord({ ...editingWord, russian: e.target.value })
                   }
                 />
               </td>
@@ -45,10 +36,7 @@ const WordTable = ({
                 <input
                   value={editingWord.transcription}
                   onChange={(e) =>
-                    setEditingWord({
-                      ...editingWord,
-                      transcription: e.target.value,
-                    })
+                    setEditingWord({ ...editingWord, transcription: e.target.value })
                   }
                 />
               </td>
