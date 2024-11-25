@@ -19,7 +19,7 @@ const App = () => {
   const [editingWord, setEditingWord] = useState(null);
   const [error, setError] = useState("");
   const [theme, setTheme] = useState("light");
-  const [isLoading, setIsLoading] = useState(true); // Для отображения загрузки
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -27,6 +27,7 @@ const App = () => {
 
   useEffect(() => {
     fetchWords();
+    testConnection();
   }, []);
 
   const toggleTheme = () => {
@@ -41,10 +42,23 @@ const App = () => {
       }
       const data = await response.json();
       setWords(data);
-      setIsLoading(false); // Отключаем загрузку
+      setIsLoading(false);
     } catch (error) {
       console.error("Ошибка загрузки слов:", error);
-      setIsLoading(false); // Даже при ошибке загрузку нужно отключить
+      setIsLoading(false);
+    }
+  };
+
+  const testConnection = async () => {
+    try {
+      const response = await fetch("http://itgirlschool.justmakeit.ru/api/words");
+      if (response.ok) {
+        console.log("Подключение к серверу успешно");
+      } else {
+        console.error("Сервер вернул ошибку:", response.status);
+      }
+    } catch (error) {
+      console.error("Ошибка подключения к серверу:", error.message);
     }
   };
 
