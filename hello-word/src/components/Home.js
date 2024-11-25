@@ -1,44 +1,46 @@
-import React from 'react';
-import WordTable from './WordTable';
-import './Home.css';
+import React from "react";
+import WordTable from "./WordTable";
+import "./Home.css";
 
-const Home = () => {
-  const words = [
-    { id: 1, word: 'cat', transcription: 'kæt', translation: 'кошка', theme: 'Animals' },
-    { id: 2, word: 'dog', transcription: 'dɒg', translation: 'собака', theme: 'Animals' },
-    { id: 3, word: 'apple', transcription: 'ˈæpəl', translation: 'яблоко', theme: 'Food' },
-    { id: 4, word: 'car', transcription: 'kɑːr', translation: 'машина', theme: 'Transport' },
-    { id: 5, word: 'house', transcription: 'haʊs', translation: 'дом', theme: 'Places' },
-    { id: 6, word: 'book', transcription: 'bʊk', translation: 'книга', theme: 'Education' },
-    { id: 7, word: 'sun', transcription: 'sʌn', translation: 'солнце', theme: 'Nature' },
-    { id: 8, word: 'tree', transcription: 'triː', translation: 'дерево', theme: 'Nature' },
-    { id: 9, word: 'water', transcription: 'ˈwɔːtər', translation: 'вода', theme: 'Nature' },
-    { id: 10, word: 'phone', transcription: 'fəʊn', translation: 'телефон', theme: 'Technology' },
-    { id: 11, word: 'computer', transcription: 'kəmˈpjuːtər', translation: 'компьютер', theme: 'Technology' },
-    { id: 12, word: 'table', transcription: 'ˈteɪbəl', translation: 'стол', theme: 'Furniture' },
-    { id: 13, word: 'chair', transcription: 'tʃɛər', translation: 'стул', theme: 'Furniture' },
-    { id: 14, word: 'window', transcription: 'ˈwɪndoʊ', translation: 'окно', theme: 'House' },
-    { id: 15, word: 'flower', transcription: 'ˈflaʊər', translation: 'цветок', theme: 'Nature' },
-    { id: 16, word: 'coffee', transcription: 'ˈkɒfi', translation: 'кофе', theme: 'Food' },
-    { id: 17, word: 'banana', transcription: 'bəˈnænə', translation: 'банан', theme: 'Food' },
-    { id: 18, word: 'train', transcription: 'treɪn', translation: 'поезд', theme: 'Transport' },
-    { id: 19, word: 'plane', transcription: 'pleɪn', translation: 'самолет', theme: 'Transport' },
-    { id: 20, word: 'city', transcription: 'ˈsɪti', translation: 'город', theme: 'Places' },
-    { id: 21, word: 'river', transcription: 'ˈrɪvər', translation: 'река', theme: 'Nature' },
-    { id: 22, word: 'mountain', transcription: 'ˈmaʊntən', translation: 'гора', theme: 'Nature' },
-    { id: 23, word: 'baby', transcription: 'ˈbeɪbi', translation: 'малыш', theme: 'People' },
-    { id: 24, word: 'student', transcription: 'ˈstjuːdənt', translation: 'студент', theme: 'Education' },
-    { id: 25, word: 'teacher', transcription: 'ˈtiːtʃər', translation: 'учитель', theme: 'Education' },
-  ];
-
+const Home = ({ words, newWord, setNewWord, addWord, error, isLoading }) => {
   return (
     <main className="home-container">
-      <h2>Добро пожаловать!</h2>
+      <div className="animated-title-container">
+        <h1 className="animated-title">Добро пожаловать!</h1>
+      </div>
       <p>Здесь вы можете изучать слова с помощью карточек.</p>
-      <WordTable words={words} /> 
+      {isLoading ? (
+        <div className="loading-spinner"></div>
+      ) : (
+        <>
+          <WordTable words={words} />
+          <h2>Добавить новое слово</h2>
+          <div>
+            <input
+              type="text"
+              placeholder="Слово (на английском)"
+              value={newWord.english}
+              onChange={(e) => setNewWord({ ...newWord, english: e.target.value })}
+            />
+            <input
+              type="text"
+              placeholder="Перевод"
+              value={newWord.russian}
+              onChange={(e) => setNewWord({ ...newWord, russian: e.target.value })}
+            />
+            <input
+              type="text"
+              placeholder="Транскрипция"
+              value={newWord.transcription}
+              onChange={(e) => setNewWord({ ...newWord, transcription: e.target.value })}
+            />
+            <button onClick={addWord}>Добавить</button>
+            {error && <p style={{ color: "red" }}>{error}</p>}
+          </div>
+        </>
+      )}
     </main>
   );
 };
 
 export default Home;
-

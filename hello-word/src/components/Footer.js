@@ -1,10 +1,10 @@
-// Footer.js
-import './Footer.css';
+import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
   return (
     <footer>
-      <p>© 2024 Language Flashcards</p>
+      <p>© 2024 My App. All rights reserved.</p>
     </footer>
   );
 };

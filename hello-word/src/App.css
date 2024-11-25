@@ -1,35 +1,45 @@
-.container {
+/* Общий стиль для body */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Хедер */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  z-index: 1000;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 20px;
 }
 
-.word-table {
-  width: 80%;
-  margin: 0 auto;
-  border-collapse: collapse;
+/* Основное содержимое */
+main {
+  flex: 1;
+  padding: 70px 20px 70px; /* Оставляем место под хедер и футер */
+  box-sizing: border-box;
 }
 
-.word-table th,
-.word-table td {
-  padding: 10px;
-  border: 1px solid #ddd;
-}
-
-input {
-  padding: 8px;
-  margin: 5px;
-}
-
-button {
-  padding: 8px;
-  margin: 5px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
+/* Футер */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 1000;
 }

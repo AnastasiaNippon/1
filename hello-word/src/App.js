@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
+import Home from "./components/Home";
 import WordTrainer from "./components/WordTrainer";
-import "./App.css"; // Подключение ваших стилей с темами
-import "./themes.css"; // Подключение переменных тем
+import "./App.css";
+import "./themes.css";
 
 const API_BASE_URL = "http://itgirlschool.justmakeit.ru/api/words";
 
@@ -18,6 +19,7 @@ const App = () => {
   const [editingWord, setEditingWord] = useState(null);
   const [error, setError] = useState("");
   const [theme, setTheme] = useState("light");
+  const [isLoading, setIsLoading] = useState(true); // Для отображения загрузки
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -39,8 +41,10 @@ const App = () => {
       }
       const data = await response.json();
       setWords(data);
+      setIsLoading(false); // Отключаем загрузку
     } catch (error) {
       console.error("Ошибка загрузки слов:", error);
+      setIsLoading(false); // Даже при ошибке загрузку нужно отключить
     }
   };
 
@@ -128,108 +132,18 @@ const App = () => {
     <Router>
       <Menu theme={theme} toggleTheme={toggleTheme} />
       <div className="container">
-        <button onClick={toggleTheme} className="theme-toggle">
-          {theme === "light" ? "Темная Тема" : "Светлая Тема"}
-        </button>
         <Routes>
           <Route
             path="/"
             element={
-              <div>
-                <h1>Список слов</h1>
-                <table className="word-table">
-                  <thead>
-                    <tr>
-                      <th>Слово</th>
-                      <th>Перевод</th>
-                      <th>Транскрипция</th>
-                      <th>Действия</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {words.map((word) =>
-                      editingWord && editingWord.id === word.id ? (
-                        <tr key={word.id}>
-                          <td>
-                            <input
-                              value={editingWord.english}
-                              onChange={(e) =>
-                                setEditingWord({ ...editingWord, english: e.target.value })
-                              }
-                            />
-                          </td>
-                          <td>
-                            <input
-                              value={editingWord.russian}
-                              onChange={(e) =>
-                                setEditingWord({
-                                  ...editingWord,
-                                  russian: e.target.value,
-                                })
-                              }
-                            />
-                          </td>
-                          <td>
-                            <input
-                              value={editingWord.transcription}
-                              onChange={(e) =>
-                                setEditingWord({
-                                  ...editingWord,
-                                  transcription: e.target.value,
-                                })
-                              }
-                            />
-                          </td>
-                          <td>
-                            <button onClick={saveWord}>Сохранить</button>
-                            <button onClick={() => setEditingWord(null)}>Отмена</button>
-                          </td>
-                        </tr>
-                      ) : (
-                        <tr key={word.id}>
-                          <td>{word.english}</td>
-                          <td>{word.russian}</td>
-                          <td>{word.transcription}</td>
-                          <td>
-                            <button onClick={() => setEditingWord(word)}>Редактировать</button>
-                            <button onClick={() => deleteWord(word.id)}>Удалить</button>
-                          </td>
-                        </tr>
-                      )
-                    )}
-                  </tbody>
-                </table>
-
-                <h2>Добавить новое слово</h2>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Слово (на английском)"
-                    value={newWord.english}
-                    onChange={(e) =>
-                      setNewWord({ ...newWord, english: e.target.value })
-                    }
-                  />
-                  <input
-                    type="text"
-                    placeholder="Перевод"
-                    value={newWord.russian}
-                    onChange={(e) =>
-                      setNewWord({ ...newWord, russian: e.target.value })
-                    }
-                  />
-                  <input
-                    type="text"
-                    placeholder="Транскрипция"
-                    value={newWord.transcription}
-                    onChange={(e) =>
-                      setNewWord({ ...newWord, transcription: e.target.value })
-                    }
-                  />
-                  <button onClick={addWord}>Добавить</button>
-                  {error && <p style={{ color: "red" }}>{error}</p>}
-                </div>
-              </div>
+              <Home
+                words={words}
+                newWord={newWord}
+                setNewWord={setNewWord}
+                addWord={addWord}
+                error={error}
+                isLoading={isLoading} // Передаём состояние загрузки
+              />
             }
           />
           <Route path="/game" element={<WordTrainer words={words} />} />

@@ -1,35 +1,16 @@
 .word-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .word-table th, .word-table td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
-  }
-  
-  input {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  
-  input.error {
-    border-color: red;
-  }
-  
-  button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #0066cc;
-    color: white;
-    cursor: pointer;
-  }
-  
-  button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--bg-color); /* Общий фон таблицы */
+  color: var(--text-color); /* Цвет текста */
+}
+
+.word-table th, .word-table td {
+  border: 1px solid var(--table-border); /* Бордюры */
+  padding: 10px;
+  text-align: left;
+}
+
+.word-table tr {
+  background-color: var(--bg-color); /* Убираем зебру */
+}
