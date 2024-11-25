@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Menu from "./components/Menu"; 
-import Footer from "./components/Footer"; 
-import WordTrainer from "./components/WordTrainer"; 
-import "./App.css"; 
+import Menu from "./components/Menu";
+import Footer from "./components/Footer";
+import WordTrainer from "./components/WordTrainer";
+import "./App.css";
 import "./themes.css";
 
-const API_BASE_URL = "http://itgirlschool.justmakeit.ru/api/words";
+const API_KEY = "ВАШ_API_КЛЮЧ"; // Замените на ваш API-ключ
+const API_URL = "https://dictionary.yandex.net/api/v1/dicservice.json/lookup";
 
 const App = () => {
-  const [words, setWords] = useState([]);
-  const [newWord, setNewWord] = useState({ word: "", translation: "", transcription: "" });
+  const [words, setWords] = useState([
+    { word: "cat", translation: "кошка", transcription: "[kæt]" },
+    { word: "dog", translation: "собака", transcription: "[dɒg]" },
+  ]); // Добавлены тестовые данные
+  const [newWord, setNewWord] = useState("");
   const [editingWord, setEditingWord] = useState(null);
   const [error, setError] = useState("");
   const [theme, setTheme] = useState("light");
@@ -19,93 +23,61 @@ const App = () => {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
-  useEffect(() => {
-    fetchWords();
-  }, []);
-
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
-  const fetchWords = async () => {
+  const fetchWordData = async (word) => {
     try {
-      const response = await fetch(`${API_BASE_URL}`);
+      const response = await fetch(
+        `${API_URL}?key=${API_KEY}&lang=en-ru&text=${word}`
+      );
+      if (!response.ok) {
+        throw new Error("Ошибка при обращении к API.");
+      }
       const data = await response.json();
-      setWords(data);
+      if (data.def && data.def.length > 0) {
+        const entry = data.def[0];
+        const transcription = entry.ts || "Нет транскрипции";
+        const translation =
+          entry.tr && entry.tr.length > 0 ? entry.tr[0].text : "Нет перевода";
+        return { word, transcription, translation };
+      } else {
+        setError("Слово не найдено в словаре.");
+        return null;
+      }
     } catch (error) {
-      console.error("Ошибка загрузки слов:", error);
+      console.error("Ошибка подключения к API:", error);
+      setError("Ошибка подключения к API.");
+      return null;
     }
   };
 
   const addWord = async () => {
-    if (!newWord.word || !newWord.translation || !newWord.transcription) {
-      setError("Все поля обязательны для заполнения!");
+    if (!newWord) {
+      setError("Поле для ввода слова не должно быть пустым!");
       return;
     }
-
-    try {
-      const response = await fetch(`${API_BASE_URL}/add`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newWord),
-      });
-
-      if (response.ok) {
-        const addedWord = await response.json();
-        setWords((prevWords) => [...prevWords, addedWord]);
-        setNewWord({ word: "", translation: "", transcription: "" });
-        setError("");
-      } else {
-        setError("Ошибка добавления слова на сервер.");
-      }
-    } catch (error) {
-      console.error("Ошибка добавления слова:", error);
-      setError("Ошибка подключения к серверу.");
+    const wordData = await fetchWordData(newWord);
+    if (wordData) {
+      setWords((prevWords) => [...prevWords, wordData]);
+      setNewWord("");
+      setError("");
     }
   };
 
-  const deleteWord = async (id) => {
-    try {
-      const response = await fetch(`${API_BASE_URL}/${id}/delete`, {
-        method: "POST",
-      });
-
-      if (response.ok) {
-        setWords((prevWords) => prevWords.filter((word) => word.id !== id));
-      } else {
-        console.error("Ошибка удаления слова.");
-      }
-    } catch (error) {
-      console.error("Ошибка удаления слова:", error);
-    }
+  const deleteWord = (wordToDelete) => {
+    setWords((prevWords) => prevWords.filter((word) => word.word !== wordToDelete));
   };
 
-  const saveWord = async () => {
-    if (!editingWord.word || !editingWord.translation || !editingWord.transcription) {
-      setError("Все поля обязательны для редактирования!");
-      return;
-    }
-
-    try {
-      const response = await fetch(`${API_BASE_URL}/${editingWord.id}/update`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(editingWord),
-      });
-
-      if (response.ok) {
-        setWords((prevWords) =>
-          prevWords.map((word) =>
-            word.id === editingWord.id ? { ...word, ...editingWord } : word
-          )
-        );
-        setEditingWord(null);
-        setError("");
-      } else {
-        console.error("Ошибка сохранения изменений.");
-      }
-    } catch (error) {
-      console.error("Ошибка сохранения изменений:", error);
+  const saveWord = () => {
+    if (editingWord) {
+      setWords((prevWords) =>
+        prevWords.map((word) =>
+          word.word === editingWord.word ? editingWord : word
+        )
+      );
+      setEditingWord(null);
     }
   };
 
@@ -132,55 +104,68 @@ const App = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {words.map((word) =>
-                      editingWord && editingWord.id === word.id ? (
-                        <tr key={word.id}>
-                          <td>
-                            <input
-                              value={editingWord.word}
-                              onChange={(e) =>
-                                setEditingWord({ ...editingWord, word: e.target.value })
-                              }
-                            />
-                          </td>
-                          <td>
-                            <input
-                              value={editingWord.translation}
-                              onChange={(e) =>
-                                setEditingWord({
-                                  ...editingWord,
-                                  translation: e.target.value,
-                                })
-                              }
-                            />
-                          </td>
-                          <td>
-                            <input
-                              value={editingWord.transcription}
-                              onChange={(e) =>
-                                setEditingWord({
-                                  ...editingWord,
-                                  transcription: e.target.value,
-                                })
-                              }
-                            />
-                          </td>
-                          <td>
-                            <button onClick={saveWord}>Сохранить</button>
-                            <button onClick={() => setEditingWord(null)}>Отмена</button>
-                          </td>
-                        </tr>
-                      ) : (
-                        <tr key={word.id}>
-                          <td>{word.word}</td>
-                          <td>{word.translation}</td>
-                          <td>{word.transcription}</td>
-                          <td>
-                            <button onClick={() => setEditingWord(word)}>Редактировать</button>
-                            <button onClick={() => deleteWord(word.id)}>Удалить</button>
-                          </td>
-                        </tr>
+                    {words.length > 0 ? (
+                      words.map((word, index) =>
+                        editingWord && editingWord.word === word.word ? (
+                          <tr key={index}>
+                            <td>
+                              <input
+                                value={editingWord.word}
+                                onChange={(e) =>
+                                  setEditingWord({
+                                    ...editingWord,
+                                    word: e.target.value,
+                                  })
+                                }
+                              />
+                            </td>
+                            <td>
+                              <input
+                                value={editingWord.translation}
+                                onChange={(e) =>
+                                  setEditingWord({
+                                    ...editingWord,
+                                    translation: e.target.value,
+                                  })
+                                }
+                              />
+                            </td>
+                            <td>
+                              <input
+                                value={editingWord.transcription}
+                                onChange={(e) =>
+                                  setEditingWord({
+                                    ...editingWord,
+                                    transcription: e.target.value,
+                                  })
+                                }
+                              />
+                            </td>
+                            <td>
+                              <button onClick={saveWord}>Сохранить</button>
+                              <button onClick={() => setEditingWord(null)}>Отмена</button>
+                            </td>
+                          </tr>
+                        ) : (
+                          <tr key={index}>
+                            <td>{word.word}</td>
+                            <td>{word.translation}</td>
+                            <td>{word.transcription}</td>
+                            <td>
+                              <button onClick={() => setEditingWord(word)}>
+                                Редактировать
+                              </button>
+                              <button onClick={() => deleteWord(word.word)}>
+                                Удалить
+                              </button>
+                            </td>
+                          </tr>
+                        )
                       )
+                    ) : (
+                      <tr>
+                        <td colSpan="4">Список слов пуст</td>
+                      </tr>
                     )}
                   </tbody>
                 </table>
@@ -189,27 +174,9 @@ const App = () => {
                 <div>
                   <input
                     type="text"
-                    placeholder="Слово"
-                    value={newWord.word}
-                    onChange={(e) =>
-                      setNewWord({ ...newWord, word: e.target.value })
-                    }
-                  />
-                  <input
-                    type="text"
-                    placeholder="Перевод"
-                    value={newWord.translation}
-                    onChange={(e) =>
-                      setNewWord({ ...newWord, translation: e.target.value })
-                    }
-                  />
-                  <input
-                    type="text"
-                    placeholder="Транскрипция"
-                    value={newWord.transcription}
-                    onChange={(e) =>
-                      setNewWord({ ...newWord, transcription: e.target.value })
-                    }
+                    placeholder="Введите английское слово"
+                    value={newWord}
+                    onChange={(e) => setNewWord(e.target.value)}
                   />
                   <button onClick={addWord}>Добавить</button>
                   {error && <p style={{ color: "red" }}>{error}</p>}
