@@ -9,11 +9,11 @@
   
   /* Dark Theme */
   [data-theme="dark"] {
-    --bg-color: #444444; /* Более светлый серый фон */
-    --text-color: #f0f0f0; /* Светло-серый текст */
-    --button-bg: #666666; /* Светло-серый фон кнопок */
-    --button-text: #ffffff; /* Белый текст */
-    --table-border: #555555; /* Бордюр таблицы чуть светлее */
+    --bg-color: #444444;
+    --text-color: #f0f0f0;
+    --button-bg: #666666;
+    --button-text: #ffffff;
+    --table-border: #555555;
   }
   
   /* General Styling */
@@ -34,7 +34,7 @@
   }
   
   button:hover {
-    background-color: var(--table-border); /* Легкий эффект при наведении */
+    background-color: var(--table-border);
   }
   
   table {
