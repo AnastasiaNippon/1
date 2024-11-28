@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +11,19 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* themes.css */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --button-bg: #e0e0e0;
+  --button-text: #000000;
+}
+
+[data-theme="dark"] {
+  --bg-color: #333333;
+  --text-color: #ffffff;
+  --button-bg: #555555;
+  --button-text: #ffffff;
 }

@@ -1,0 +1,56 @@
+/* Light Theme */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --button-bg: #e0e0e0;
+    --button-text: #000000;
+    --table-border: #ccc;
+  }
+  
+  /* Dark Theme */
+  [data-theme="dark"] {
+    --bg-color: #444444;
+    --text-color: #f0f0f0;
+    --button-bg: #666666;
+    --button-text: #ffffff;
+    --table-border: #555555;
+  }
+  
+  /* General Styling */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: var(--table-border);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid var(--table-border);
+    padding: 10px;
+    text-align: left;
+  }
+  
+  input {
+    padding: 8px;
+    border: 1px solid var(--table-border);
+    border-radius: 4px;
+  }
+  

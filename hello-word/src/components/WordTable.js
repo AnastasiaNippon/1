@@ -1,104 +1,62 @@
-import { useState } from 'react';
-import './WordTable.css';
+import React from "react";
+import "./WordTable.css";
 
-const WordTable = ({ words }) => {
-  const [editIndex, setEditIndex] = useState(null);
-  const [editedWord, setEditedWord] = useState({});
-  const [hasErrors, setHasErrors] = useState(false);
-
-  const startEditing = (index) => {
-    setEditIndex(index);
-    setEditedWord({ ...words[index] });
-    setHasErrors(false);
-  };
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setEditedWord((prev) => ({ ...prev, [name]: value }));
-    validateFields({ ...editedWord, [name]: value });
-  };
-
-  const validateFields = (word) => {
-    const isEmpty = Object.values(word).some((field) => field.trim() === '');
-    setHasErrors(isEmpty);
-  };
-
-  const saveChanges = () => {
-    if (hasErrors) {
-      alert('Ошибка: Все поля должны быть заполнены!');
-    } else {
-      console.log('Сохранено слово:', editedWord);
-      setEditIndex(null);
-    }
-  };
-
+const WordTable = ({ words, editingWord, setEditingWord, saveWord, deleteWord }) => {
   return (
     <table className="word-table">
       <thead>
         <tr>
           <th>Слово</th>
-          <th>Транскрипция</th>
           <th>Перевод</th>
-          <th>Тема</th>
+          <th>Транскрипция</th>
           <th>Действия</th>
         </tr>
       </thead>
       <tbody>
-        {words.map((word, index) => (
-          <tr key={word.id}>
-            {editIndex === index ? (
-              <>
-                <td>
-                  <input
-                    name="word"
-                    value={editedWord.word || ''}
-                    onChange={handleInputChange}
-                    className={editedWord.word ? '' : 'error'}
-                  />
-                </td>
-                <td>
-                  <input
-                    name="transcription"
-                    value={editedWord.transcription || ''}
-                    onChange={handleInputChange}
-                    className={editedWord.transcription ? '' : 'error'}
-                  />
-                </td>
-                <td>
-                  <input
-                    name="translation"
-                    value={editedWord.translation || ''}
-                    onChange={handleInputChange}
-                    className={editedWord.translation ? '' : 'error'}
-                  />
-                </td>
-                <td>
-                  <input
-                    name="theme"
-                    value={editedWord.theme || ''}
-                    onChange={handleInputChange}
-                    className={editedWord.theme ? '' : 'error'}
-                  />
-                </td>
-                <td>
-                  <button onClick={saveChanges} disabled={hasErrors}>
-                    Сохранить
-                  </button>
-                </td>
-              </>
-            ) : (
-              <>
-                <td>{word.word}</td>
-                <td>{word.transcription}</td>
-                <td>{word.translation}</td>
-                <td>{word.theme}</td>
-                <td>
-                  <button onClick={() => startEditing(index)}>Редактировать</button>
-                </td>
-              </>
-            )}
-          </tr>
-        ))}
+        {words.map((word) =>
+          editingWord && editingWord.id === word.id ? (
+            <tr key={word.id}>
+              <td>
+                <input
+                  value={editingWord.english}
+                  onChange={(e) =>
+                    setEditingWord({ ...editingWord, english: e.target.value })
+                  }
+                />
+              </td>
+              <td>
+                <input
+                  value={editingWord.russian}
+                  onChange={(e) =>
+                    setEditingWord({ ...editingWord, russian: e.target.value })
+                  }
+                />
+              </td>
+              <td>
+                <input
+                  value={editingWord.transcription}
+                  onChange={(e) =>
+                    setEditingWord({ ...editingWord, transcription: e.target.value })
+                  }
+                />
+              </td>
+              <td>
+                <button onClick={saveWord}>Сохранить</button>
+                <button onClick={() => setEditingWord(null)}>Отмена</button>
+              </td>
+            </tr>
+          ) : (
+            <tr key={word.id}>
+              <td>{word.english}</td>
+              <td>{word.russian}</td>
+              <td>{word.transcription}</td>
+              <td>
+                <button onClick={() => setEditingWord(word)}>Редактировать</button>
+                <button onClick={() => deleteWord(word.id)}>Удалить</button>
+              </td>
+            </tr>
+          )
+        )}
       </tbody>
     </table>
   );

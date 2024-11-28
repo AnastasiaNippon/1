@@ -1,24 +1,26 @@
 import { Link } from 'react-router-dom';
+import React from "react";
 import './Menu.css';
-import logo from '../assets/группа-в-составе-сыгранности-работая-вектор-логотипа-друзей-121304871.jpg'; // Импортируем логотип
+import logo from '../assets/группа-в-составе-сыгранности-работая-вектор-логотипа-друзей-121304871.jpg'; 
 
-const Menu = () => {
+const Menu = ({ theme, toggleTheme }) => {
   return (
-    <nav className="menu">
+    <div className="menu">
       <div className="logo">
-        <Link to="/">
-          <img src={logo} alt="Logo" className="logo-image" />
-        </Link>
+        <img src={logo} alt="Logo" className="logo-image" /> 
       </div>
       <ul className="menu-links">
         <li>
-          <Link to="/">Main</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/game">Card</Link>
+          <Link to="/game">Game</Link>
         </li>
       </ul>
-    </nav>
+      <button className="theme-toggle" onClick={toggleTheme}>
+        {theme === "light" ? "Switch to Dark Theme" : "Switch to Light Theme"}
+      </button>
+    </div>
   );
 };
 

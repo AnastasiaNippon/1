@@ -1,75 +1,139 @@
-/* Центрирование основного контента */
+/* Общий стиль для body */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-/* Основной контейнер приложения */
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  flex: 1; /* Контейнер заполняет доступное пространство */
-}
-
-/* Header */
-header {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   box-sizing: border-box;
+}
+
+/* Хедер */
+header {
+  position: fixed; /* Фиксируем хедер над основным содержимым */
+  top: 0;
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 1000;
+  font-size: 1.2rem;
 }
 
 /* Основное содержимое */
 main {
   flex: 1;
-  background-color: white;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  margin: 20px auto;
-  text-align: center;
+  padding-top: 80px; /* Отступ сверху для учета высоты хедера */
   box-sizing: border-box;
 }
 
-/* Заголовки */
-h2 {
+/* Таблица */
+.word-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.word-table th,
+.word-table td {
+  border: 1px solid var(--table-border);
+  padding: 10px;
+  text-align: left;
+}
+
+.word-table th {
+  background-color: var(--table-border);
   text-align: center;
-  margin-bottom: 20px;
+}
+
+.word-table td {
+  word-break: break-word;
+}
+
+/* Футер */
+footer {
+  position: relative;
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 15px 20px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 1000;
 }
 
 /* Кнопки */
 button {
-  padding: 10px;
+  padding: 10px 15px;
+  font-size: 1rem;
   border: none;
-  background-color: #333;
-  color: white;
-  cursor: pointer;
   border-radius: 4px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  cursor: pointer;
 }
 
 button:hover {
-  background-color: #555;
+  background-color: var(--table-border);
 }
 
-/* Стили для футера */
-footer {
-  background-color: #333; /* Цвет фона */
-  color: white; /* Цвет текста */
-  padding: 20px;
-  text-align: center;
-  width: 100%; /* Занимает всю ширину экрана */
-  display: flex;
-  justify-content: center; /* Центрирует текст внутри футера */
-  align-items: center;
-  box-sizing: border-box;
-  margin-top: auto; /* Позволяет футеру всегда быть внизу */
+/* Медиазапросы */
+@media (max-width: 768px) {
+  /* Планшетная версия */
+  header {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  .word-table th,
+  .word-table td {
+    padding: 8px;
+  }
+
+  .word-table th {
+    font-size: 0.9rem;
+  }
+
+  .word-table td {
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Мобильная версия */
+  header {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  .word-table {
+    font-size: 0.8rem;
+  }
+
+  .word-table th,
+  .word-table td {
+    padding: 5px;
+  }
+
+  /* Уменьшаем кнопки */
+  button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  /* Убираем боковые отступы для экономии места */
+  main {
+    padding: 10px;
+  }
 }

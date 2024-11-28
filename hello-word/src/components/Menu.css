@@ -7,7 +7,7 @@
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between; /* Разделяет логотип и ссылки по краям */
+    justify-content: space-between; 
     align-items: center;
     box-sizing: border-box;
   }
@@ -18,7 +18,7 @@
   }
   
   .logo-image {
-    width: 50px; /* Размер логотипа */
+    width: 50px; 
     height: auto;
   }
   
@@ -26,7 +26,7 @@
     list-style: none;
     display: flex;
     gap: 50px;
-    justify-content: center; /* Центрируем сами ссылки внутри контейнера */
+    justify-content: center; 
   }
   
   .menu-links li {
@@ -42,3 +42,34 @@
     text-decoration: underline;
   }
   
+  .menu {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  .menu-links a {
+    color: var(--text-color);
+  }
+  
+  .theme-toggle {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .theme-toggle:hover {
+    background-color: var(--table-border);
+  }
+  
+  .theme-toggle:hover {
+    opacity: 0.8;
+  }
+  
+  @media (max-width: 768px) {
+    .logo-image {
+      max-width: 50px;
+    }
+  }
