@@ -51,7 +51,7 @@ const App = () => {
 
   const testConnection = async () => {
     try {
-      const response = await fetch("http://itgirlschool.justmakeit.ru/api/words");
+      const response = await fetch(`${API_BASE_URL}`);
       if (response.ok) {
         console.log("Подключение к серверу успешно");
       } else {

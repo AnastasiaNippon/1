@@ -7,39 +7,133 @@ body {
   min-height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-color);
+  box-sizing: border-box;
 }
 
 /* Хедер */
 header {
-  position: fixed;
+  position: fixed; /* Фиксируем хедер над основным содержимым */
   top: 0;
-  left: 0;
   width: 100%;
   background-color: var(--bg-color);
   color: var(--text-color);
-  z-index: 1000;
-  padding: 10px 20px;
+  padding: 15px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
+  z-index: 1000;
+  font-size: 1.2rem;
 }
 
 /* Основное содержимое */
 main {
   flex: 1;
-  padding: 70px 20px 70px; /* Оставляем место под хедер и футер */
+  padding: 20px;
+  padding-top: 80px; /* Отступ сверху для учета высоты хедера */
   box-sizing: border-box;
+}
+
+/* Таблица */
+.word-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.word-table th,
+.word-table td {
+  border: 1px solid var(--table-border);
+  padding: 10px;
+  text-align: left;
+}
+
+.word-table th {
+  background-color: var(--table-border);
+  text-align: center;
+}
+
+.word-table td {
+  word-break: break-word;
 }
 
 /* Футер */
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   background-color: var(--bg-color);
   color: var(--text-color);
-  padding: 10px 20px;
+  padding: 15px 20px;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
   z-index: 1000;
+}
+
+/* Кнопки */
+button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--table-border);
+}
+
+/* Медиазапросы */
+@media (max-width: 768px) {
+  /* Планшетная версия */
+  header {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  .word-table th,
+  .word-table td {
+    padding: 8px;
+  }
+
+  .word-table th {
+    font-size: 0.9rem;
+  }
+
+  .word-table td {
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Мобильная версия */
+  header {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  .word-table {
+    font-size: 0.8rem;
+  }
+
+  .word-table th,
+  .word-table td {
+    padding: 5px;
+  }
+
+  /* Уменьшаем кнопки */
+  button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  /* Убираем боковые отступы для экономии места */
+  main {
+    padding: 10px;
+  }
 }
